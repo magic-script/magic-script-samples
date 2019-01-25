@@ -1,0 +1,8 @@
+# MagicScript binary
+digest.sha512.signed
+
+# ML SDK build files
+.out
+
+# OS X
+.DS_Store
