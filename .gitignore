@@ -6,3 +6,6 @@ digest.sha512.signed
 
 # OS X
 .DS_Store
+
+# Node
+node_modules

@@ -1,5 +1,5 @@
 <manifest xmlns:ml="magicleap"
-          ml:package="com.leoz.sampleuibutton"
+          ml:package="com.magicscript.sample.uibutton"
           ml:version_name="0.0.0.1"
           ml:version_code="1">
     <application ml:visible_name="UiButton Sample"

@@ -1,0 +1,18 @@
+<manifest xmlns:ml="magicleap"
+          ml:package="com.magicscript.sample.immersiveapp"
+          ml:version_name="0.0.0.1"
+          ml:version_code="1">
+  <application ml:visible_name="Immersive App Sample"
+               ml:application_type="untrusted"
+               ml:sdk_version="1.0">
+    <component ml:name=".fullscreen"
+               ml:visible_name="Immersive App"
+               ml:binary_name="script/main.js"
+               ml:type="Fullscreen">
+      <icon ml:model_folder=""
+            ml:portal_folder=""/>
+    </component>
+    <uses-privilege ml:name="MagicScript"/>
+    <uses-privilege ml:name="LowLatencyLightwear"/>
+  </application>
+</manifest>
