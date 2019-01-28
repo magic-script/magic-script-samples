@@ -1,4 +1,7 @@
 # sample-ui-image
+MagicScript UiImage Sample
+
+---
 
 cat.png is released into the public domain by its author, Bakerq at English Wikipedia. This applies worldwide.
 
