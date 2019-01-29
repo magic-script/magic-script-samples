@@ -1,0 +1,7 @@
+{
+  "main": "script/main.js",
+  "scripts": {
+    "start": "magic-script run"
+  },
+  "private": true
+}
