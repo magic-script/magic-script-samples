@@ -1,16 +1,12 @@
-#!/system/bin/script/mxs
+//
+import { LandscapeApp } from "lumin";
 
-import { ImmersiveApp } from "lumin";
-
-class App extends ImmersiveApp {
+class App extends LandscapeApp {
   init() {
-    let prism = this.requestNewPrism([1, 1, 1]);
+    let prism = this.requestNewPrism([0.5, 0.5, 0.5]);
     let node = prism.createLineNode();
     node.addPoints([0, 0, 0]);
-    node.addPoints([1, 1, 1]);
-
-    this.positionPrism(prism, [0, 0, -1]);
-
+    node.addPoints([0.5, 0.5, 0.5]);
     prism.getRootNode().addChild(node);
     return 0;
   }

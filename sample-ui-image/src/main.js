@@ -1,5 +1,4 @@
-#!/system/bin/script/mxs
-
+//
 import { LandscapeApp, ui } from "lumin";
 
 class App extends LandscapeApp {

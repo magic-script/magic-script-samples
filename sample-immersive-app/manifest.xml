@@ -7,7 +7,7 @@
                ml:sdk_version="1.0">
     <component ml:name=".fullscreen"
                ml:visible_name="Immersive App"
-               ml:binary_name="script/main.js"
+               ml:binary_name="bin/main.js"
                ml:type="Fullscreen">
       <icon ml:model_folder=""
             ml:portal_folder=""/>

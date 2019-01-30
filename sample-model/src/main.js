@@ -1,14 +1,14 @@
-#!/system/bin/script/mxs
-
+//
 import { LandscapeApp } from "lumin";
 
 class App extends LandscapeApp {
   init() {
     let prism = this.requestNewPrism([0.5, 0.5, 0.5]);
-    let node = prism.createLineNode();
-    node.addPoints([0, 0, 0]);
-    node.addPoints([0.5, 0.5, 0.5]);
-    prism.getRootNode().addChild(node);
+
+    let resource = prism.createModelResourceId("res/BoxTextured.glb", 0.3);
+    let model = prism.createModelNode(resource);
+
+    prism.getRootNode().addChild(model);
     return 0;
   }
   updateLoop(delta) {

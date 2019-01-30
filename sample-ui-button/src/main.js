@@ -1,5 +1,4 @@
-#!/system/bin/script/mxs
-
+//
 import { LandscapeApp } from "lumin";
 import { makeText } from "./text.js";
 import { makeButton } from "./button.js";
