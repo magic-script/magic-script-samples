@@ -1,6 +1,9 @@
 # MagicScript binary
 digest.sha512.signed
 
+# MagicScript bundle output
+bin
+
 # ML SDK build files
 .out
 
@@ -9,3 +12,6 @@ digest.sha512.signed
 
 # Node
 node_modules
+
+# NPM
+package-lock.json

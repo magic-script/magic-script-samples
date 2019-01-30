@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "build": "rollup -c",
+    "start": "magic-script run"
+  },
+  "private": true,
+  "devDependencies": {
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-executable": "^1.4.4",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
+  "dependencies": {
+    "lodash": "^4.17.11",
+    "underscore": "^1.9.1"
+  }
+}
