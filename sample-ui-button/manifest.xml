@@ -5,7 +5,7 @@
     <application ml:visible_name="UiButton Sample"
                  ml:application_type="untrusted"
                  ml:sdk_version="1.0">
-        <component ml:name=".landscape"
+        <component ml:name=".universe"
                    ml:visible_name="Button App"
                    ml:binary_name="bin/main.js"
                    ml:type="Universe">

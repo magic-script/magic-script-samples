@@ -11,7 +11,7 @@ export default {
     file: "bin/main.js",
     intro: "#!/system/bin/script/mxs\nglobalThis.window=globalThis;",
     format: "es",
-    sourcemap: "external"
+    sourcemap: "inline"
   },
   plugins: [resolve(), commonjs(), executable()]
 };
