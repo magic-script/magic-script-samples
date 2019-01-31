@@ -30,6 +30,9 @@ class App extends LandscapeApp {
     }, 5000);
     return 0;
   }
+  update(delta) {
+    return true;
+  }
 }
 
 let app = new App(0.016);
