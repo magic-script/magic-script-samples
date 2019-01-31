@@ -5,7 +5,7 @@
   <application ml:visible_name="Prism Sample"
                ml:application_type="untrusted"
                ml:sdk_version="1.0">
-    <component ml:name="universe"
+    <component ml:name=".universe"
                ml:visible_name="Prism App"
                ml:binary_name="bin/main.js"
                ml:type="Universe">
