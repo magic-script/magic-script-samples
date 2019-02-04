@@ -30,7 +30,7 @@ class App extends LandscapeApp {
     }, 5000);
     return 0;
   }
-  update(delta) {
+  updateLoop(delta) {
     return true;
   }
 }
