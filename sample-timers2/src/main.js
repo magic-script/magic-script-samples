@@ -10,21 +10,16 @@ function sleep(ms) {
 class App extends LandscapeApp {
   init() {
     let prism = this.requestNewPrism([0.4, 0.2, 0.1]);
-    console.log({prism});
 
     let button = UiButton.Create(prism, "Click Me", 0, 0.1);
-    button.onActivateSub(() => {
-      console.log("clicked");
+    button.onActivateSub(async () => {
       button.setText("Thanks!");
-      setTimeout(() => {
-        console.log("timeout");
-        button.setText("Again?");
-      }, 1000);
+      await sleep(1000);
+      button.setText("Again?");
     });
     prism.getRootNode().addChild(button);
-    console.log({button});
   }
-  update(delta) {
+  updateLoop(delta) {
     return true;
   }
 
