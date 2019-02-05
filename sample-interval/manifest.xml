@@ -1,5 +1,5 @@
 <manifest xmlns:ml="magicleap"
-          ml:package="com.magicscript.sample.timers"
+          ml:package="com.magicscript.sample.interval"
           ml:version_name="0.0.0.1"
           ml:version_code="1">
   <application ml:visible_name="No Mistakes"

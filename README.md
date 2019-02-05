@@ -23,7 +23,7 @@ npm install
 4. build the app and install it on device
 
 ```sh
-magic-script build -i 
+magic-script build -i
 ```
 
 ## Samples included
@@ -35,8 +35,8 @@ magic-script build -i
 5. [Landscape App](sample-landscape-app/README.md)
 6. [Model Sample](sample-model/README.md)
 7. [Prism Sample](sample-prism/README.md)
-8. [Timers Sample](sample-timers/README.md)
-9. [Timers #2 Sample](sample-timers2/README.md)
+8. [Interval Sample](sample-interval/README.md)
+9. [Timeout Sample](sample-timeout/README.md)
 10. [UiButton Sample](sample-ui-button/README.md)
 11. [UiImage Sample](sample-ui-image/README.md)
 12. [UiPageView Extended Sample](sample-ui-pageview-ext/README.md)
