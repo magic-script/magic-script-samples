@@ -8,6 +8,7 @@
 4. [glMatrix](http://glmatrix.net/) and Transform Node.
 5. Animated Models.
 6. [axios](https://github.com/axios/axios) newtroking sample.
+7. Audio sample with wav file playbeck from "/res".
 
 ## Testing
 
