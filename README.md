@@ -28,11 +28,11 @@ magic-script build -i
 
 ## Samples included
 
-- [List of Samples](SAMPLES.md)
+- [List of Samples](docs/SAMPLES.md)
 
 ## Samples needed
 
-- [To do](TODO.md)
+- [To do](docs/TODO.md)
 
 ## License
 
