@@ -41,6 +41,7 @@ magic-script build -i
 11. [UiImage Sample](sample-ui-image/README.md)
 12. [UiPageView Extended Sample](sample-ui-pageview-ext/README.md)
 13. [UiPageView Sample](sample-ui-pageview/README.md)
+14. [Fetch Remote File](sample-fetch-remote-file/README.md)
 
 ## License
 
