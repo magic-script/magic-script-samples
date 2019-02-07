@@ -5,6 +5,8 @@ module.exports = {
     },
     globals: {
         "print": true,
+        "setTimeout": true,
+        "setInterval": true,
         "globalThis": true,
     },
     extends: "eslint:recommended",

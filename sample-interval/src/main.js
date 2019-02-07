@@ -1,11 +1,9 @@
+import "magic-script-polyfills";
 
 import { ui, LandscapeApp } from "lumin";
-import { setTimeout, setInterval } from "./builtins.js";
 const { UiText, EclipseLabelType, Alignment, HorizontalAlignment } = ui;
 
-function sleep(ms) {
-  return new Promise(resolve => setTimeout(resolve, ms));
-}
+let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
 
 class App extends LandscapeApp {
   init() {
@@ -28,12 +26,7 @@ class App extends LandscapeApp {
       await sleep(500);
       text.setText("Only happy little accidents!");
     }, 5000);
-    return 0;
-  }
-  updateLoop(delta) {
-    return true;
   }
 }
 
-let app = new App(0.016);
-app.run();
+new App();
