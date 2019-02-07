@@ -8,10 +8,9 @@ export default {
   external: ["uv", "lumin"],
   input: "src/main.js",
   output: {
-    file: "bin/main.js",
+    dir: "bin",
     intro: "#!/system/bin/script/mxs\nglobalThis.window=globalThis;",
     format: "es",
-    sourcemap: "inline"
   },
   plugins: [resolve(), commonjs(), executable()]
 };

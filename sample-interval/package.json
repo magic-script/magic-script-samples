@@ -9,5 +9,8 @@
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-executable": "^1.4.4",
     "rollup-plugin-node-resolve": "^4.0.0"
+  },
+  "dependencies": {
+    "magic-script-polyfills": "git+ssh://git@github.com/magic-script/magic-script-polyfills.git"
   }
 }
