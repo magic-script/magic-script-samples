@@ -568,15 +568,22 @@ function makeCallback() {
 
 async function connect(host, service) {
   // Resolve IP address and TCP port
+  print("Resolving dns", host, service)
   let cb = makeCallback();
   getaddrinfo(new Getaddrinfo(), cb, host, "" + service);
   let [{ ip, port }] = await cb.promise;
+  print("Resolved", ip, port)
 
   // Connect to server
   let socket = new Tcp();
+  print("Connecting tcp", ip, port)
   cb = makeCallback();
-  socket.connect(new Connect(), ip, port, cb);
+  socket.connect(new Connect(), ip, port, ()=>{
+    print("onconnect")
+    cb();
+  });
   await cb.promise;
+  print("Connected.")
 
   return socket;
 }
@@ -781,7 +788,11 @@ async function httpRequest(req) {
   for (let [key, value] of req.headers) {
     headers.push(key, value);
   }
-
+  print(JSON.stringify({
+    method: req.method,
+    path: pathname,
+    headers
+  }, null, 2))
   await write({
     method: req.method,
     path: pathname,
@@ -959,7 +970,7 @@ function normalizeUrl(input) {
     let port = portStr ? parseInt(portStr.substr(1), 10) : defaultPort;
     let hostname = `${host}${port === defaultPort ? "" : ":" + port}`;
     let pathname = `${path}${query || ""}`;
-    let url = `${protocol}://${hostname}${pathname}${hash}`;
+    let url = `${protocol}://${hostname}${pathname}${hash||''}`;
     return [url, { protocol, host, port, path, query, hash, hostname, pathname }];
   }
   if (protocol === "file") {

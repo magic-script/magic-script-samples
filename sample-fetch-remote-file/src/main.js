@@ -24,5 +24,4 @@ class App extends LandscapeApp {
   }
 }
 
-let app = new App(0.016);
-app.run();
+export default new App(0.016);
