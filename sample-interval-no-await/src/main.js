@@ -1,44 +1,8 @@
-import { LandscapeApp, ui } from "lumin";
-import { setInterval } from "./builtins.js";
+// Add support for things like setTimeout, setInterval and fetch.
+import 'magic-script-polyfills';
 
-class App extends LandscapeApp {
-  init() {
-    const INTERVAL_DURATION = 1000; // ms
-    const MAX_VALUE = 1000;
-    const INITIAL_VALUE = 1;
+// Import our main app
+import { App } from './App.js';
 
-    const prism = this.requestNewPrism([0.5, 0.5, 0.5]);
-
-    const text = ui.UiText.CreateEclipseLabel(prism, "Initial Label", ui.EclipseLabelType.kT3);
-    text.setAlignment(ui.Alignment.CENTER_CENTER);
-    
-    prism.getRootNode().addChild(text);
-
-    let counter = INITIAL_VALUE;
-    let previousTime = Date.now();
-
-    setInterval(() => {
-        const currentTime = Date.now();
-        text.setText(`Update ${counter} in ${currentTime - previousTime} ms`);
-        previousTime = currentTime;
-
-        if (counter <= MAX_VALUE) {
-          counter++;
-        } else {
-          counter = INITIAL_VALUE;
-        }
-      },
-      INTERVAL_DURATION);
-
-    return 0;
-  }
-  updateLoop(delta) {
-    return true;
-  }
-  eventListener(event) {
-    return true;
-  }
-}
-
-let app = new App(0.016);
-app.run();
+// Launch our app!
+new App(0.5);

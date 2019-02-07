@@ -1,13 +1,13 @@
 <manifest xmlns:ml="magicleap"
           ml:package="com.magicscript.sample.fetchlocalfile"
-          ml:version_name="0.0.0.1"
+          ml:version_name="0.0.1"
           ml:version_code="1">
-  <application ml:visible_name="Fetch File Sample"
+  <application ml:visible_name="Fetch"
                ml:application_type="untrusted"
                ml:sdk_version="1.0">
     <component ml:name=".universe"
-               ml:visible_name="Fetch File App"
-               ml:binary_name="bin/main.js"
+               ml:visible_name="Fetch"
+               ml:binary_name="bin/index.js"
                ml:type="Universe">
       <mode ml:shareable="true"/>
       <icon ml:model_folder=""
