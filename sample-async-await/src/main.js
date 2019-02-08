@@ -58,14 +58,14 @@ class App extends LandscapeApp {
         counter = COUNTER_INITIAL_VALUE;
       }
 
-      const label = ui.UiText.CreateEclipseLabel(prism, `Work Item ${counter}`, ui.EclipseLabelType.kT3);
+      const label = ui.UiText.CreateEclipseLabel(prism, `Working on Item ${counter}`, ui.EclipseLabelType.kT3);
 
       const listViewItem = ui.UiListViewItem.Create(prism);
       listViewItem.addChild(label);
       listView.addItem(listViewItem);
       
       const data = await this.requestWork(counter, DEFAULT_REQUEST_DELAY);
-      label.setText(`Request ${data.request} completed in ${data.duration} ms`);
+      label.setText(`Work ${data.request} completed in ${data.duration} ms`);
 
       setTimeout(() => this.removeItemFromListView(listViewItem, listView), LISTVIEW_CLEANUP_DELAY);
     });
@@ -108,5 +108,5 @@ class App extends LandscapeApp {
   }
 }
 
-let app = new App(0.016);
+new App(0.016);
 // app.run();
