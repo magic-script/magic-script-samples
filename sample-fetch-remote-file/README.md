@@ -1,0 +1,11 @@
+# Fetch Remote File Sample
+
+This app explaining how to use [Fetch API](https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API) built into MagicScript to load remote file over HTTP.
+
+## Usage
+
+See the [README](../README.md) file for details
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](../LICENSE.md) file for details
