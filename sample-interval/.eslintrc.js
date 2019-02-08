@@ -4,10 +4,21 @@ module.exports = {
         "es6": true
     },
     globals: {
+        // These globals are provided by the vm itself.
         "print": true,
-        "setTimeout": true,
-        "setInterval": true,
         "globalThis": true,
+        // The following globals are provided by `magic-script-polyfills`
+        "setTimeout": true,
+        "clearTimeout": true,
+        "setInterval": true,
+        "clearInterval": true,
+        "setImmediate": true,
+        "clearImmediate": true,
+        "fetch": true,
+        "Headers": true,
+        "Request": true,
+        "Response": true,
+
     },
     extends: "eslint:recommended",
     parserOptions: {
@@ -25,7 +36,7 @@ module.exports = {
         ],
         "quotes": [
             "error",
-            "double"
+            "single"
         ],
         "semi": [
             "error",

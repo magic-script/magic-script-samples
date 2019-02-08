@@ -1,6 +1,6 @@
 //
-import { ui } from "lumin";
-import _ from "underscore";
+import { ui } from 'lumin';
+import _ from 'underscore';
 
 export function makeTextUnderscore(prism) {
   const { UiText, EclipseLabelType, Alignment, HorizontalAlignment } = ui;
@@ -9,7 +9,7 @@ export function makeTextUnderscore(prism) {
   });
   let node = UiText.CreateEclipseLabel(
     prism,
-    "Underscore.js result:\n" + result,
+    'Underscore.js result:\n' + result,
     EclipseLabelType.kT7
   );
   node.setAlignment(Alignment.CENTER_CENTER);

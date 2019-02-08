@@ -1,16 +1,15 @@
 // Rollup config for consuming some npm modules in MagicScript
 
-import resolve from "rollup-plugin-node-resolve";
-import commonjs from "rollup-plugin-commonjs";
-import executable from "rollup-plugin-executable";
+import resolve from 'rollup-plugin-node-resolve';
+import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-  external: ["uv", "lumin"],
-  input: "src/main.js",
+  external: ['uv', 'lumin'],
+  input: 'src/main.js',
+  preserveModules: true,
   output: {
-    dir: "bin",
-    intro: "#!/system/bin/script/mxs\nglobalThis.window=globalThis;",
-    format: "es",
+    dir: 'bin',
+    format: 'es'
   },
-  plugins: [resolve(), commonjs(), executable()]
+  plugins: [resolve(), commonjs()]
 };
