@@ -1,4 +1,4 @@
-# magic-script-samples
+# MagicScript Samples
 
 Samples showing how to use MagicScript API
 
@@ -32,8 +32,8 @@ magic-script build -i
 
 ## Samples needed
 
-- [To do](docs/TODO.md)
+- [TODO](docs/TODO.md)
 
 ## License
 
-TBD.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details

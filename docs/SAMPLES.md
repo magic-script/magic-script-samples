@@ -3,7 +3,7 @@
 1. [Audio](../sample-audio/README.md)
 2. [External Package](../sample-external-package/README.md)
 3. [Fetch Local File](../sample-fetch-local-file/README.md)
-4. [Fetch Remote File](.../sample-fetch-remote-file/README.md)
+4. [Fetch Remote File](../sample-fetch-remote-file/README.md)
 5. [Immersive App](../sample-immersive-app/README.md)
 6. [Interval without Await](../sample-interval-no-await/README.md)
 7. [Interval with Await](../sample-interval/README.md)
