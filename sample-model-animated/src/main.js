@@ -1,4 +1,8 @@
-import { DynamicFbxScene } from './dynamic-fbx-scene'
+// Add support for things like setTimeout, setInterval and fetch.
+import 'magic-script-polyfills';
 
-const app = new DynamicFbxScene(0.016);
-app.run();
+// Import our main app
+import { DynamicFbxScene } from './dynamic-fbx-scene.js';
+
+// Launch our app!
+new DynamicFbxScene(0.5);
