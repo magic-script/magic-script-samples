@@ -11,9 +11,9 @@ export class DynamicFbxScene extends Scene {
         super.init([1.0, 1.0, 1.0]);
 
         const model = this.addModel(
-            'resources/clown/Clown.kmat',
-            'resources/clown/whiteclown_diffuse.png',
-            'resources/clown/thriller.fbx'
+            'resources/turkey/turkey.kmat',
+            'resources/turkey/turkey_baseColor.png',
+            'resources/turkey/turkey4.fbx'
         );
         const modelResId = model.getModelResource();
 
@@ -32,7 +32,7 @@ export class DynamicFbxScene extends Scene {
         const button = this.addButton([0.25, -0.25, 0.25], 'Switch Animation');
         button.onActivateSub((event) => {
 
-        if (iterator > 4) {
+        if (iterator > 1) {
             iterator = 0;
         } else {
             iterator++;
@@ -40,21 +40,15 @@ export class DynamicFbxScene extends Scene {
         
         switch (iterator)
         {
+            case 0:
+                model.playAnimation(modelResId, "walking", false, 0);
+                break;
             case 1:
-            model.playAnimation(modelResId, "Dance1", false, 0);
-            break;
-            case 2:
-            model.playAnimation(modelResId, "Dance2", false, 0);
-            break;
-            case 3:
-            model.playAnimation(modelResId, "Dance3", false, 0);
-            break;
-            case 4:
-            model.playAnimation(modelResId, "Dance4", false, 0);
-            break;
+                model.playAnimation(modelResId, "spotted", false, 0);
+                break;
             default:
-            model.playAnimation(modelResId, 0, false, 0);
-            break;
+                model.playAnimation(modelResId, 'idle', false, 0);
+                break;
         }
         
         });
@@ -69,13 +63,14 @@ export class DynamicFbxScene extends Scene {
 
     addModel(materialPath, texturePath, modelPath) {
         this.Prism.createMaterialResourceId(materialPath);
-        this.Prism.createTextureResourceId(Desc2d.DEFAULT, texturePath);
-        
+
+        const textureID = this.Prism.createTextureResourceId(Desc2d.DEFAULT, texturePath);
         const modelResId = this.Prism.createModelResourceId(modelPath, 1.0);
         const model = this.Prism.createModelNode(modelResId);
-        model.setLocalPosition([0, -0.25, 0]);
-        model.setLocalScale([0.0025, 0.0025, 0.0025]);
-        model.playAnimation(modelResId, 'Idle', false, 0);
+        model.setTexture('turkey_material', 0, textureID)
+        model.setLocalPosition([0, 0, 0]);
+        model.setLocalScale([0.0075, 0.0075, 0.0075]);
+        model.playAnimation(modelResId, 'idle', false, 0);
         return model;
     }
 
