@@ -1,0 +1,4 @@
+DATAS = "digest.sha512.signed" : "." \
+        "bin/" : "bin/" \
+        "res/" : "res/"
+OPTIONS = package/minApiLevel/2
