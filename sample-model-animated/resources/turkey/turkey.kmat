@@ -1,0 +1,20 @@
+{
+  "global": {
+    "shaderName": "DiffuseNormalSpec",
+    "albedo": "turkey/turkey_baseColor.png",
+    "normal": "turkey/turkey_Normal.png",
+    "roughness": "turkey/turkey_Roughness.png",
+    "color": [
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "materials": [
+    {
+      "name": "turkey_material",
+      "opaque": true
+    }
+  ]
+}
