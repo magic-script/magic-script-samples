@@ -20,6 +20,12 @@ You will need:
 npm install
 ```
 
+or
+
+```sh
+yarn
+```
+
 4. build the app and install it on device
 
 ```sh

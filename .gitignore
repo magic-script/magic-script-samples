@@ -15,3 +15,7 @@ node_modules
 
 # NPM
 package-lock.json
+
+# yarn
+yarn-error.log
+yarn.lock
