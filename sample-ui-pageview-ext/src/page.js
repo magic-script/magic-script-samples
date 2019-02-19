@@ -1,6 +1,6 @@
 //
 
-import { ui } from "lumin";
+import { ui, Desc2d } from "lumin";
 
 export function makePage(prism, name) {
   const {
@@ -22,9 +22,17 @@ export function makePage(prism, name) {
   panel.addChild(label);
 
   // Add image
-  let image = UiImage.Create(prism, name, 0, 0);
+  let id = prism.createTextureResourceId(Desc2d.DEFAULT, name);
+  let image = UiImage.Create(prism, id, 0, 0);
 
   // TODO: Use Lumin RT API to get bitmap dimensions
+  let resource = prism.getResource(id);
+  let loaded = resource.isResourceValid();
+
+  // This does not work
+  //let w = resource.getWidth();
+  //let h = resource.getHeight();
+
   let originalWidth = 0.4096;
   let originalHeight = 0.3072;
 
