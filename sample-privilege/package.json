@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "build": "rollup -c",
+    "start": "magic-script run"
+  },
+  "private": true,
+  "devDependencies": {
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "https://github.com/creationix/rollup-plugin-commonjs.git",
+    "rollup-plugin-node-resolve": "^4.0.0"
+  },
+  "dependencies": {
+    "magic-script-polyfills": "^0.3.0"
+  }
+}
