@@ -10,7 +10,7 @@ export class App extends LandscapeApp {
     prism.getRootNode().addChild(text);
     text.setLocalPosition([0, 0.1, 0]);
     // Add button
-    let button = makeButton(prism, text);
+    let button = makeButton(this, prism, text);
     button.setLocalPosition([0, -0.1, 0]);
     prism.getRootNode().addChild(button);
     return 0;
