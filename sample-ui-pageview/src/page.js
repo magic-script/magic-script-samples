@@ -1,6 +1,4 @@
-//
-
-import { ui } from "lumin";
+import { ui } from 'lumin';
 
 export function makePage(prism, text, name) {
   const {
