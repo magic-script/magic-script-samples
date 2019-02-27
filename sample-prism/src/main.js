@@ -1,27 +1,8 @@
-//
-import { LandscapeApp } from "lumin";
+// Add support for things like setTimeout, setInterval and fetch.
+import 'magic-script-polyfills';
 
-class App extends LandscapeApp {
-  onAppStart(initArg) {
-    let prism = this.requestNewPrism([0.2, 0.4, 0.2]);
+// Import our main app
+import { App } from './App.js';
 
-    let name = "res/WaterBottle.glb";
-    let resource = prism.createModelResourceId(name, 1.0);
-    let model = prism.createModelNode(resource);
-
-    prism.getRootNode().addChild(model);
-    super.onAppStart(initArg);
-  }
-  init() {
-    return 0;
-  }
-  updateLoop(delta) {
-    return true;
-  }
-  eventListener(event) {
-    return true;
-  }
-}
-
-let app = new App(0.016);
-app.run();
+// Launch our app!
+new App(0.5);
