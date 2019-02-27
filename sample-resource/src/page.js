@@ -1,6 +1,4 @@
-//
-
-import { ui, Desc2d } from "lumin";
+import { ui, Desc2d } from 'lumin';
 
 export function makePage(prism, name) {
   const {
