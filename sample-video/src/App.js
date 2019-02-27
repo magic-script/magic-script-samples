@@ -1,4 +1,4 @@
-import { LandscapeApp, VideoEventData, ViewMode, ui } from "lumin";
+import { LandscapeApp, VideoEventData, ViewMode, ui } from 'lumin';
 
 export class App extends LandscapeApp {
   init() {
@@ -7,7 +7,7 @@ export class App extends LandscapeApp {
     // Add VideoNode with 1920 x 1080
     const videoNode = prism.createVideoNode(1920, 1080);
     const statusCode = videoNode.setVideoPath('res/PumpkinCandleH264.mp4');
-    console.log("setVideoPath - result: " + statusCode);
+    console.log('setVideoPath - result: ' + statusCode);
 
     videoNode.setLocalPosition([-0.5, -0.25, 0]);
     videoNode.setLocalScale([0.960, 0.540, 0]);
@@ -16,11 +16,11 @@ export class App extends LandscapeApp {
 
     prism.getRootNode().addChild(videoNode);
 
- 
+
     // Add Toggle
     const toggle = ui.UiToggle.Create(prism, 'Play');
     toggle.setLocalPosition([0.25, -0.15, 0]);
-    
+
     toggle.onActivateSub((event) => {
       if (toggle.getOn()) {
         videoNode.start();
@@ -42,7 +42,7 @@ export class App extends LandscapeApp {
 
   eventListener(event) {
     if (event instanceof VideoEventData) {
-      console.log("eventListener - VideoEventData type: " + event.getVideoEventType());
+      console.log('eventListener - VideoEventData type: ' + event.getVideoEventType());
     }
 
     return true;
