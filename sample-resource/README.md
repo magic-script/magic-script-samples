@@ -1,6 +1,6 @@
-# UiPageView Extended Sample
+# Resource Sample
 
-MagicScript UiPageView Extended Sample is based on [UiPageView Sample](../sample-ui-pageview/README.md) with extra functionality of image manipulation.
+MagicScript Resource Sample is based on [UiPageView Sample](../sample-ui-pageview/README.md) with extra functionality of image manipulation via Resource.
 
 ## Usage
 

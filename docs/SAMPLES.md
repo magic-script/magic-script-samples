@@ -15,6 +15,6 @@
 13. [Timeout](../sample-timeout/README.md)
 14. [UiButton](../sample-ui-button/README.md)
 15. [UiImage](../sample-ui-image/README.md)
-16. [UiPageView Extended](../sample-ui-pageview-ext/README.md)
+16. [Resource](../sample-resource/README.md)
 17. [UiPageView](../sample-ui-pageview/README.md)
 18. [Video](../sample-video/README.md)
