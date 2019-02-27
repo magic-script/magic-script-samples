@@ -4,6 +4,8 @@ import { ui } from "lumin";
 async function basicFetch(app, prism, text) {
   text.setText("basicFetch - start");
   // http://lorempixel.com/800/600/animals/
+  // https://picsum.photos/250/150/?random
+  // http://placehold.jp/99ccff/003366/250x150.png
   let response = await fetch("http://placehold.jp/99ccff/003366/250x150.png");
   if (!response.ok) {
     throw new Error("HTTP error, status = " + response.status);
@@ -18,7 +20,7 @@ async function basicFetch(app, prism, text) {
 
   const { UiImage } = ui;
 
-  let image = UiImage.Create(prism, full_name, 0.4, 0.3);
+  let image = UiImage.Create(prism, full_name, 0.4, 0.3, true);
   prism.getRootNode().addChild(image);
 }
 
