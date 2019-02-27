@@ -1,12 +1,10 @@
-//
-
-import { ui } from "lumin";
+import { ui } from 'lumin';
 
 export function makeText(prism) {
   const { UiText, EclipseLabelType, Alignment, HorizontalAlignment } = ui;
   let node = UiText.CreateEclipseLabel(
     prism,
-    "Hello\nMagicScript!",
+    'Hello\nMagicScript!',
     EclipseLabelType.kT7
   );
   node.setAlignment(Alignment.CENTER_CENTER);
