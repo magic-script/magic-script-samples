@@ -1,6 +1,6 @@
 import { LandscapeApp, ui } from 'lumin';
 
-class App extends LandscapeApp {
+export class App extends LandscapeApp {
   onAppStart(initArg) {
     let prism = this.requestNewPrism([0.2, 0.4, 0.2]);
 
