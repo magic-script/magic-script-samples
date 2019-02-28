@@ -1,5 +1,5 @@
 import { LandscapeApp, ui } from 'lumin';
-import { makeButton } from "./button.js";
+import { makeButton } from './button.js';
 
 export class App extends LandscapeApp {
   init() {
