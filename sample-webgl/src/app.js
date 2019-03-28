@@ -2,27 +2,20 @@ import gl from 'gl';
 import egl from 'egl';
 import shader from './thebookofshaders.js';
 import { scandir } from 'magic-script-polyfills/src/fs.js';
-import { LandscapeApp, ui, CursorHoverState } from 'lumin';
+import { PrismController, LandscapeApp, ui, CursorHoverState } from 'lumin';
 const { Cursor, UiText, EclipseLabelType, Alignment, HorizontalTextAlignment } = ui;
 
 let sleep = ms => new Promise(resolve => setTimeout(resolve, ms));
-
-export class App extends LandscapeApp {
-  init () {
-    print('INIT!');
-    return 0;
-  }
-  onAppStart () {
-    print(CursorHoverState);
-    print(JSON.stringify(CursorHoverState, null, 2));
+let w = 0.5;
+let h = 0.5;
+class Controller extends PrismController {
+  onAttachPrism () {
     // Create a new prism that's half a meter cubed.
-    let w = this.w = 0.5;
-    let h = this.h = 0.5;
-    let prism = this.prism = this.requestNewPrism([w, h, 0.1]);
+    let prism = this.prism = this.getPrism();
 
     Cursor.SetState(prism, CursorHoverState.kNone);
 
-    let root = prism.getRootNode();
+    let root = this.getRoot();
 
     // Add a label for visibility/debugging
     let text = this.text = UiText.CreateEclipseLabel(
@@ -70,18 +63,19 @@ export class App extends LandscapeApp {
     print('version', JSON.stringify(version, null, 2));
     egl.bindAPI(egl.OPENGL_ES_API);
     print('bound API');
-    egl.makeCurrent(surface, surface, context);
     print('made current');
 
-    this.time = 0;
+    let makeUpdate = shader();
 
     let load = async (name) => {
+      this.time = 0;
       let res = await fetch('res/' + name);
       let frag = await res.text();
       text.setText(name);
-      this.update = shader(gl, width, height, frag);
+      this.update = makeUpdate(gl, width, height, frag);
       print(name);
     };
+
     let cycle = async () => {
       while (true) {
         for (let { name, type } of await scandir('res')) {
@@ -98,12 +92,12 @@ export class App extends LandscapeApp {
     // load('ikeda.glsl');
     // load('voroni.glsl');
   }
-  updateLoop (delta) {
+  onUpdate (delta) {
     this.time += delta;
-    let { prism, update, time, surface, text, w, h, width, height } = this;
+    let { prism, update, time, surface, context, text, width, height } = this;
+    egl.makeCurrent(surface, surface, context);
     if (update) {
       let [x, y] = Cursor.GetPosition(prism);
-      print(x, y);
       x = width * (x / w + 0.5);
       y = height * (y / h + 0.5);
       update(time, x, y);
@@ -115,5 +109,16 @@ export class App extends LandscapeApp {
     text.setLocalPosition([0, 0, Math.sin(time) * 0.04]);
     egl.swapBuffers(surface);
     return true;
+  }
+}
+
+export class App extends LandscapeApp {
+  init () {
+    print('INIT!');
+    return 0;
+  }
+  onAppStart () {
+    let prism = this.requestNewPrism([w, h, 0.1]);
+    prism.setPrismController(new Controller());
   }
 }
