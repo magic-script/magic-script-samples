@@ -1,13 +1,12 @@
-import { LandscapeApp, ui } from 'lumin';
+import { ui } from 'lumin';
 
-export class App extends LandscapeApp {
-  init() {
+export default async function start (app) {
     const LISTVIEW_CLEANUP_DELAY = 4000;
     const DEFAULT_REQUEST_DELAY = 3000;
     const COUNTER_MAX_VALUE = 1000;
     const COUNTER_INITIAL_VALUE = 1;
 
-    const prism = this.requestNewPrism([1.0, 1.0, 0.5]);
+    const prism = app.requestNewPrism([1.0, 1.0, 0.5]);
 
     // UiListView
     const listView = ui.UiListView.Create(prism, 0.375, 1.0);
@@ -34,10 +33,10 @@ export class App extends LandscapeApp {
       listViewItem.addChild(label);
       listView.addItem(listViewItem);
 
-      const data = await this.doWork(counter);
+      const data = await doWork(counter);
       label.setText(`Work ${data.request} completed`);
 
-      setTimeout(() => this.removeItemFromListView(listViewItem, listView), LISTVIEW_CLEANUP_DELAY);
+      setTimeout(() => removeItemFromListView(listViewItem, listView), LISTVIEW_CLEANUP_DELAY);
     });
 
     prism.getRootNode().addChild(doButton);
@@ -61,37 +60,28 @@ export class App extends LandscapeApp {
       listViewItem.addChild(label);
       listView.addItem(listViewItem);
 
-      const data = await this.requestWork(counter, DEFAULT_REQUEST_DELAY);
+      const data = await requestWork(counter, DEFAULT_REQUEST_DELAY);
       label.setText(`Work ${data.request} completed in ${data.duration} ms`);
 
-      setTimeout(() => this.removeItemFromListView(listViewItem, listView), LISTVIEW_CLEANUP_DELAY);
+      setTimeout(() => removeItemFromListView(listViewItem, listView), LISTVIEW_CLEANUP_DELAY);
     });
 
     prism.getRootNode().addChild(requestButton);
 
-    return 0;
-  }
-  updateLoop(delta) {
-    return true;
-  }
-  eventListener(event) {
-    return true;
-  }
-
-  async doWork(requestId) {
+   async function doWork(requestId) {
     // Returning a non-promise value in async function
     // directs JS to automatically wrap the value in resolved promise
     // return {request: requestId, duration: 0} == return Promise.resolve({request: requestId, duration: 0});
     return { request: requestId, duration: 0 };
   }
 
-  async requestWork(requestId, delay) {
+  async function requestWork(requestId, delay) {
     const timeStart = Date.now();
     return new Promise((resolve, reject) =>
       setTimeout(() => resolve({ request: requestId, duration: Date.now() - timeStart }), delay));
   }
 
-  removeItemFromListView(item, listView) {
+  function removeItemFromListView(item, listView) {
     const itemNodeId = item.getNodeId();
     const itemsCount = listView.getItemCount();
 
@@ -103,4 +93,5 @@ export class App extends LandscapeApp {
       }
     }
   }
+  return prism;
 }
