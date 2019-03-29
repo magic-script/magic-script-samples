@@ -1,4 +1,4 @@
-import { ui, PrivilegeId } from 'lumin';
+import { ui, PrivilegeId, PrivilegeResult} from 'lumin';
 
 var counter = 0;
 
@@ -8,7 +8,7 @@ function onPress(node, app, text) {
   var result = app.requestPrivilegeBlocking(PrivilegeId.kLocalAreaNetwork);
   print('privilege response', result);
   node.setText('Request Again');
-  text.setText('Privilge ' + ((result == 1) ? 'Granted' : 'Not Granted'));
+  text.setText('Privilge ' + ((result == PrivilegeResult.kGranted) ? 'Granted' : 'Not Granted'));
 }
 
 export function makeButton(prism, app, text) {

@@ -12,6 +12,6 @@
   "dependencies": {
     "lodash": "^4.17.11",
     "underscore": "^1.9.1",
-    "magic-script-polyfills": "^0.3.0"
+    "magic-script-polyfills": "^1.0.0"
   }
 }

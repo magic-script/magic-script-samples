@@ -3,7 +3,7 @@ import { ui } from 'lumin';
 import _ from 'underscore';
 
 export function makeTextUnderscore(prism) {
-  const { UiText, EclipseLabelType, Alignment, HorizontalAlignment } = ui;
+  const { UiText, EclipseLabelType, Alignment, HorizontalTextAlignment } = ui;
   let result = _.map([1, 2, 3], function(num) {
     return num * 3;
   });
@@ -13,6 +13,6 @@ export function makeTextUnderscore(prism) {
     EclipseLabelType.kT7
   );
   node.setAlignment(Alignment.CENTER_CENTER);
-  node.setTextAlignment(HorizontalAlignment.kCenter);
+  node.setTextAlignment(HorizontalTextAlignment.kCenter);
   return node;
 }

@@ -3,7 +3,7 @@ import { ui } from 'lumin';
 import __ from 'lodash';
 
 export function makeTextLodash(prism) {
-  const { UiText, EclipseLabelType, Alignment, HorizontalAlignment } = ui;
+  const { UiText, EclipseLabelType, Alignment, HorizontalTextAlignment } = ui;
   let array = [1, 2, 3, 4, 5, 6, 7];
   __.fill(array, '*', 2, 5);
   let result = __.map(array, function(num) {
@@ -15,6 +15,6 @@ export function makeTextLodash(prism) {
     EclipseLabelType.kT7
   );
   node.setAlignment(Alignment.CENTER_CENTER);
-  node.setTextAlignment(HorizontalAlignment.kCenter);
+  node.setTextAlignment(HorizontalTextAlignment.kCenter);
   return node;
 }
