@@ -8,7 +8,7 @@ export default async function start (app) {
   prism.getRootNode().addChild(text);
   text.setLocalPosition([0, 0.2, 0]);
   // Add button
-  let button = makeButton(this, prism, text);
+  let button = makeButton(app, prism, text);
   button.setLocalPosition([0, -0.2, 0]);
   prism.getRootNode().addChild(button);
   return prism;
