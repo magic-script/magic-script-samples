@@ -2,6 +2,8 @@
 import query from './GooglePolyApi.js';
 import { eulerToQuaternion } from './math.js';
 import { ui, Desc2d, MAT4_IDENTITY } from 'lumin';
+import { stat } from "magic-script-polyfills/src/fs.js"
+
 const { UiTextEdit, Alignment, UiLinearLayout, UiGridLayout, UiImage } = ui;
 
 // Log to both `mldb log` and chrome inspector.
@@ -59,7 +61,7 @@ async function renderGrid (context, assets) {
     if (!hasPng) continue;
 
     let filePath = context.writablePath + i + '-' + relativePath;
-    print('Downloading...', displayName, url, filePath);
+    print('Initiating download...', displayName, url, filePath);
     let index = i++;
     promises.push(download(url, filePath).then(() => {
       let img = UiImage.Create(context.prism, filePath, 0.266666, 0.2, true, true);
@@ -126,9 +128,29 @@ function fit (context, node, size = 1) {
 }
 
 async function download (url, file) {
-  print('Downloading...', url);
-  let res = await fetch(url);
-  return fetch('file://' + file, { method: 'PUT', body: res.body });
+  let exists = false;
+
+  try {
+    await stat(file);
+    exists = true;
+  } catch (e) {
+    if (/^ENOENT:/.test(e.message) == false) {
+      throw e;
+    }
+  }
+
+  if (exists == false) {
+    // File doesn't exist locally, yet.
+
+    print("File needs to be downloaded: " + file);
+
+    let res = await fetch(url);
+    return fetch(file, { method: 'PUT', body: res.body });
+  }
+
+  // File already downloaded.
+
+  print("File previously downloaded: " + file);
 }
 
 export default async function start (app) {
