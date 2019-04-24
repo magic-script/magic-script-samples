@@ -5,7 +5,7 @@ export default async function start (app) {
   node.addPoints([0, 0, 0]);
   node.addPoints([1, 1, 1]);
 
-  this.positionPrism(prism, [0, 0, -1]);
+  app.positionPrism(prism, [0, 0, -1]);
 
   prism.getRootNode().addChild(node);
   return prism;
