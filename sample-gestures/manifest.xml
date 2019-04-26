@@ -1,0 +1,21 @@
+<manifest xmlns:ml="magicleap"
+          ml:package="com.magicscript.sample.gestures"
+          ml:version_name="0.0.1"
+          ml:version_code="1">
+  <application ml:visible_name="Gestures"
+               ml:application_type="untrusted"
+               ml:sdk_version="1.0">
+    <component ml:name="fullscreen"
+               ml:visible_name="Gestures"
+               ml:binary_name="bin/index.js"
+               ml:type="Fullscreen">
+      <mode ml:shareable="true"/>
+      <icon ml:model_folder=""
+            ml:portal_folder=""/>
+    </component>
+    <uses-privilege ml:name="GesturesConfig"/>
+    <uses-privilege ml:name="GesturesSubscribe"/>
+    <uses-privilege ml:name="LowLatencyLightwear"/>
+    <uses-privilege ml:name="MagicScript"/>
+  </application>
+</manifest>

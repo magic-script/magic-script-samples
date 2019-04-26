@@ -1,0 +1,4 @@
+<KaliObjectModel name="model_scene" version="1">
+    <TransformNode/>
+    <ModelNode scale="0.010000, 0.010000, 0.010000" res="Sphere" color="0.000000, 1.000000, 0.000000, 1.000000" name="Sphere" castShadow="false" receiveShadow="false"/>
+</KaliObjectModel>
