@@ -1,6 +1,6 @@
 # MagicScript Samples
 
-[![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/:license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
 
 Samples showing how to use MagicScript API
 
@@ -44,4 +44,4 @@ magic-script build -i
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
