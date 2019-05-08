@@ -4,7 +4,7 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
 export default {
-  external: ['uv', 'lumin'],
+  external: ['uv', 'lumin', 'egl', 'png', 'gl', 'jpeg', 'ssl'],
   input: 'src/main.js',
   preserveModules: true,
   output: {
