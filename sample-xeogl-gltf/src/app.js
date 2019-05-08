@@ -17,7 +17,7 @@ export class App extends LandscapeApp {
 }
 
 // The WebGlController fakes many browser APIs so we can use a browser webgl engine
-// like xeogl as-is using browser style APIs.s
+// like xeogl as-is using browser style APIs.
 window.onload = () => {
   var scene = new Scene({
     canvas: 'myCanvas',
