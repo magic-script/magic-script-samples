@@ -80,9 +80,8 @@ function cubeData () {
   var colors = [];
 
   for (var j = 0; j < 6; j++) {
-    var polygonColor = colorsOfFaces[j];
-
     for (var i = 0; i < 4; i++) {
+      var polygonColor = colorsOfFaces[(j + i) % 6];
       colors = colors.concat(polygonColor);
     }
   }
@@ -208,7 +207,7 @@ export class App extends LandscapeApp {
     // Tell WebGL to test the depth when drawing
     gl.enable(gl.DEPTH_TEST);
 
-    gl.clearColor(0.1, 0, 0, 1.0);
+    gl.clearColor(0.07, 0, 0.1, 1.0);
 
     this.model = mat4.create();
     this.view = mat4.create();
