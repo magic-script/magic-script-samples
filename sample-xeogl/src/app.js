@@ -1,6 +1,6 @@
 import { LandscapeApp } from 'lumin';
-import { WebGlController } from 'webgl-prism-controller';
-import { TorusGeometry, MetallicMaterial, Texture, Mesh } from 'xeogl';
+import { WebGlController } from 'magic-script-webgl-prism-controller';
+import { TorusGeometry, MetallicMaterial, Texture, Mesh, Scene, setDefaultScene } from 'xeogl';
 
 export class App extends LandscapeApp {
   init () {
@@ -19,6 +19,12 @@ export class App extends LandscapeApp {
 // like xeogl as-is using browser style APIs.
 window.onload = () => {
   print('Starting webgl code');
+  var scene = new Scene({
+    canvas: 'myCanvas',
+    transparent: true
+  });
+  setDefaultScene(scene);
+
   // Render a webgl scene using xeogl engine.
   var mesh = new Mesh({
     geometry: new TorusGeometry({
@@ -38,9 +44,8 @@ window.onload = () => {
     })
   });
 
-  mesh.scene.webgl2 = true;
-  mesh.scene.camera.eye = [0, 0, -4];
-  mesh.scene.on('tick', function () {
-    mesh.scene.camera.orbitYaw(0.4);
+  scene.camera.eye = [0, 0, -4];
+  scene.on('tick', function () {
+    scene.camera.orbitYaw(0.4);
   });
 };

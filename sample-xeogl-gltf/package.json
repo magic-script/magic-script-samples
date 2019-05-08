@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "magic-script-polyfills": "^2.1.0",
-    "webgl-prism-controller": "^1.1.0",
+    "magic-script-webgl-prism-controller": "^2.0.0",
     "xeogl": "^0.9.0",
     "xeogl-gltf-model": "^1.0.0"
   }

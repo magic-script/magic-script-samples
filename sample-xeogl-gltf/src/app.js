@@ -1,5 +1,5 @@
 import { LandscapeApp } from 'lumin';
-import { WebGlController } from 'webgl-prism-controller';
+import { WebGlController } from 'magic-script-webgl-prism-controller';
 import { ReflectionMap, Scene, setDefaultScene } from 'xeogl';
 import { GLTFModel } from 'xeogl-gltf-model';
 
