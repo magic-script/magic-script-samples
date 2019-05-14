@@ -1,7 +1,7 @@
 # External Package Sample
 
 Sample demoing external package inclusion.
-It shows how [Lodash](https://lodash.com/) and [Underscore](https://underscorejs.org/) could be used togeher with UiText. 
+It shows how [Lodash](https://lodash.com/) and [Underscore](https://underscorejs.org/) could be used together with UiText. 
 
 ## Usage
 
