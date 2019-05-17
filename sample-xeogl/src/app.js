@@ -6,7 +6,7 @@ export class App extends LandscapeApp {
   init () {
     print('Creating Lumin Runtime Prism and Quad Node');
     // Create a new prism that's half a meter squared.
-    let prism = this.requestNewPrism([0.5, 0.5, 0.1]);
+    let prism = this.requestNewPrism([0.5, 0.5, 0.02]);
 
     // Set a custom prism controller to handle the rest.
     prism.setPrismController(new WebGlController());
