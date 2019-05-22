@@ -1,0 +1,1 @@
+export { default as TextSlider } from './text-slider.js';
