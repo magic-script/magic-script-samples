@@ -1,2 +1,2 @@
-# mxs-jsx-demo
-Demo app using magic-script-components
+# sample-components
+sample app using magic-script-components
