@@ -1,2 +1,2 @@
 # Purpose
-Demonstrate how to create custom React component (prefab) which can be reused.
+Demonstrate how to create a custom React component (prefab) which can be reused.
