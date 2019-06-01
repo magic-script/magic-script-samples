@@ -1,6 +1,6 @@
 import gl from 'gl';
 import egl from 'egl';
-import { ExclusiveRender, LandscapeApp, FPS_DELTA } from 'lumin';
+import { ExclusiveRender, ImmersiveApp, FPS_DELTA } from 'lumin';
 import * as mat4 from 'gl-matrix/esm/mat4.js';
 
 function makeProgram (vs, fs) {
@@ -164,7 +164,7 @@ function initGL () {
   return { context, fs, vs, program, positions, colors, elements };
 }
 
-export class App extends LandscapeApp {
+export class App extends ImmersiveApp {
   init () {
     this.setEventSleepTime(FPS_DELTA); // make this a FPS APS
 
@@ -178,7 +178,7 @@ export class App extends LandscapeApp {
 
     let options = new ExclusiveRender.ClientOptions();
 
-    let exclusive = this.exclusive = this.startExclusiveModeGL(options, context, prism.getPrismId());
+    let exclusive = this.exclusive = this.startExclusiveModeGL(options, context);
     print('exclusive started', exclusive);
 
     this.info = new ExclusiveRender.FrameInfo();

@@ -1,22 +1,20 @@
 <manifest xmlns:ml="magicleap"
-          ml:package="com.magicscript.sample.exclusive"
+          ml:package="com.magicscript.sample.exclusive2"
           ml:version_name="0.0.1"
           ml:version_code="1">
   <application ml:visible_name="Exclusive Sample"
-               ml:application_type="trusted"
+               ml:application_type="untrusted"
                ml:sdk_version="1.0">
-    <component ml:name=".universe"
+    <component ml:name=".fullscreen"
                ml:visible_name="Exclusive Sample"
                ml:binary_name="bin/index.js"
-               ml:type="Universe">
+               ml:type="Fullscreen">
       <mode ml:shareable="true"/>
       <icon ml:model_folder=""
             ml:portal_folder=""/>
     </component>
     <uses-privilege ml:name="CopresenceAccess"/>
-    <uses-privilege ml:name="VolumeRelativeVolume"/>
     <uses-privilege ml:name="LowLatencyLightwear"/>
-    <uses-privilege ml:name="UniverseExclusiveMode"/>
     <uses-privilege ml:name="MagicScript"/>
   </application>
 </manifest>
