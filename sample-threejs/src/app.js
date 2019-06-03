@@ -2,20 +2,14 @@ import { LandscapeApp, ViewMode } from 'lumin';
 import { WebGlController } from 'magic-script-webgl-prism-controller';
 import {
   ArrayCamera,
-  DoubleSide,
-  Group,
-  LineBasicMaterial,
-  LineSegments,
   Mesh,
-  MeshPhongMaterial,
   PerspectiveCamera,
-  PointLight,
   Scene,
-  TorusGeometry,
   Vector4,
-  WebGLRenderer
+  WebGLRenderer,
+  TorusKnotBufferGeometry,
+  MeshNormalMaterial
 } from 'three';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 
 export class App extends LandscapeApp {
   init () {
@@ -62,51 +56,21 @@ window.onload = () => {
   var renderer = new WebGLRenderer({ antialias: true });
   renderer.setPixelRatio(window.devicePixelRatio);
   renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setClearColor(0x000000, 1);
+  // renderer.setClearColor(0x000000, 1);
   document.body.appendChild(renderer.domElement);
 
-  var lights = [];
-  lights[ 0 ] = new PointLight(0xffffff, 1, 0);
-  lights[ 1 ] = new PointLight(0xffffff, 1, 0);
-  lights[ 2 ] = new PointLight(0xffffff, 1, 0);
+  var geometry = new TorusKnotBufferGeometry(1, 0.3, 256, 32);
+  var material = new MeshNormalMaterial();
+  var torusKnot = new Mesh(geometry, material);
 
-  lights[ 0 ].position.set(0, 20, 0);
-  lights[ 1 ].position.set(10, 20, 10);
-  lights[ 2 ].position.set(-10, -20, -10);
-
-  scene.add(lights[ 0 ]);
-  scene.add(lights[ 1 ]);
-  scene.add(lights[ 2 ]);
-
-  var helmet;
-  var loader = new GLTFLoader();
-  loader.load('res/DamagedHelmet/glTF/DamagedHelmet.gltf', function (gltf) {
-    helmet = gltf.scene;
-    scene.add(gltf.scene);
-  }, undefined, function (error) {
-    print('Error', error);
-  });
-
-  var group = new Group();
-
-  var geometry = new TorusGeometry(2, 0.5, 16, 100);
-
-  var lineMaterial = new LineBasicMaterial({ color: 0xffffff, transparent: true, opacity: 0.5 });
-  var meshMaterial = new MeshPhongMaterial({ color: 0x156289, emissive: 0x072534, side: DoubleSide, flatShading: true });
-
-  group.add(new LineSegments(geometry, lineMaterial));
-  group.add(new Mesh(geometry, meshMaterial));
-
-  scene.add(group);
+  scene.add(torusKnot);
 
   var render = function (time) {
     window.requestAnimationFrame(render);
 
-    group.rotation.x += 0.005;
-    group.rotation.y += 0.005;
-    if (helmet) {
-      helmet.rotation.y = time / 1000;
-    }
+    torusKnot.rotation.x = time * 0.0003;
+    torusKnot.rotation.y = time * 0.0004;
+    torusKnot.rotation.z = time * 0.0002;
 
     renderer.render(scene, camera);
   };
