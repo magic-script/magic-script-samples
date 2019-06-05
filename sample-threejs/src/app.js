@@ -1,4 +1,4 @@
-import { LandscapeApp, ViewMode, EyeTrackingEventData } from 'lumin';
+import { LandscapeApp, ViewMode, EyeTrackingEventData, ui } from 'lumin';
 import { WebGlController } from 'magic-script-webgl-prism-controller';
 import {
   ArrayCamera,
@@ -31,7 +31,7 @@ export class App extends LandscapeApp {
     console.log('Creating Lumin Runtime Prism and Quad Node');
     // Create a new prism that's half a meter squared.
     let prism = this.requestNewPrism([0.5, 0.5, 0.5]);
-
+    ui.Cursor.SetEnabled(prism, false);
     // Set a custom prism controller to handle the rest.
     let controller = window.controller = new WebGlController();
     prism.setPrismController(controller);
@@ -51,9 +51,10 @@ export class App extends LandscapeApp {
     let pr = new Vector4(...evt.getEyeTrackingRightEyePosition(), 1).applyMatrix4(worldToPrism);
     let up = new Vector3(...this.getHeadposeWorldUpVector());
     let center = new Vector3(0, 0, 0);
-    let L = new Matrix4().lookAt(pl, center, up);
-    let T = new Matrix4().makeTranslation(-0.25, -0.25, 0);
-    let quadToPrism = new Matrix4().multiplyMatrices(L, T);
+    let quadToPrism = new Matrix4()
+      .multiply(new Matrix4().lookAt(pl, center, up))
+      .multiply(new Matrix4().makeTranslation(-0.25, -0.25, 0))
+      .multiply(new Matrix4().makeScale(0.5, 0.5, 0.5));
     let look = quadToPrism.toArray();
     look = [
       look.slice(0, 4),
@@ -74,7 +75,7 @@ export class App extends LandscapeApp {
     let pc = new Vector4(...vertices[3], 1).applyMatrix4(quadToPrism);
 
     const positions = [pl, pr];
-    const n = 0.0025;
+    const n = 0.37;
     const f = 100;
 
     for (let i = 0; i < 2; i++) {
