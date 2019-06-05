@@ -43,17 +43,28 @@ export class App extends LandscapeApp {
   }
   eventListener (evt) {
     if (!(evt instanceof EyeTrackingEventData)) { return true; }
-    // let head = new Vector3(...this.getHeadposeWorldPosition());
-    // pl = head;
-    // pr = head;
-    // console.log('lefttoright', new Vector3().subVectors(pl, pr));
-    // console.log('headtoleft', new Vector3().subVectors(pl, head));
-    // console.log('headtoright', new Vector3().subVectors(pr, head));
 
-    // Get quad vertices in world coordinates.
-    const quadToPrism = new Matrix4().fromArray(this.quad.getCurrentPrismTransform().flat());
+    // Get eye positions in prism coordinates
     const prismToWorld = new Matrix4().fromArray(this.prism.getTransform().flat());
     const worldToPrism = new Matrix4().getInverse(prismToWorld);
+    let pl = new Vector4(...evt.getEyeTrackingLeftEyePosition(), 1).applyMatrix4(worldToPrism);
+    let pr = new Vector4(...evt.getEyeTrackingRightEyePosition(), 1).applyMatrix4(worldToPrism);
+    let up = new Vector3(...this.getHeadposeWorldUpVector());
+    let center = new Vector3(0, 0, 0);
+    let L = new Matrix4().lookAt(pl, center, up);
+    let T = new Matrix4().makeTranslation(-0.25, -0.25, 0);
+    let quadToPrism = new Matrix4().multiplyMatrices(L, T);
+    let look = quadToPrism.toArray();
+    look = [
+      look.slice(0, 4),
+      look.slice(4, 8),
+      look.slice(8, 12),
+      look.slice(12, 16)
+    ];
+    console.log(look);
+    this.quad.setLocalTransform(look);
+    // Get quad vertices in prism coordinates
+    // const quadToPrism = new Matrix4().fromArray(this.quad.getCurrentPrismTransform().flat());
     let vertices = this.quad.getVertices();
     // bottom-left
     let pa = new Vector4(...vertices[0], 1).applyMatrix4(quadToPrism);
@@ -61,15 +72,6 @@ export class App extends LandscapeApp {
     let pb = new Vector4(...vertices[1], 1).applyMatrix4(quadToPrism);
     // bottom-right
     let pc = new Vector4(...vertices[3], 1).applyMatrix4(quadToPrism);
-
-    let pl = new Vector4(...evt.getEyeTrackingLeftEyePosition(), 1).applyMatrix4(worldToPrism);
-    let pr = new Vector4(...evt.getEyeTrackingRightEyePosition(), 1).applyMatrix4(worldToPrism);
-
-    // console.log(pa, pb, pc);
-    let vr = new Vector3().subVectors(pb, pa);
-    let vu = new Vector3().subVectors(pb, pa);
-    console.log(vr.length(), vu.length());
-    console.log('ipd', new Vector3().subVectors(pl, pr).length());
 
     const positions = [pl, pr];
     const n = 0.0025;
