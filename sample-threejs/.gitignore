@@ -3,3 +3,4 @@
 /bin/
 !/bin/index.js
 /digest.sha512.signed
+/.vscode/
