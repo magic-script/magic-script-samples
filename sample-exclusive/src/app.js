@@ -135,10 +135,10 @@ function initGL () {
     varying vec4 vColor;
 
     void main() {
-      
+
       // Pass the color down to the fragment shader
       vColor = color;
-      
+
       // Read the multiplication in reverse order, the point is taken from
       // the original model space and moved into world space. It is then
       // projected into clip space as a homogeneous point. Generally the
@@ -150,7 +150,7 @@ function initGL () {
   let fs = frag`
     precision mediump float;
     varying vec4 vColor;
-    
+
     void main() {
       gl_FragColor = vColor;
       // gl_FragColor = vec4(1.0, 0.0, 0.0, 1.0);
@@ -241,8 +241,8 @@ export class App extends ImmersiveApp {
     draw(1);
 
     function draw (eye) {
-      mat4.copy(projection, info.getProj(eye).flat());
-      mat4.copy(view, info.getView(eye).flat());
+      mat4.copy(projection, info.getProj(eye));
+      mat4.copy(view, info.getView(eye));
 
       gl.uniformMatrix4fv(locations.model, false, model);
       gl.uniformMatrix4fv(locations.view, false, view);
