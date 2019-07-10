@@ -1,7 +1,10 @@
+import React from 'react';
+
 function Square(props) {
+  const color = props.value === 'X' ? [1, 0.1, 0.1, 1] : [0.1, 0.1, 1, 1];
   return (
-    <button className="square" onClick={props.onClick}>
-      {props.value}
+    <button width={0.15} height={0.15} textColor={color} roundness={0.1} onClick={props.onClick}>
+      {props.value || ''}
     </button>
   );
 }
@@ -10,36 +13,23 @@ class Board extends React.Component {
   renderSquare(i) {
     return (
       <Square
+        key={i}
         value={this.props.squares[i]}
-        onClick={() => this.props.onClick(i)}
+        onClick={event => this.props.onClick(i)}
       />
     );
   }
 
   render() {
-    return (
-      <div>
-        <div className="board-row">
-          {this.renderSquare(0)}
-          {this.renderSquare(1)}
-          {this.renderSquare(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(3)}
-          {this.renderSquare(4)}
-          {this.renderSquare(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSquare(6)}
-          {this.renderSquare(7)}
-          {this.renderSquare(8)}
-        </div>
-      </div>
-    );
+    const items = [];
+    for (let i = 0; i < 9; i++) {
+      items.push(this.renderSquare(i));
+    }
+    return <gridLayout rows={3} columns={3} width={0.5} height={0.5}>{items}</gridLayout>;
   }
 }
 
-class Game extends React.Component {
+export class Game extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -89,9 +79,11 @@ class Game extends React.Component {
         'Go to move #' + move :
         'Go to game start';
       return (
-        <li key={move}>
-          <button onClick={() => this.jumpTo(move)}>{desc}</button>
-        </li>
+        <listViewItem key={move}>
+          <button roundness={0.1} textSize={0.03} onClick={event => this.jumpTo(move)}>
+            {desc}
+          </button>
+        </listViewItem>
       );
     });
 
@@ -103,25 +95,26 @@ class Game extends React.Component {
     }
 
     return (
-      <div className="game">
-        <div className="game-board">
+      <view name="game">
+        <view name="game-board" localPosition={[-0.5, 0.5, 0]}>
           <Board
             squares={current.squares}
             onClick={i => this.handleClick(i)}
           />
-        </div>
-        <div className="game-info">
-          <div>{status}</div>
-          <ol>{moves}</ol>
-        </div>
-      </div>
+        </view>
+        <view name="game-info" localPosition={[0, 0.5, 0]}>
+          <text textSize={0.05} alignment="top-left">{status}</text>
+          <listView width={0.5} height={0.42} localPosition={[0, -0.08, 0]}>{moves}</listView>
+        </view>
+      </view>
     );
   }
 }
 
 // ========================================
 
-ReactDOM.render(<Game />, document.getElementById("root"));
+// in main.js:
+// mxs.bootstrap(<Game type='landscape' volumeSize={[1,1,1]} caption='Tic Tac Toe 123' counter={0} />);
 
 function calculateWinner(squares) {
   const lines = [
