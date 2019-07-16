@@ -3,17 +3,32 @@ import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
-export default {
-  external: ['uv', 'lumin', 'ssl'],
-  input: 'src/main.js',
-  preserveModules: true,
-  output: {
-    dir: 'bin',
-    format: 'es'
-  },
+const common = {
+  external: ['uv', 'lumin', 'ssl', 'jpeg', 'png', 'gl'],
   plugins: [
-    babel({ exclude: "node_modules/**" }),
+    babel({ exclude: 'node_modules/**' }),
     resolve(),
-    commonjs()
+    commonjs(),
   ]
 };
+
+export default [
+  {
+    ...common,
+    input: 'src/main.js',
+    preserveModules: true,
+    output: {
+      dir: 'bin',
+      format: 'es',
+    },
+  },
+  {
+    ...common,
+    input: 'src/app.js',
+    output: {
+      file: 'bin/bundle.js',
+      format: 'iife',
+      name: 'mxs_bundle',
+    },
+  },
+];
