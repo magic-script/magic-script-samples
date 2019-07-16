@@ -5,9 +5,9 @@ import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 
 const common = {
-  external: ['uv', 'lumin', 'ssl', "jpeg", 'png', 'gl'],
+  external: ['uv', 'lumin', 'ssl', 'jpeg', 'png', 'gl'],
   plugins: [
-    babel({ exclude: "node_modules/**" }),
+    babel({ exclude: 'node_modules/**' }),
     resolve(),
     commonjs(),
   ]
