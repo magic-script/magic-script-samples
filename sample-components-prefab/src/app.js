@@ -1,7 +1,7 @@
 import React from 'react';
 import { TextSlider } from './components/index.js';
 
-export class MyApp extends React.Component {
+export default class MyApp extends React.Component {
   constructor(props) {
     super(props);
 
