@@ -13,5 +13,6 @@
             ml:portal_folder=""/>
     </component>
     <uses-privilege ml:name="MagicScript"/>
+    <uses-privilege ml:name="Internet"/>
   </application>
 </manifest>
