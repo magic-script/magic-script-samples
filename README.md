@@ -15,7 +15,17 @@ You will need:
 ## Usage
 
 1. clone this repo
+
+```sh
+git clone https://github.com/magic-script/magic-script-samples.git
+```
+
 2. cd to directory of a sample you want to build
+
+```sh
+cd magic-script-samples
+```
+
 3. build the app and install it on device
 
 ```sh
