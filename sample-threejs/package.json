@@ -1,0 +1,25 @@
+{
+  "scripts": {
+    "build": "rollup -c",
+    "start": "magic-script run"
+  },
+  "private": true,
+  "devDependencies": {
+    "eslint-config-semistandard": "^13.0.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-node": "^8.0.1",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "rollup": "^1.1.2",
+    "rollup-plugin-commonjs": "^10.0.0",
+    "rollup-plugin-node-resolve": "^4.0.0",
+    "semistandard": "^13.0.1"
+  },
+  "dependencies": {
+    "gl-matrix": "^3.0.0",
+    "magic-script-polyfills": "^2.1.0",
+    "magic-script-webgl-prism-controller": "^2.0.0",
+    "three": "^0.104.0"
+  }
+}
