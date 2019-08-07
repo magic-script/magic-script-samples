@@ -10,7 +10,7 @@ You will need:
 
 1. [ML1 hardware](https://www.magicleap.com/magic-leap-one) to run these samples
 2. [ML SDK](https://creator.magicleap.com/downloads/lumin-sdk/overview) installed to build the samples
-3. [magic-script CLI](https://www.npmjs.com/package/magic-script) tool instlled to build and run the samples
+3. [magic-script CLI](https://www.npmjs.com/package/magic-script-cli) tool instlled to build and run the samples
 
 ## Usage
 
