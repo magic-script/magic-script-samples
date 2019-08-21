@@ -1,4 +1,3 @@
-#!/system/bin/script/mxs
 
 import { App } from "./App.js";
 

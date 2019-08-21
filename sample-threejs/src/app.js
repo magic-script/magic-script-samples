@@ -36,6 +36,7 @@ export class App extends LandscapeApp {
     let controller = window.controller = new WebGlController();
     prism.setPrismController(controller);
     this.eyeTracker = prism.retainEyeTrackingUpdates();
+    this.headTracker = prism.retainHeadposeUpdates();
     this.prism = prism;
     this.quad = controller.quad;
 
@@ -45,23 +46,23 @@ export class App extends LandscapeApp {
     if (!(evt instanceof EyeTrackingEventData)) { return true; }
 
     // Get eye positions in prism coordinates
-    const prismToWorld = new Matrix4().fromArray(this.prism.getTransform().flat());
+    const prismToWorld = new Matrix4().fromArray(this.prism.getTransform());
     const worldToPrism = new Matrix4().getInverse(prismToWorld);
     let pl = new Vector4(...evt.getEyeTrackingLeftEyePosition(), 1).applyMatrix4(worldToPrism);
     let pr = new Vector4(...evt.getEyeTrackingRightEyePosition(), 1).applyMatrix4(worldToPrism);
     let up = new Vector3(...this.getHeadposeWorldUpVector());
+    // Fall back to headpose when eye tracking isn't available
+    if (pl.x === 0) {
+      let head = new Vector4(...evt.getHeadposePosition(), 1).applyMatrix4(worldToPrism);
+      pl = head;
+      pr = head;
+    }
     let center = new Vector3(0, 0, 0);
     let quadToPrism = new Matrix4()
       .multiply(new Matrix4().lookAt(pl, center, up))
       .multiply(new Matrix4().makeTranslation(-0.25, -0.25, 0))
       .multiply(new Matrix4().makeScale(0.5, 0.5, 0.5));
     let look = quadToPrism.toArray();
-    look = [
-      look.slice(0, 4),
-      look.slice(4, 8),
-      look.slice(8, 12),
-      look.slice(12, 16)
-    ];
     console.log(look);
     this.quad.setLocalTransform(look);
     // Get quad vertices in prism coordinates

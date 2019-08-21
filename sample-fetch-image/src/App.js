@@ -1,21 +1,15 @@
-import { LandscapeApp } from "lumin";
 import { makeText } from "./text.js";
 import { makeButton } from "./button.js";
 
-export class App extends LandscapeApp {
-  init() {
-    let prism = this.requestNewPrism([0.7, 0.5, 0.2]);
-    // Add text label
-    let text = makeText(prism);
-    prism.getRootNode().addChild(text);
-    text.setLocalPosition([0, 0.2, 0]);
-    // Add button
-    let button = makeButton(this, prism, text);
-    button.setLocalPosition([0, -0.2, 0]);
-    prism.getRootNode().addChild(button);
-    return 0;
-  }
-  updateLoop(delta) {
-    return true;
-  }
+export default async function start (app) {
+  let prism = app.requestNewPrism([0.7, 0.5, 0.2]);
+  // Add text label
+  let text = makeText(prism);
+  prism.getRootNode().addChild(text);
+  text.setLocalPosition([0, 0.2, 0]);
+  // Add button
+  let button = makeButton(app, prism, text);
+  button.setLocalPosition([0, -0.2, 0]);
+  prism.getRootNode().addChild(button);
+  return prism;
 }

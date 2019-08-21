@@ -6,7 +6,7 @@ export function makePage(prism, text, name) {
     UiText,
     EclipseLabelType,
     Alignment,
-    HorizontalAlignment,
+    HorizontalTextAlignment,
     UiImage
   } = ui;
   // Create panel
@@ -14,7 +14,7 @@ export function makePage(prism, text, name) {
   // Add text label
   let label = UiText.CreateEclipseLabel(prism, text, EclipseLabelType.kB1);
   label.setAlignment(Alignment.CENTER_CENTER);
-  label.setTextAlignment(HorizontalAlignment.kCenter);
+  label.setTextAlignment(HorizontalTextAlignment.kCenter);
   panel.addChild(label);
   // Add image
   let image = UiImage.Create(prism, name, 0.4096, 0.3072);

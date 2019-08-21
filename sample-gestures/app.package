@@ -1,0 +1,5 @@
+DATAS = res/ : res/ \
+        "digest.sha512.signed" : "." \
+        "bin/" : "bin/"
+OPTIONS = package/minApiLevel/2
+OUTNAME=app

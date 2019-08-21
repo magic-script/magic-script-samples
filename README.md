@@ -1,5 +1,7 @@
 # MagicScript Samples
 
+[![License](https://img.shields.io/:license-Apache%202.0-blue.svg?style=flat-square)](LICENSE)
+
 Samples showing how to use MagicScript API
 
 ## Dependencies
@@ -8,28 +10,32 @@ You will need:
 
 1. [ML1 hardware](https://www.magicleap.com/magic-leap-one) to run these samples
 2. [ML SDK](https://creator.magicleap.com/downloads/lumin-sdk/overview) installed to build the samples
-3. [magic-script CLI](https://www.npmjs.com/package/magic-script) tool instlled to build and run the samples
+3. [magic-script CLI](https://www.npmjs.com/package/magic-script-cli) tool installed to build and run the samples
 
 ## Usage
 
-1. clone this repo
-2. cd to directory of a sample you want to build
-3. install npm dependencies
+1. Clone this repo.
 
 ```sh
-npm install
+git clone https://github.com/magic-script/magic-script-samples.git
 ```
 
-or
+2. Enter the directory of a sample you want to build.
 
 ```sh
-yarn
+cd magic-script-samples/sample-model
 ```
 
-4. build the app and install it on device
+3. Build the app and install it on device.
 
 ```sh
 magic-script build -i
+```
+
+4. Run the app on the device.
+
+```sh
+magic-script run
 ```
 
 ## Samples included
@@ -42,4 +48,4 @@ magic-script build -i
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+This project is licensed under the Apache 2.0 License - see the [LICENSE](LICENSE) file for details
