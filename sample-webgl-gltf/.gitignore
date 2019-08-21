@@ -1,5 +1,0 @@
-/.out/
-/node_modules/
-/bin/
-!/bin/index.js
-/digest.sha512.signed
