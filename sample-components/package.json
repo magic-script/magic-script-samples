@@ -20,7 +20,7 @@
     "semistandard": "^13.0.1"
   },
   "dependencies": {
-    "magic-script-components": "^0.0.8",
+    "magic-script-components": "0.0.8",
     "magic-script-polyfills": "^2.0.0"
   }
 }
