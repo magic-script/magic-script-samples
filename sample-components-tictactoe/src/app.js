@@ -1,41 +1,42 @@
 import React from 'react';
 
-function Square(props) {
+// Component that renders a single square in the Tic Tac Toe board
+function Square (props) {
   const color = props.value === 'X' ? [1, 0.1, 0.1, 1] : [0.1, 0.1, 1, 1];
   return (
-    <button width={0.15} height={0.15} textColor={color} roundness={0.1} onClick={props.onClick}>
+    <button name={props.name} width={0.15} height={0.15} textColor={color} roundness={0.1} onClick={props.onClick}>
       {props.value || ''}
     </button>
   );
 }
 
-class Board extends React.Component {
-  renderSquare(i) {
+// Component that renders the full Tic Tac Toe board
+function Board (props) {
+  const renderSquare = (props, i) => {
     return (
       <Square
         key={i}
-        value={this.props.squares[i]}
-        onClick={event => this.props.onClick(i)}
+        name={'square-' + i}
+        value={props.squares[i]}
+        onClick={event => props.onClick(i)}
       />
     );
-  }
+  };
 
-  render() {
-    const items = [];
-    for (let i = 0; i < 9; i++) {
-      items.push(this.renderSquare(i));
-    }
-    return <gridLayout rows={3} columns={3} width={0.5} height={0.5}>{items}</gridLayout>;
+  const items = [];
+  for (let i = 0; i < 9; i++) {
+    items.push(renderSquare(props, i));
   }
+  return <gridLayout rows={3} columns={3} width={0.5} height={0.5}>{items}</gridLayout>;
 }
 
 export class Game extends React.Component {
-  constructor(props) {
+  constructor (props) {
     super(props);
     this.state = {
       history: [
         {
-          squares: Array(9).fill(null)
+          squares: Array(9).fill('')
         }
       ],
       stepNumber: 0,
@@ -43,14 +44,14 @@ export class Game extends React.Component {
     };
   }
 
-  handleClick(i) {
+  handleClick (i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? "X" : "O";
+    squares[i] = this.state.xIsNext ? 'X' : 'O';
     this.setState({
       history: history.concat([
         {
@@ -62,22 +63,20 @@ export class Game extends React.Component {
     });
   }
 
-  jumpTo(step) {
+  jumpTo (step) {
     this.setState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
     });
   }
 
-  render() {
+  render () {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
-      const desc = move ?
-        'Go to move #' + move :
-        'Go to game start';
+      const desc = move ? ('Go to move #' + move) : 'Go to game start';
       return (
         <listViewItem key={move}>
           <button roundness={0.1} textSize={0.03} onClick={event => this.jumpTo(move)}>
@@ -89,9 +88,9 @@ export class Game extends React.Component {
 
     let status;
     if (winner) {
-      status = "Winner: " + winner;
+      status = 'Winner: ' + winner;
     } else {
-      status = "Next player: " + (this.state.xIsNext ? "X" : "O");
+      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
     }
 
     return (
@@ -111,12 +110,7 @@ export class Game extends React.Component {
   }
 }
 
-// ========================================
-
-// in main.js:
-// mxs.bootstrap(<Game type='landscape' volumeSize={[1,1,1]} caption='Tic Tac Toe 123' counter={0} />);
-
-function calculateWinner(squares) {
+function calculateWinner (squares) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
