@@ -1,4 +1,6 @@
-import { ImmersiveApp, ui, PrismType, input, color, HandGestureFlags, GestureInputEventData} from "lumin";
+import { ImmersiveApp, ui, PrismType, input, color, HandGestureFlags } from "lumin";
+
+import { GestureInputEventData } from "lumin";
 
 import { mat4, vec3 } from "gl-matrix";
 
@@ -36,7 +38,7 @@ export class App extends ImmersiveApp
 
     this.trackedGestures = HandGestureFlags.kHandC.value | HandGestureFlags.kHandFinger.value | HandGestureFlags.kHandFist.value |
                            HandGestureFlags.kHandPinch.value | HandGestureFlags.kHandThumb.value | HandGestureFlags.kHandL.value |
-                           HandGestureFlags.kHandOpenHandBack.value | HandGestureFlags.kHandOk.value;
+                           HandGestureFlags.kHandOpenHandBack.value | HandGestureFlags.kHandOk.value | HandGestureFlags.kHandNoPose.value;
 
 
     prism.startTrackHandGesture(this.trackedGestures);
@@ -255,19 +257,7 @@ export class App extends ImmersiveApp
   {
     //debugger;
     let transform = this.getPrismTransform(this.prism);
-    let realTransform = new Float32Array(16);
-    let index = 0;
-
-    for (let i = 0; i < 4; ++i)
-    {
-      for (let j = 0; j < 4; ++j)
-      {
-        realTransform[index] = transform[i][j];
-        ++index;
-      }
-    }
-
-    let inverse = mat4.invert([], realTransform);
+    let inverse = mat4.invert([], transform);
 
     for (var k in this.leftHand.keypointMap)
     {
@@ -281,19 +271,7 @@ export class App extends ImmersiveApp
   {
     //debugger;
     let transform = this.getPrismTransform(this.prism);
-    let realTransform = new Float32Array(16);
-    let index = 0;
-
-    for (let i = 0; i < 4; ++i)
-    {
-      for (let j = 0; j < 4; ++j)
-      {
-        realTransform[index] = transform[i][j];
-        ++index;
-      }
-    }
-
-    let inverse = mat4.invert([], realTransform);
+    let inverse = mat4.invert([], transform);
 
     for (var k in this.rightHand.keypointMap)
     {
@@ -458,21 +436,21 @@ export class App extends ImmersiveApp
     switch(gesture)
     {
       case input.GestureType.HAND_C:
-        return HandGestureFlags.kHandC;
+        return HandGestureFlags.kHandC.value;
       case input.GestureType.HAND_FINGER:
-        return HandGestureFlags.kHandFinger;
+        return HandGestureFlags.kHandFinger.value;
       case input.GestureType.HAND_FIST:
-        return HandGestureFlags.kHandFist;
+        return HandGestureFlags.kHandFist.value;
       case input.GestureType.HAND_L:
-        return HandGestureFlags.kHandL;
+        return HandGestureFlags.kHandL.value;
       case input.GestureType.HAND_OK:
-        return HandGestureFlags.kHandOk;
+        return HandGestureFlags.kHandOk.value;
       case input.GestureType.HAND_OPENHANDBACK:
-        return HandGestureFlags.kHandOpenHandBack;
+        return HandGestureFlags.kHandOpenHandBack.value;
       case input.GestureType.HAND_PINCH:
-        return HandGestureFlags.kHandPinch;
+        return HandGestureFlags.kHandPinch.value;
       case input.GestureType.HAND_THUMB:
-        return HandGestureFlags.kHandThumb;
+        return HandGestureFlags.kHandThumb.value;
       default:
         return 0;
     }
