@@ -3,7 +3,6 @@ import { SceneManager } from "./SceneManager.js"
 
 import { EyeFixation } from "./EyeFixation.js"
 import { EyeOrientation } from "./EyeOrientation.js"
-import { EyeFixationComfort } from "./EyeFixationComfort.js"
 
 export class App extends LandscapeApp {
   init() {
@@ -13,7 +12,6 @@ export class App extends LandscapeApp {
     let sceneManager = new SceneManager(prism);
     sceneManager.addScene(new EyeFixation("EyeFixation"));
     sceneManager.addScene(new EyeOrientation("EyeOrientation"));
-    sceneManager.addScene(new EyeFixationComfort("EyeFixationComfort"));
     return 0;
   }
   updateLoop(delta) {
