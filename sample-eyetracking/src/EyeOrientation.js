@@ -68,7 +68,7 @@ export class EyeOrientation extends PrismController {
         if (event instanceof EyeTrackingEventData)
         {
             // inverse prism transformation
-            let inverse_prism_matrix = mat4.invert([], Helpers.toVec16(this.getPrism().getTransform()));
+            let inverse_prism_matrix = mat4.invert([], this.getPrism().getTransform());
             let inverse_prism_rot = quat.invert([], this.getPrism().getRotation());
 
             // left eye position

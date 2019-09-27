@@ -58,7 +58,7 @@ export class EyeFixation extends PrismController {
         if (event instanceof EyeTrackingEventData)
         {
             // inverse prism transformation
-            let inverse_prism_matrix = mat4.invert([], Helpers.toVec16(this.getPrism().getTransform()));
+            let inverse_prism_matrix = mat4.invert([], this.getPrism().getTransform());
 
             // fixation point in world coordinate
             let fixation = event.getEyeTrackingFixationPosition();
@@ -86,7 +86,7 @@ export class EyeFixation extends PrismController {
 
             if (z_constrained_pos)
             {
-            let fix = vec3.transformMat4([], z_constrained_pos, Helpers.toVec16(this.getPrism().getTransform()));
+            let fix = vec3.transformMat4([], z_constrained_pos, this.getPrism().getTransform());
 
             let focusedSphere = this.focusedSphere;
             let minDist = vec3.dist(focusedSphere.getWorldPosition(), fix);
