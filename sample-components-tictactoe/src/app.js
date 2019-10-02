@@ -3,13 +3,23 @@ import React from 'react';
 import firebase from 'firebase/app';
 import 'firebase/database';
 
+import {
+  Button,
+  GridLayout,
+  LinearLayout,
+  ListView,
+  ListViewItem,
+  Text,
+  View
+} from 'magic-script-components';
+
 // Component that renders a single square in the Tic Tac Toe board
 function Square (props) {
   const color = props.value === 'X' ? [1, 0.1, 0.1, 1] : [0.1, 0.1, 1, 1];
   return (
-    <button name={props.name} width={0.15} height={0.15} textColor={color} roundness={0.1} onClick={props.onClick}>
+    <Button name={props.name} width={0.15} height={0.15} textColor={color} roundness={0.1} onClick={props.onClick}>
       {props.value || ''}
-    </button>
+    </Button>
   );
 }
 
@@ -30,10 +40,52 @@ function Board (props) {
   for (let i = 0; i < 9; i++) {
     items.push(renderSquare(props, i));
   }
-  return <gridLayout rows={3} columns={3} width={0.5} height={0.5}>{items}</gridLayout>;
+  return <GridLayout rows={3} columns={3} width={0.5} height={0.5}>{items}</GridLayout>;
 }
 
-export class Game extends React.Component {
+// Component that renders current game status and history of moves
+function GameInfo (props) {
+  const current = props.history[props.stepNumber];
+  const winner = calculateWinner(current.squares);
+
+  const moves = props.history.map((step, move) => {
+    const desc = move
+      ? ('Go to move #' + move)
+      : 'Go to game start';
+    return (
+      <ListViewItem key={move}>
+        <Button roundness={0.1} textSize={0.03} onClick={event => props.onHistoryClick(move)}>
+          {desc}
+        </Button>
+      </ListViewItem>
+    );
+  });
+
+  let status;
+  if (winner) {
+    if (props.player === ' ') {
+      status = winner + ' Wins!';
+    } else {
+      status = (winner === props.player) ? 'You Win!' : 'You Lose!';
+    }
+  } else {
+    const nextPlayer = props.xIsNext ? 'X' : 'O';
+    status = 'Next player: ' + nextPlayer;
+    if (props.player !== ' ') {
+      status += (nextPlayer === props.player) ? ' (You)' : ' (Opponent)';
+    }
+  }
+
+  return (
+    <View>
+      <Text textSize={0.05} alignment="top-left">{status}</Text>
+      <ListView width={0.5} height={0.42} localPosition={[0, -0.08, 0]}>{moves}</ListView>
+    </View>
+  );
+}
+
+// The main gameplay component that renders the Tic Tac Toe board
+class Game extends React.Component {
   constructor (props) {
     super(props);
     this.state = {
@@ -77,6 +129,10 @@ export class Game extends React.Component {
     return firebase.database().ref('tic-tac-toe');
   }
 
+  updateState (partialNewState) {
+    this.setState(partialNewState, () => this.syncStateChange(this.state));
+  }
+
   syncStateChange (state) {
     this.dbref().set(state, (error) => {
       console.error('Error writing state update', error);
@@ -87,10 +143,14 @@ export class Game extends React.Component {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
+    const nextPlayer = this.state.xIsNext ? 'X' : 'O';
+    if (this.props.player !== ' ' && this.props.player !== nextPlayer) {
+      return;
+    }
     if (calculateWinner(squares) || squares[i]) {
       return;
     }
-    squares[i] = this.state.xIsNext ? 'X' : 'O';
+    squares[i] = nextPlayer;
     this.updateState({
       history: history.concat([
         {
@@ -100,10 +160,6 @@ export class Game extends React.Component {
       stepNumber: history.length,
       xIsNext: !this.state.xIsNext
     });
-  }
-
-  updateState (partialNewState) {
-    this.setState(partialNewState, () => this.syncStateChange(this.state));
   }
 
   jumpTo (step) {
@@ -116,40 +172,70 @@ export class Game extends React.Component {
   render () {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
-    const winner = calculateWinner(current.squares);
-
-    const moves = history.map((step, move) => {
-      const desc = move
-        ? ('Go to move #' + move)
-        : 'Go to game start';
-      return (
-        <listViewItem key={move}>
-          <button roundness={0.1} textSize={0.03} onClick={event => this.jumpTo(move)}>
-            {desc}
-          </button>
-        </listViewItem>
-      );
-    });
-
-    let status;
-    if (winner) {
-      status = 'Winner: ' + winner;
-    } else {
-      status = 'Next player: ' + (this.state.xIsNext ? 'X' : 'O');
-    }
 
     return (
-      <view name="game">
-        <view name="game-board" localPosition={[-0.5, 0.5, 0]}>
+      <View name="game">
+        <View name="game-board">
           <Board
             squares={current.squares}
             onClick={i => this.handleClick(i)}
           />
-        </view>
-        <view name="game-info" localPosition={[0, 0.5, 0]}>
-          <text textSize={0.05} alignment="top-left">{status}</text>
-          <listView width={0.5} height={0.42} localPosition={[0, -0.08, 0]}>{moves}</listView>
-        </view>
+        </View>
+        <View name="game-info" localPosition={[0.5, 0, 0]}>
+          <GameInfo
+            player={this.props.player}
+            history={history}
+            stepNumber={this.state.stepNumber}
+            xIsNext={this.state.xIsNext}
+            onHistoryClick={step => this.jumpTo(step)}
+          />
+        </View>
+      </View>
+    );
+  }
+}
+
+function PlayerChooser (props) {
+  return (
+    <LinearLayout width={0.5} height={0.5} orientation="vertical">
+      <text textSize={0.05} alignment="top-left">Choose a player:</text>
+      <Square
+        value='X'
+        name='ChoosePlayerX'
+        onClick={event => props.onClick('X')}
+      />
+      <Square
+        value='O'
+        name='ChoosePlayerO'
+        onClick={event => props.onClick('O')}
+      />
+      <Square
+        value=' '
+        name='ChoosePlayerBlank'
+        onClick={event => props.onClick(' ')}
+      />
+    </LinearLayout>
+  );
+}
+
+// Top-level application component -- renders either a player chooser or the game
+export class TicTacToeApp extends React.Component {
+  constructor (props) {
+    super(props);
+
+    this.state = { player: '?' };
+  }
+
+  onPlayerChosen (player) {
+    this.setState({ player: player });
+  }
+
+  render () {
+    return (
+      <view name="TicTacToe" localPosition={[-0.5, 0.5, 0]}>
+        { this.state.player === '?'
+          ? <PlayerChooser onClick={player => this.onPlayerChosen(player)}/>
+          : <Game player={this.state.player}/> }
       </view>
     );
   }
