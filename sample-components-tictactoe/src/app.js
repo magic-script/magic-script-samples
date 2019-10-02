@@ -2,7 +2,6 @@ import React from 'react';
 
 import firebase from 'firebase/app';
 import 'firebase/database';
-import 'firebase/firestore';
 
 // Component that renders a single square in the Tic Tac Toe board
 function Square (props) {
