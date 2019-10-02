@@ -76,7 +76,9 @@ export class Game extends React.Component {
     const winner = calculateWinner(current.squares);
 
     const moves = history.map((step, move) => {
-      const desc = move ? ('Go to move #' + move) : 'Go to game start';
+      const desc = move
+        ? ('Go to move #' + move)
+        : 'Go to game start';
       return (
         <listViewItem key={move}>
           <button roundness={0.1} textSize={0.03} onClick={event => this.jumpTo(move)}>
