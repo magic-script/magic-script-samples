@@ -1,5 +1,8 @@
 import React from 'react';
 
+import firebase from 'firebase/app';
+import 'firebase/database';
+
 // Component that renders a single square in the Tic Tac Toe board
 function Square (props) {
   const color = props.value === 'X' ? [1, 0.1, 0.1, 1] : [0.1, 0.1, 1, 1];
@@ -44,6 +47,42 @@ export class Game extends React.Component {
     };
   }
 
+  componentDidMount () {
+    this.initFirebase();
+    this.listenForCloudChanges();
+  }
+
+  initFirebase () {
+    // Copy from Firebase console
+    const firebaseConfig = {
+      apiKey: undefined,
+      authDomain: undefined,
+      databaseURL: undefined,
+      projectId: undefined,
+      storageBucket: undefined,
+      messagingSenderId: undefined,
+      appId: undefined
+    };
+
+    firebase.initializeApp(firebaseConfig);
+  }
+
+  listenForCloudChanges () {
+    this.dbref().on('value', snapshot => {
+      this.setState(snapshot.val());
+    });
+  }
+
+  dbref () {
+    return firebase.database().ref('tic-tac-toe');
+  }
+
+  syncStateChange (state) {
+    this.dbref().set(state, (error) => {
+      console.error('Error writing state update', error);
+    });
+  }
+
   handleClick (i) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
@@ -52,7 +91,7 @@ export class Game extends React.Component {
       return;
     }
     squares[i] = this.state.xIsNext ? 'X' : 'O';
-    this.setState({
+    this.updateState({
       history: history.concat([
         {
           squares: squares
@@ -63,8 +102,12 @@ export class Game extends React.Component {
     });
   }
 
+  updateState (partialNewState) {
+    this.setState(partialNewState, () => this.syncStateChange(this.state));
+  }
+
   jumpTo (step) {
-    this.setState({
+    this.updateState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
     });
