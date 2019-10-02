@@ -22,6 +22,7 @@
     "semistandard": "^13.0.1"
   },
   "dependencies": {
+    "eslint-plugin-react": "^7.15.1",
     "firebase": "^7.0.0",
     "magic-script-components": "2.0.0",
     "magic-script-components-lumin": "1.0.0",
