@@ -48,7 +48,7 @@ function GameInfo (props) {
   const current = props.history[props.stepNumber];
   const winner = calculateWinner(current.squares);
 
-  const moves = props.history.map((step, move) => {
+  let moves = props.history.map((step, move) => {
     const desc = move
       ? ('Go to move #' + move)
       : 'Go to game start';
@@ -60,6 +60,14 @@ function GameInfo (props) {
       </ListViewItem>
     );
   });
+  // Add element to start of list for choosing player again
+  moves.unshift(
+    <ListViewItem key={'ChoosePlayer'}>
+      <Button roundness={0.1} textSize={0.03} onClick={event => props.onPlayerChosen('?')}>
+        {'Choose Player'}
+      </Button>
+    </ListViewItem>
+  );
 
   let status;
   if (winner) {
@@ -100,29 +108,13 @@ class Game extends React.Component {
   }
 
   componentDidMount () {
-    this.initFirebase();
-    this.listenForCloudChanges();
-  }
-
-  initFirebase () {
-    // Copy from Firebase console
-    const firebaseConfig = {
-      apiKey: undefined,
-      authDomain: undefined,
-      databaseURL: undefined,
-      projectId: undefined,
-      storageBucket: undefined,
-      messagingSenderId: undefined,
-      appId: undefined
-    };
-
-    firebase.initializeApp(firebaseConfig);
-  }
-
-  listenForCloudChanges () {
     this.dbref().on('value', snapshot => {
       this.setState(snapshot.val());
     });
+  }
+
+  componentWillUnmount () {
+    this.dbref().off('value');
   }
 
   dbref () {
@@ -184,6 +176,7 @@ class Game extends React.Component {
         <View name="game-info" localPosition={[0.5, 0, 0]}>
           <GameInfo
             player={this.props.player}
+            onPlayerChosen={this.props.onPlayerChosen}
             history={history}
             stepNumber={this.state.stepNumber}
             xIsNext={this.state.xIsNext}
@@ -202,17 +195,17 @@ function PlayerChooser (props) {
       <Square
         value='X'
         name='ChoosePlayerX'
-        onClick={event => props.onClick('X')}
+        onClick={event => props.onPlayerChosen('X')}
       />
       <Square
         value='O'
         name='ChoosePlayerO'
-        onClick={event => props.onClick('O')}
+        onClick={event => props.onPlayerChosen('O')}
       />
       <Square
         value=' '
         name='ChoosePlayerBlank'
-        onClick={event => props.onClick(' ')}
+        onClick={event => props.onPlayerChosen(' ')}
       />
     </LinearLayout>
   );
@@ -224,6 +217,11 @@ export class TicTacToeApp extends React.Component {
     super(props);
 
     this.state = { player: '?' };
+    this.onPlayerChosen = this.onPlayerChosen.bind(this);
+  }
+
+  componentDidMount () {
+    this.initFirebase();
   }
 
   onPlayerChosen (player) {
@@ -233,11 +231,26 @@ export class TicTacToeApp extends React.Component {
   render () {
     return (
       <view name="TicTacToe" localPosition={[-0.5, 0.5, 0]}>
-        { this.state.player === '?'
-          ? <PlayerChooser onClick={player => this.onPlayerChosen(player)}/>
-          : <Game player={this.state.player}/> }
+        {this.state.player === '?'
+          ? <PlayerChooser onPlayerChosen={this.onPlayerChosen}/>
+          : <Game player={this.state.player} onPlayerChosen={this.onPlayerChosen}/>}
       </view>
     );
+  }
+
+  initFirebase () {
+    // Copy from Firebase console
+    const firebaseConfig = {
+      apiKey: undefined,
+      authDomain: undefined,
+      databaseURL: undefined,
+      projectId: undefined,
+      storageBucket: undefined,
+      messagingSenderId: undefined,
+      appId: undefined
+    };
+
+    firebase.initializeApp(firebaseConfig);
   }
 }
 
