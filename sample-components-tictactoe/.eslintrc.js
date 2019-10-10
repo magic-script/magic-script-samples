@@ -24,5 +24,8 @@ module.exports = {
         "ecmaVersion": 2018,
         "sourceType": "module"
     },
-    extends: "semistandard",
+    extends: [
+        "semistandard",
+        "plugin:react/recommended"
+    ],
 };
