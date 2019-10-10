@@ -18,6 +18,6 @@ export class App extends LandscapeApp {
     return true;
   }
   eventListener(event) {
-    return true;
+    return false;
   }
 }

@@ -104,7 +104,7 @@ export class App extends ImmersiveApp
         this.updateLeftKeypoints(event);
       }
     }
-    return true;
+    return false;
   }
 
   resolveRightHandGesture(gestureType, confidence)

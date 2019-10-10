@@ -95,7 +95,7 @@ export class App extends LandscapeApp {
       camera.matrixWorld.identity();
       camera.matrixWorldInverse.identity();
     }
-    return true;
+    return false;
   }
 }
 
