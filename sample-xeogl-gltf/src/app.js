@@ -3,8 +3,15 @@ import { WebGlController } from 'magic-script-webgl-prism-controller';
 import { ReflectionMap, Scene, setDefaultScene } from 'xeogl';
 import { GLTFModel } from 'xeogl-gltf-model';
 
+let downloadModel = false;
+
 export class App extends LandscapeApp {
-  init () {
+  onAppStart (initArg) {
+    // Launch with 'mldb launch com.magicscript.sample.xeogl-gltf -i http' to download the model
+    // instead of using the copy in local resources (for testing HTTP download performance)
+    if (initArg.getUri() === 'http') {
+      downloadModel = true;
+    }
     print('Creating Lumin Runtime Prism and Quad Node');
     // Create a new prism that's half a meter squared.
     let prism = this.requestNewPrism([0.5, 0.5, 0.1]);
@@ -25,9 +32,16 @@ window.onload = () => {
   });
   setDefaultScene(scene);
 
+  const modelSource = downloadModel
+    ? 'https://github.com/KhronosGroup/glTF-Sample-Models/raw/master/2.0/DamagedHelmet/glTF/DamagedHelmet.gltf'
+    : 'res/DamagedHelmet/glTF/DamagedHelmet.gltf';
+  print('[Load Model] src: ' + modelSource);
+
+  const startTime = Date.now();
+
   var model = new GLTFModel({
     id: 'helmet',
-    src: 'res/DamagedHelmet/glTF/DamagedHelmet.gltf',
+    src: modelSource,
     combineGeometry: true,
     quantizeGeometry: true
   });
@@ -38,6 +52,9 @@ window.onload = () => {
   camera.up = [0, 1, 0];
   var spinning = true;
   model.on('loaded', function () {
+    const endTime = Date.now();
+    print('[Load Model] Time taken: ' + (endTime - startTime) / 1000);
+
     scene.on('tick', function () { // Slowly orbit the camera
       if (spinning) {
         camera.orbitYaw(-0.2);
