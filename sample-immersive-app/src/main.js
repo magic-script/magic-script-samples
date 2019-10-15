@@ -49,7 +49,7 @@ class App extends ImmersiveApp {
     for (let prism of this.prisms) {
       if (prism.onEvent) prism.onEvent(event);
     }
-    return true;
+    return false;
   }
 }
 

@@ -36,7 +36,7 @@ export default async function start (app) {
       console.log('eventListener - VideoEventData type: ' + event.getVideoEventType());
     }
 
-    return true;
+    return false;
   }
   return prism;
 }

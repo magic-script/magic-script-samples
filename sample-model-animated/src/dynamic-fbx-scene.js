@@ -36,7 +36,7 @@ export class DynamicFbxScene extends Scene {
         } else {
             iterator++;
         }
-        
+
         switch (iterator)
         {
           case 0:
@@ -48,7 +48,7 @@ export class DynamicFbxScene extends Scene {
           default:
               model.playAnimation(modelResId, 'idle', false, 0);
               break;
-        }       
+        }
     });
 
     this.addToRootNode(model);
@@ -95,6 +95,6 @@ export class DynamicFbxScene extends Scene {
       return true;
   }
   eventListener(event) {
-      return true;
+      return false;
   }
 }
