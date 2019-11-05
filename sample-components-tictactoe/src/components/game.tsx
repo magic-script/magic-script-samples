@@ -1,26 +1,41 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import firebase from 'firebase/app';
 import 'firebase/database';
 
 import { View } from 'magic-script-components';
-import { Board, GameInfo } from './index.js';
 import { calculateWinner } from './calculate-winner.js';
+import Board from './board';
+import GameInfo from './game-info';
+
+interface Props {
+  enableFirebase: boolean;
+  player: string;
+  onChoosePlayer: () => void;
+}
+
+export interface HistoryItem {
+  squares: string[]
+}
+
+const initialState = {
+  history: [
+    {
+      squares: Array(9).fill('')
+    }
+  ],
+  stepNumber: 0,
+  xIsNext: true
+};
+
+type State = Readonly<typeof initialState>;
 
 // The main gameplay component that renders the Tic Tac Toe board
-export default class Game extends React.Component {
-  constructor (props) {
+export default class Game extends React.Component<Props, State> {
+  state: State = initialState;
+
+  constructor (props: Props) {
     super(props);
-    this.state = {
-      history: [
-        {
-          squares: Array(9).fill('')
-        }
-      ],
-      stepNumber: 0,
-      xIsNext: true
-    };
   }
 
   componentDidMount () {
@@ -41,11 +56,11 @@ export default class Game extends React.Component {
     return firebase.database().ref('tic-tac-toe');
   }
 
-  updateState (partialNewState) {
+  updateState<K extends keyof State> (partialNewState: Pick<State, K>) {
     this.setState(partialNewState, () => this.syncStateChange(this.state));
   }
 
-  syncStateChange (state) {
+  syncStateChange (state: State) {
     if (this.props.enableFirebase) {
       this.dbref().set(state, (error) => {
         console.error('Error writing state update', error);
@@ -53,7 +68,7 @@ export default class Game extends React.Component {
     }
   }
 
-  handleClick (i) {
+  handleClick (i: number) {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
@@ -76,7 +91,7 @@ export default class Game extends React.Component {
     });
   }
 
-  jumpTo (step) {
+  jumpTo (step: number) {
     this.updateState({
       stepNumber: step,
       xIsNext: (step % 2) === 0
@@ -109,9 +124,3 @@ export default class Game extends React.Component {
     );
   }
 }
-
-Game.propTypes = {
-  enableFirebase: PropTypes.bool,
-  player: PropTypes.string,
-  onChoosePlayer: PropTypes.func
-};

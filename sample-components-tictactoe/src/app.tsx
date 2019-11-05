@@ -1,31 +1,40 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import firebase from 'firebase/app';
 
-import { View } from 'magic-script-components';
+import { View, AppProps } from 'magic-script-components';
 import { PlayerChooser, Game } from './components/index.js';
 
+interface Props extends AppProps {
+  firebaseConfig?: object;
+}
+
+interface State {
+  player: string;
+}
+
 // Top-level application component -- renders either a player chooser or the game
-export class TicTacToeApp extends React.Component {
-  constructor (props) {
+export class TicTacToeApp extends React.Component<Props, State> {
+  state: State = { player: '?' };
+
+  constructor (props: Props) {
     super(props);
 
-    this.state = { player: '?' };
     this.onPlayerChosen = this.onPlayerChosen.bind(this);
   }
 
-  useFirebase () {
-    return this.props.firebaseConfig && this.props.firebaseConfig.hasOwnProperty('apiKey');
+  useFirebase (): boolean {
+    return this.props.firebaseConfig !== undefined && this.props.firebaseConfig !== null
+      && this.props.firebaseConfig.hasOwnProperty('apiKey');
   }
 
   componentDidMount () {
     if (this.useFirebase()) {
-      firebase.initializeApp(this.props.firebaseConfig);
+      firebase.initializeApp(this.props.firebaseConfig!);
     }
   }
 
-  onPlayerChosen (player) {
+  onPlayerChosen (player: string) {
     this.setState({ player: player });
   }
 
@@ -45,7 +54,3 @@ export class TicTacToeApp extends React.Component {
     );
   }
 }
-
-TicTacToeApp.propTypes = {
-  firebaseConfig: PropTypes.object
-};

@@ -1,10 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import { LinearLayout, Text } from 'magic-script-components';
-import { Square } from './index.js';
+import Square from './square';
 
-export default function PlayerChooser (props) {
+interface Props {
+  onPlayerChosen: (player: string) => void;
+}
+
+export default function PlayerChooser (props: Props) {
   return (
     <LinearLayout width={0.5} height={0.5} orientation="vertical">
       <Text textSize={0.05} alignment="top-left">Choose a player:</Text>
@@ -26,7 +29,3 @@ export default function PlayerChooser (props) {
     </LinearLayout>
   );
 }
-
-PlayerChooser.propTypes = {
-  onPlayerChosen: PropTypes.func
-};

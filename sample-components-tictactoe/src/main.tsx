@@ -2,12 +2,15 @@
 // Simply importing this sets all these as global definitions.
 // They are declared in the .eslintrc so your editor won't complain.
 import 'magic-script-polyfills';
-import process from './global-scope.js'; // eslint-disable-line no-unused-vars
+import process from './global-scope';
 import React from 'react';
 import mxs from 'magic-script-components-lumin';
 
+// Reference process so it isn't stripped
+typeof process;
+
 // Load main app logic from the app class.
-import { TicTacToeApp } from './app.js';
+import { TicTacToeApp } from './app';
 
 // To enable firebase, copy firebaseConfig from your Firebase project console
 

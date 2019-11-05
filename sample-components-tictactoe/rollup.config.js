@@ -1,12 +1,14 @@
 import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
+import typescript from 'rollup-plugin-typescript';
 
 const common = {
   plugins: [
     babel({ exclude: 'node_modules/**' }),
     resolve(),
-    commonjs()
+    commonjs(),
+    typescript()
   ]
 };
 
@@ -15,7 +17,7 @@ export default [
   {
     ...common,
     external: ['uv', 'lumin', 'ssl', 'jpeg', 'png', 'gl'],
-    input: 'src/main.js',
+    input: 'src/main.tsx',
     preserveModules: true,
     output: {
       dir: 'bin',
@@ -25,7 +27,7 @@ export default [
   // Build for MagicScript on Magicverse (iOS, Android)
   {
     ...common,
-    input: 'src/app.js',
+    input: 'src/app.tsx',
     external: ['react'],
     output: {
       globals: {

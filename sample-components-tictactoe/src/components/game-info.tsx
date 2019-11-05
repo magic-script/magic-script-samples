@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 import {
   Button,
@@ -10,9 +9,19 @@ import {
 } from 'magic-script-components';
 
 import { calculateWinner } from './calculate-winner.js';
+import { HistoryItem } from './game';
+
+interface Props {
+  history: HistoryItem[];
+  onHistoryClick: (move: number) => void;
+  player: string;
+  onChoosePlayer: () => void;
+  stepNumber: number;
+  xIsNext: boolean;
+}
 
 // Component that renders current game status and history of moves
-export default function GameInfo (props) {
+export default function GameInfo (props: Props) {
   const current = props.history[props.stepNumber];
   const winner = calculateWinner(current.squares);
 
@@ -60,12 +69,3 @@ export default function GameInfo (props) {
     </View>
   );
 }
-
-GameInfo.propTypes = {
-  history: PropTypes.array,
-  onHistoryClick: PropTypes.func,
-  player: PropTypes.string,
-  onChoosePlayer: PropTypes.func,
-  stepNumber: PropTypes.number,
-  xIsNext: PropTypes.bool
-};
