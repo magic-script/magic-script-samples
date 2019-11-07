@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { LinearLayout, Text } from 'magic-script-components';
-import Square from './square';
+import Square, { Player } from './square';
 
 interface Props {
-  onPlayerChosen: (player: string) => void;
+  onPlayerChosen: (player: Player) => void;
 }
 
 export default function PlayerChooser (props: Props) {

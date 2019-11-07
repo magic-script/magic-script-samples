@@ -2,9 +2,11 @@ import React from 'react';
 
 import { Button, vec4 } from 'magic-script-components';
 
+export type Player = 'X' | 'O' | ' ';
+
 interface Props {
   name: string;
-  value: string;
+  value: Player;
   onClick: (event: any) => void;
 }
 

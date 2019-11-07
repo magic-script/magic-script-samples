@@ -1,10 +1,10 @@
 import React from 'react';
 
 import { GridLayout } from 'magic-script-components';
-import Square from './square';
+import Square, { Player } from './square';
 
 interface Props {
-  squares: string[];
+  squares: Player[];
   onClick: (i: number) => void;
 }
 

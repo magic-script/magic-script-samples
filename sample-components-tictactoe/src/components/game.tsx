@@ -4,24 +4,25 @@ import firebase from 'firebase/app';
 import 'firebase/database';
 
 import { View } from 'magic-script-components';
-import { calculateWinner } from './calculate-winner.js';
+import calculateWinner from './calculate-winner.js';
 import Board from './board';
 import GameInfo from './game-info';
+import { Player } from './square.js';
+
+export interface HistoryItem {
+  squares: Player[]
+}
 
 interface Props {
   enableFirebase: boolean;
-  player: string;
+  player: Player;
   onChoosePlayer: () => void;
-}
-
-export interface HistoryItem {
-  squares: string[]
 }
 
 const initialState = {
   history: [
     {
-      squares: Array(9).fill('')
+      squares: Array<Player>(9).fill(' ')
     }
   ],
   stepNumber: 0,
@@ -33,10 +34,6 @@ type State = Readonly<typeof initialState>;
 // The main gameplay component that renders the Tic Tac Toe board
 export default class Game extends React.Component<Props, State> {
   state: State = initialState;
-
-  constructor (props: Props) {
-    super(props);
-  }
 
   componentDidMount () {
     if (this.props.enableFirebase) {
@@ -76,7 +73,7 @@ export default class Game extends React.Component<Props, State> {
     if (this.props.player !== ' ' && this.props.player !== nextPlayer) {
       return;
     }
-    if (calculateWinner(squares) || squares[i]) {
+    if (calculateWinner(squares) !== ' ' || squares[i] !== ' ') {
       return;
     }
     squares[i] = nextPlayer;

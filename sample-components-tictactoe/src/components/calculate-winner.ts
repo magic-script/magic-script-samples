@@ -1,4 +1,6 @@
-export function calculateWinner (squares: string[]): string | null {
+import { Player } from "./square";
+
+export default function calculateWinner (squares: Player[]): Player {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,5 +17,5 @@ export function calculateWinner (squares: string[]): string | null {
       return squares[a];
     }
   }
-  return null;
+  return ' ';
 }

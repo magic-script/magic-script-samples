@@ -1,20 +1,14 @@
+import { ListView, ListViewItem, Text, View, Button } from 'magic-script-components';
 import React from 'react';
-
-import {
-  Button,
-  ListView,
-  ListViewItem,
-  Text,
-  View
-} from 'magic-script-components';
-
-import { calculateWinner } from './calculate-winner.js';
+import calculateWinner from './calculate-winner';
 import { HistoryItem } from './game';
+import { Player } from './square';
+
 
 interface Props {
   history: HistoryItem[];
   onHistoryClick: (move: number) => void;
-  player: string;
+  player: Player;
   onChoosePlayer: () => void;
   stepNumber: number;
   xIsNext: boolean;
@@ -48,7 +42,7 @@ export default function GameInfo (props: Props) {
   );
 
   let status;
-  if (winner) {
+  if (winner != ' ') {
     if (props.player === ' ') {
       status = winner + ' Wins!';
     } else {
