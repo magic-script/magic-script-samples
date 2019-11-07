@@ -17,5 +17,5 @@ export default function calculateWinner (squares: Player[]): Player {
       return squares[a];
     }
   }
-  return ' ';
+  return Player.None;
 }

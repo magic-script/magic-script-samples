@@ -22,7 +22,7 @@ interface Props {
 const initialState = {
   history: [
     {
-      squares: Array<Player>(9).fill(' ')
+      squares: Array<Player>(9).fill(Player.None)
     }
   ],
   stepNumber: 0,
@@ -69,11 +69,11 @@ export default class Game extends React.Component<Props, State> {
     const history = this.state.history.slice(0, this.state.stepNumber + 1);
     const current = history[history.length - 1];
     const squares = current.squares.slice();
-    const nextPlayer = this.state.xIsNext ? 'X' : 'O';
-    if (this.props.player !== ' ' && this.props.player !== nextPlayer) {
+    const nextPlayer = this.state.xIsNext ? Player.X : Player.O
+    if (this.props.player !== Player.None && this.props.player !== nextPlayer) {
       return;
     }
-    if (calculateWinner(squares) !== ' ' || squares[i] !== ' ') {
+    if (calculateWinner(squares) !== Player.None || squares[i] !== Player.None) {
       return;
     }
     squares[i] = nextPlayer;

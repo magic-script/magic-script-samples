@@ -42,16 +42,16 @@ export default function GameInfo (props: Props) {
   );
 
   let status;
-  if (winner != ' ') {
-    if (props.player === ' ') {
+  if (winner != Player.None) {
+    if (props.player === Player.None) {
       status = winner + ' Wins!';
     } else {
       status = (winner === props.player) ? 'You Win!' : 'You Lose!';
     }
   } else {
-    const nextPlayer = props.xIsNext ? 'X' : 'O';
+    const nextPlayer = props.xIsNext ? Player.X : Player.O;
     status = 'Next player: ' + nextPlayer;
-    if (props.player !== ' ') {
+    if (props.player !== Player.None) {
       status += (nextPlayer === props.player) ? ' (You)' : ' (Opponent)';
     }
   }

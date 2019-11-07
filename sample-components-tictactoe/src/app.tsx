@@ -12,7 +12,7 @@ interface Props extends AppProps {
 
 interface State {
   // Use null to indicate that no player has been chosen yet
-  // (Blank ' ' is used to play for both 'X' and 'O')
+  // (Player.None is used to play for both X and O)
   player: Player | null;
 }
 

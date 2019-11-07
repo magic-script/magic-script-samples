@@ -12,19 +12,19 @@ export default function PlayerChooser (props: Props) {
     <LinearLayout width={0.5} height={0.5} orientation="vertical">
       <Text textSize={0.05} alignment="top-left">Choose a player:</Text>
       <Square
-        value='X'
+        value={Player.X}
         name='ChoosePlayerX'
-        onClick={event => props.onPlayerChosen('X')}
+        onClick={event => props.onPlayerChosen(Player.X)}
       />
       <Square
-        value='O'
+        value={Player.O}
         name='ChoosePlayerO'
-        onClick={event => props.onPlayerChosen('O')}
+        onClick={event => props.onPlayerChosen(Player.O)}
       />
       <Square
-        value=' '
+        value={Player.None}
         name='ChoosePlayerBlank'
-        onClick={event => props.onPlayerChosen(' ')}
+        onClick={event => props.onPlayerChosen(Player.None)}
       />
     </LinearLayout>
   );
