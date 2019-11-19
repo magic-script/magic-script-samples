@@ -4,7 +4,7 @@ import { ReflectionMap, Scene, setDefaultScene } from 'xeogl';
 import { GLTFModel } from 'xeogl-gltf-model';
 
 export class App extends LandscapeApp {
-  init () {
+  init() {
     print('Creating Lumin Runtime Prism and Quad Node');
     // Create a new prism that's half a meter squared.
     let prism = this.requestNewPrism([0.5, 0.5, 0.1]);
@@ -27,7 +27,7 @@ window.onload = () => {
 
   var model = new GLTFModel({
     id: 'helmet',
-    src: 'res/DamagedHelmet/glTF/DamagedHelmet.gltf',
+    src: 'res/BoomBox/BoomBox.gltf',
     combineGeometry: true,
     quantizeGeometry: true
   });
