@@ -29,7 +29,8 @@ window.onload = () => {
     id: 'helmet',
     src: 'res/BoomBox/BoomBox.gltf',
     combineGeometry: true,
-    quantizeGeometry: true
+    quantizeGeometry: true,
+    scale: [100, 100, 100],
   });
 
   var camera = scene.camera;
