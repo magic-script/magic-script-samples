@@ -1,0 +1,16 @@
+{
+  "plugins": [
+    "@babel/plugin-syntax-jsx",
+    "@babel/plugin-transform-react-jsx",
+    [
+      "module-resolver",
+      {
+        "root": ["."],
+        "alias": {
+          "~": ".",
+          "@": "./src"
+        }
+      }
+    ]
+  ]
+}
