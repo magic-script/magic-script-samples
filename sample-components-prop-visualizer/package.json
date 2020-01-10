@@ -23,9 +23,8 @@
     "semistandard": "^13.0.1"
   },
   "dependencies": {
-    "magic-script-components-lumin": "^1.0.7",
     "magic-script-components": "^2.0.1",
-    "magic-script-polyfills": "^2.4.2",
-    "react-router": "^5.1.2"
+    "magic-script-components-lumin": "^1.0.7",
+    "magic-script-polyfills": "^2.4.2"
   }
 }
