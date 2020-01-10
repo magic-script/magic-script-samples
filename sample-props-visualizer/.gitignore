@@ -1,0 +1,11 @@
+# Node
+node_modules/
+
+# Lumin
+.out/
+bin/
+digest.sha512.signed
+
+# Vs Code
+.history
+.DS_Store
