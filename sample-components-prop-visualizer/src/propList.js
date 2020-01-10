@@ -7,7 +7,7 @@ function quat() {
     this.valueX || 0,
     this.valueY || 0,
     this.valueZ || 0,
-    this.valueA || 0
+    this.valueW || 0
   ];
 }
 

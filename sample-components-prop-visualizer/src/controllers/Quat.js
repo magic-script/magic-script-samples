@@ -48,16 +48,16 @@ export default function QuatController({ applyValue }) {
 
       <Button
         localPosition={[0.32, 0.3, 0]}
-        onClick={() => applyValue("valueA", -0.1)}
+        onClick={() => applyValue("valueW", -0.1)}
       >
-        {"< A"}
+        {"< W"}
       </Button>
 
       <Button
         localPosition={[0.4, 0.3, 0]}
-        onClick={() => applyValue("valueA", 0.1)}
+        onClick={() => applyValue("valueW", 0.1)}
       >
-        {"> A"}
+        {"> W"}
       </Button>
     </>
   );
