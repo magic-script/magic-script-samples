@@ -10,10 +10,4 @@ import mxs from "magic-script-components-lumin";
 // Load main app logic from the app class.
 import MyApp from "./app.js";
 
-mxs.bootstrap(
-  <MyApp
-    type="landscape"
-    volumeSize={[1, 1, 1]}
-    caption="LifeStream User Portal"
-  />
-);
+mxs.bootstrap(<MyApp type="landscape" volumeSize={[1, 1, 1]} />);
