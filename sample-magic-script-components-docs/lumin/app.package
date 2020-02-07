@@ -1,0 +1,5 @@
+DATAS = "digest.sha512.signed" : "." \
+        "bin/" : "bin/"\
+        "../resources/" : "resources/"
+OPTIONS = package/minApiLevel/2
+USES = mxs_lumin_runtime

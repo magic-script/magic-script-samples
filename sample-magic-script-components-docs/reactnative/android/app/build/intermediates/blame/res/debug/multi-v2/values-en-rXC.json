@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rXC/values-en-rXC.xml",
+            "map": [
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "202",
+                        "endOffsets": "253"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "6639",
+                        "endColumns": "202",
+                        "endOffsets": "6837"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/332b84871ea3c39705a14dadae3be4a3/res/values-en-rXC/values-en-rXC.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,310,510,719,904,1106,1321,1494,1671,1862,2055,2253,2449,2652,2847,3044,3239,3432,3623,3807,4011,4216,4417,4624,4826,5031,5303,5503",
+                        "endColumns": "204,199,208,184,201,214,172,176,190,192,197,195,202,194,196,194,192,190,183,203,204,200,206,201,204,271,199,178",
+                        "endOffsets": "305,505,714,899,1101,1316,1489,1666,1857,2050,2248,2444,2647,2842,3039,3234,3427,3618,3802,4006,4211,4412,4619,4821,5026,5298,5498,5677"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "1062,1267,1467,1676,1861,2063,2278,2451,2628,2819,3012,3210,3406,3609,3804,4001,4196,4389,4580,4764,4968,5173,5374,5581,5783,5988,6260,6460",
+                        "endColumns": "204,199,208,184,201,214,172,176,190,192,197,195,202,194,196,194,192,190,183,203,204,200,206,201,204,271,199,178",
+                        "endOffsets": "1262,1462,1671,1856,2058,2273,2446,2623,2814,3007,3205,3401,3604,3799,3996,4191,4384,4575,4759,4963,5168,5369,5576,5778,5983,6255,6455,6634"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/res/values-en-rXC/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "194,344,498,723,945",
+                        "endColumns": "149,153,224,221,185",
+                        "endOffsets": "343,497,722,944,1130"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "105,259,417,646,872",
+                        "endColumns": "153,157,228,225,189",
+                        "endOffsets": "254,412,641,867,1057"
+                    }
+                }
+            ]
+        }
+    ]
+}

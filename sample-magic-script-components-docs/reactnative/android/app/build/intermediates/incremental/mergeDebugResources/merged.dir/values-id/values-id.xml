@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="__arcore_cancel">Batal</string>
+    <string name="__arcore_continue">Lanjutkan</string>
+    <string name="__arcore_install_app">Aplikasi ini memerlukan versi terbaru Layanan Google Play untuk AR.</string>
+    <string name="__arcore_install_feature">Fitur ini memerlukan versi terbaru Layanan Google Play untuk AR.</string>
+    <string name="__arcore_installing">Menginstal Layanan Google Play untuk AR…</string>
+    <string name="back_button_content_description">kembali</string>
+    <string name="cancel_button">Batal</string>
+    <string name="dialog_button_got_it">OK</string>
+    <string name="dialog_button_open_help_center">BUKA PUSAT BANTUAN</string>
+    <string name="dialog_message_incompatible_phone">Ponsel yang kompatibel dengan Daydream diperlukan. Kunjungi Pusat Bantuan Daydream untuk informasi lebih lanjut.</string>
+    <string name="dialog_message_no_cardboard">Dapatkan aplikasi Cardboard untuk mengonfigurasikan penampil Anda.</string>
+    <string name="dialog_title">Konfigurasikan</string>
+    <string name="dialog_title_incompatible_phone">Ponsel tidak kompatibel</string>
+    <string name="dialog_title_vr_core_not_enabled">Penyiapan diperlukan</string>
+    <string name="dialog_title_vr_core_not_installed">Wajib dipasang</string>
+    <string name="dialog_title_warning">Peringatan</string>
+    <string name="dialog_vr_core_not_enabled">Aplikasi ini mungkin tidak bekerja dengan benar tanpa mengaktifkan Layanan Google VR. Aktifkan Layanan Google VR di Setelan ponsel sebelum melanjutkan.</string>
+    <string name="dialog_vr_core_not_installed">Aplikasi ini mungkin tidak bekerja dengan benar tanpa Layanan Google VR. Instal Layanan Google VR dari Play Store sebelum melanjutkan.</string>
+    <string name="go_to_playstore_button">Buka Play Store</string>
+    <string name="go_to_vr_listeners_settings_button">Buka Setelan</string>
+    <string name="no_browser_text">Tidak ada browser untuk membuka situs web</string>
+    <string name="place_your_phone_into_cardboard">Tempatkan ponsel ke penampil Cardboard Anda</string>
+    <string name="place_your_viewer_into_viewer_format">Tempatkan ponsel ke dalam penampil %s</string>
+    <string name="settings_button_content_description">setelan</string>
+    <string name="setup_button">Penyiapan</string>
+    <string name="switch_viewer_action">Alihkan</string>
+    <string name="switch_viewer_prompt">Pakai penampil lain?</string>
+</resources>

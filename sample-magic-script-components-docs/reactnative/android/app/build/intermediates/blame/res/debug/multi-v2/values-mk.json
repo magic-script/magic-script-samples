@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-mk/values-mk.xml",
+            "map": [
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/332b84871ea3c39705a14dadae3be4a3/res/values-mk/values-mk.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,317,425,511,616,735,818,900,997,1096,1193,1293,1400,1499,1600,1696,1793,1884,1971,2077,2184,2285,2392,2503,2607,2763,2861",
+                        "endColumns": "107,103,107,85,104,118,82,81,96,98,96,99,106,98,100,95,96,90,86,105,106,100,106,110,103,155,97,83",
+                        "endOffsets": "208,312,420,506,611,730,813,895,992,1091,1188,1288,1395,1494,1595,1691,1788,1879,1966,2072,2179,2280,2387,2498,2602,2758,2856,2940"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "549,657,761,869,955,1060,1179,1262,1344,1441,1540,1637,1737,1844,1943,2044,2140,2237,2328,2415,2521,2628,2729,2836,2947,3051,3207,3305",
+                        "endColumns": "107,103,107,85,104,118,82,81,96,98,96,99,106,98,100,95,96,90,86,105,106,100,106,110,103,155,97,83",
+                        "endOffsets": "652,756,864,950,1055,1174,1257,1339,1436,1535,1632,1732,1839,1938,2039,2135,2232,2323,2410,2516,2623,2724,2831,2942,3046,3202,3300,3384"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/res/values-mk/values-mk.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "3389",
+                        "endColumns": "100",
+                        "endOffsets": "3485"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/res/values-mk/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "190,237,288,406,526",
+                        "endColumns": "46,50,117,119,87",
+                        "endOffsets": "236,287,405,525,613"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "105,156,211,333,457",
+                        "endColumns": "50,54,121,123,91",
+                        "endOffsets": "151,206,328,452,544"
+                    }
+                }
+            ]
+        }
+    ]
+}

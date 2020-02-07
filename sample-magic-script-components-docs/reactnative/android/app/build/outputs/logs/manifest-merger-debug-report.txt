@@ -1,0 +1,337 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:1-41:12
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:1-41:12
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:1-41:12
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:1-41:12
+MERGED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:1-41:12
+MERGED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:17:1-31:12
+MERGED from [com.facebook.react:react-native:0.60.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/9f33be591ca8570e64411507213511d6/AndroidManifest.xml:2:1-13:12
+MERGED from [org.webkit:android-jsc:r245459] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/e664a0e8991e70d06517538712c1b6d0/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/332b84871ea3c39705a14dadae3be4a3/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fresco:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/3524601a2d08cd791b6cc4812875d63a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/38f756f487e1ea597655bd3ac65b4439/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:drawee:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6b5d8c73562a8e4d7bb4f45a05078e32/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/13e3830aa6d6138f59016c01d0d39f85/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/76a833e4ea1c06ee47e84613200ffa15/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4136dafe42bf50568b5bfffdf3e84884/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/04dc690e5c760d999fcddacee9977cd1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6445f497b5153d1f58289cad8b2ec747/AndroidManifest.xml:2:1-13:12
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/dd711d299d9e03f69bda99f10813b8b5/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.ar.sceneform:assets:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7752688ba86be9d8114d6dc7fbd19060/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/eb64e41cbb3ebea352e853954177f890/AndroidManifest.xml:2:1-11:12
+MERGED from [com.larswerkman:HoloColorPicker:1.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/839bb6c6265cd0915a3cbc95810b5cf2/AndroidManifest.xml:2:1-9:12
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/45f218bf9a06b4b03d575c637ac0b234/AndroidManifest.xml:2:1-12:12
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/f91f10cc780b8a8c8fe76511e2a7f647/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4e776bb07ac9faa20710e1098caac6cc/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7b49fd7de81da4977d8d43a7cfe49aa7/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/24844a17b16678d56db6fb51cf9cf8f3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/120d1b7a0ef9c6b5a91313eb643472af/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/92438b862bfce996dbde8c299b2f7fb5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/524a46e2ca22f007218631d0c5b55938/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/5b2de7d4710f6b23d38ea74f0b0c32a9/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/bf08122a68dd5f0288064440c7cd313d/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/491086f3ef46948aba09872bff003c0a/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/67d4617987c59fa88c3598cc944d1faa/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/5f1ac3d733ca0ac54c99122e59d50861/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4addc8b18b63db3d5da14027fc8a1a78/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/33f9e39ecf5ded09fe7938eff8c33b5a/AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6d66ae6dd2bf2197f419182130f38856/AndroidManifest.xml:17:1-22:12
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/66f3ce63c22dd0eb038ef1480503a910/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/dbafac1507879749192bcc0e0e5a6449/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/b08ea12ce0f711b636686e0a22177a64/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/1d10051eeb601a6340ee00fad65ff2d5/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/f440871d4fc6a872b3bd367127381bce/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/a786208a4345b3da6f66c4f49e19d127/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/e008f1fa350039ebeae918bfff5cf86c/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/187b90eed74e6221085879e5cb341cbe/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/36833d3035f5e32df011b4f11361acf3/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7e94dfed705e85c33e2c9f2d6a67d978/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/589fbb3e9e2093a79efc16658dfb05e1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.ar.sceneform:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/d4c1bdd84f0dbb35d949194bc5ed4794/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:sceneform-base:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/b682022afadbf74db852a4a31c2b4883/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:3:1-28:12
+MERGED from [com.google.ar.sceneform:rendering:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/12e81c73f2493aef26ba4969128d5adf/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.ar.sceneform:filament-android:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/a0891cb4500a6077a2adf20358ff9b6b/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:17:1-46:12
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:2:1-8:12
+	package
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:2:3-34
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:2:3-34
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:1-41:12
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml
+	xmlns:tools
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:3:5-51
+	android:versionCode
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:1-41:12
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.INTERNET
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:4:5-67
+MERGED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:5-67
+MERGED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:27:5-67
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:4:22-64
+uses-permission#android.permission.CAMERA
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:5:2-62
+MERGED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:5-65
+MERGED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:26:5-65
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:5:19-59
+uses-feature#android.hardware.camera.ar
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:8:5-10:35
+	android:required
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:10:9-32
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:9:9-50
+application
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:12:5-38:19
+MERGED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:12:5-38:19
+MERGED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:12:5-38:19
+MERGED from [com.facebook.react:react-native:0.60.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/9f33be591ca8570e64411507213511d6/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.react:react-native:0.60.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/9f33be591ca8570e64411507213511d6/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6445f497b5153d1f58289cad8b2ec747/AndroidManifest.xml:11:5-20
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6445f497b5153d1f58289cad8b2ec747/AndroidManifest.xml:11:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/eb64e41cbb3ebea352e853954177f890/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/eb64e41cbb3ebea352e853954177f890/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/45f218bf9a06b4b03d575c637ac0b234/AndroidManifest.xml:10:5-20
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/45f218bf9a06b4b03d575c637ac0b234/AndroidManifest.xml:10:5-20
+MERGED from [androidx.core:core:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/33f9e39ecf5ded09fe7938eff8c33b5a/AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/33f9e39ecf5ded09fe7938eff8c33b5a/AndroidManifest.xml:22:5-23:19
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/66f3ce63c22dd0eb038ef1480503a910/AndroidManifest.xml:9:5-20
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/66f3ce63c22dd0eb038ef1480503a910/AndroidManifest.xml:9:5-20
+MERGED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:30:5-44:19
+MERGED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:30:5-44:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/AndroidManifest.xml:22:18-86
+	android:label
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:14:7-39
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:14:7-39
+	tools:ignore
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:7:75-114
+	android:roundIcon
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:16:7-52
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:16:7-52
+	tools:targetApi
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:7:54-74
+	android:icon
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:15:7-41
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:15:7-41
+	android:allowBackup
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:17:7-34
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:17:7-34
+	android:theme
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:18:7-38
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:18:7-38
+	android:usesCleartextTraffic
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:7:18-53
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:13:7-38
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:13:7-38
+meta-data#com.google.ar.core
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:23:9-25:40
+	android:value
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:25:13-37
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:24:13-46
+activity#com.magic.script.docs.MainActivity
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:27:7-36:18
+	android:label
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:29:9-41
+	android:windowSoftInputMode
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:31:9-51
+	android:configChanges
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:30:9-79
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:28:9-37
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:32:9-35:25
+action#android.intent.action.MAIN
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:33:13-65
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:33:21-62
+category#android.intent.category.LAUNCHER
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:34:13-73
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:34:23-70
+activity#com.facebook.react.devsupport.DevSettingsActivity
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:37:7-84
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml:37:17-81
+uses-sdk
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml
+MERGED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:5-24:41
+MERGED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:22:5-24:41
+MERGED from [com.facebook.react:react-native:0.60.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/9f33be591ca8570e64411507213511d6/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.react:react-native:0.60.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/9f33be591ca8570e64411507213511d6/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/e664a0e8991e70d06517538712c1b6d0/AndroidManifest.xml:7:5-9:41
+MERGED from [org.webkit:android-jsc:r245459] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/e664a0e8991e70d06517538712c1b6d0/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/332b84871ea3c39705a14dadae3be4a3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/332b84871ea3c39705a14dadae3be4a3/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fresco:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/3524601a2d08cd791b6cc4812875d63a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/3524601a2d08cd791b6cc4812875d63a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/38f756f487e1ea597655bd3ac65b4439/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-okhttp3:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/38f756f487e1ea597655bd3ac65b4439/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6b5d8c73562a8e4d7bb4f45a05078e32/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6b5d8c73562a8e4d7bb4f45a05078e32/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/13e3830aa6d6138f59016c01d0d39f85/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagefilters:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/13e3830aa6d6138f59016c01d0d39f85/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/76a833e4ea1c06ee47e84613200ffa15/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/76a833e4ea1c06ee47e84613200ffa15/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4136dafe42bf50568b5bfffdf3e84884/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:nativeimagetranscoder:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4136dafe42bf50568b5bfffdf3e84884/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/04dc690e5c760d999fcddacee9977cd1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/04dc690e5c760d999fcddacee9977cd1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6445f497b5153d1f58289cad8b2ec747/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.soloader:soloader:0.6.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6445f497b5153d1f58289cad8b2ec747/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/dd711d299d9e03f69bda99f10813b8b5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform.ux:sceneform-ux:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/dd711d299d9e03f69bda99f10813b8b5/AndroidManifest.xml:20:5-44
+MERGED from [com.google.ar.sceneform:assets:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7752688ba86be9d8114d6dc7fbd19060/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:assets:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7752688ba86be9d8114d6dc7fbd19060/AndroidManifest.xml:5:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/eb64e41cbb3ebea352e853954177f890/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/eb64e41cbb3ebea352e853954177f890/AndroidManifest.xml:5:5-7:41
+MERGED from [com.larswerkman:HoloColorPicker:1.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/839bb6c6265cd0915a3cbc95810b5cf2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.larswerkman:HoloColorPicker:1.5] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/839bb6c6265cd0915a3cbc95810b5cf2/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/45f218bf9a06b4b03d575c637ac0b234/AndroidManifest.xml:6:5-8:41
+MERGED from [com.github.bumptech.glide:glide:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/45f218bf9a06b4b03d575c637ac0b234/AndroidManifest.xml:6:5-8:41
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/f91f10cc780b8a8c8fe76511e2a7f647/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/f91f10cc780b8a8c8fe76511e2a7f647/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4e776bb07ac9faa20710e1098caac6cc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4e776bb07ac9faa20710e1098caac6cc/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7b49fd7de81da4977d8d43a7cfe49aa7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7b49fd7de81da4977d8d43a7cfe49aa7/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/24844a17b16678d56db6fb51cf9cf8f3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/24844a17b16678d56db6fb51cf9cf8f3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/120d1b7a0ef9c6b5a91313eb643472af/AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/120d1b7a0ef9c6b5a91313eb643472af/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/92438b862bfce996dbde8c299b2f7fb5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/92438b862bfce996dbde8c299b2f7fb5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/524a46e2ca22f007218631d0c5b55938/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/524a46e2ca22f007218631d0c5b55938/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/5b2de7d4710f6b23d38ea74f0b0c32a9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/5b2de7d4710f6b23d38ea74f0b0c32a9/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/bf08122a68dd5f0288064440c7cd313d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/bf08122a68dd5f0288064440c7cd313d/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/491086f3ef46948aba09872bff003c0a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/491086f3ef46948aba09872bff003c0a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/67d4617987c59fa88c3598cc944d1faa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/67d4617987c59fa88c3598cc944d1faa/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/5f1ac3d733ca0ac54c99122e59d50861/AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/5f1ac3d733ca0ac54c99122e59d50861/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4addc8b18b63db3d5da14027fc8a1a78/AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/4addc8b18b63db3d5da14027fc8a1a78/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/33f9e39ecf5ded09fe7938eff8c33b5a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/33f9e39ecf5ded09fe7938eff8c33b5a/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6d66ae6dd2bf2197f419182130f38856/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/6d66ae6dd2bf2197f419182130f38856/AndroidManifest.xml:20:5-44
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/66f3ce63c22dd0eb038ef1480503a910/AndroidManifest.xml:5:5-7:41
+MERGED from [com.github.bumptech.glide:gifdecoder:4.9.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/66f3ce63c22dd0eb038ef1480503a910/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/dbafac1507879749192bcc0e0e5a6449/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/dbafac1507879749192bcc0e0e5a6449/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/b08ea12ce0f711b636686e0a22177a64/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/b08ea12ce0f711b636686e0a22177a64/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/1d10051eeb601a6340ee00fad65ff2d5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/1d10051eeb601a6340ee00fad65ff2d5/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/f440871d4fc6a872b3bd367127381bce/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/f440871d4fc6a872b3bd367127381bce/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/a786208a4345b3da6f66c4f49e19d127/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/a786208a4345b3da6f66c4f49e19d127/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/e008f1fa350039ebeae918bfff5cf86c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/e008f1fa350039ebeae918bfff5cf86c/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/187b90eed74e6221085879e5cb341cbe/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/187b90eed74e6221085879e5cb341cbe/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/36833d3035f5e32df011b4f11361acf3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/36833d3035f5e32df011b4f11361acf3/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7e94dfed705e85c33e2c9f2d6a67d978/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/7e94dfed705e85c33e2c9f2d6a67d978/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/589fbb3e9e2093a79efc16658dfb05e1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:2.0.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/589fbb3e9e2093a79efc16658dfb05e1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.ar.sceneform:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/d4c1bdd84f0dbb35d949194bc5ed4794/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/d4c1bdd84f0dbb35d949194bc5ed4794/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:sceneform-base:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/b682022afadbf74db852a4a31c2b4883/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:sceneform-base:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/b682022afadbf74db852a4a31c2b4883/AndroidManifest.xml:5:5-44
+MERGED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar.sceneform:rendering:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/12e81c73f2493aef26ba4969128d5adf/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:rendering:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/12e81c73f2493aef26ba4969128d5adf/AndroidManifest.xml:5:5-44
+MERGED from [com.google.ar.sceneform:filament-android:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/a0891cb4500a6077a2adf20358ff9b6b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar.sceneform:filament-android:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/a0891cb4500a6077a2adf20358ff9b6b/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:26:5-28:41
+MERGED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:26:5-28:41
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.SYSTEM_ALERT_WINDOW
+ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:5:5-77
+	android:name
+		ADDED from /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/src/debug/AndroidManifest.xml:5:22-75
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:5-81
+MERGED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:17:5-81
+MERGED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:17:5-81
+	android:name
+		ADDED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:28:22-78
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:5-80
+MERGED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:16:5-80
+MERGED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:16:5-80
+	android:name
+		ADDED from [:magic-script-components-react-native] /Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/node_modules/magic-script-components-react-native/android/build/intermediates/library_manifest/debug/AndroidManifest.xml:29:22-77
+uses-feature#0x00020000
+ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:11:5-13:35
+	android:glEsVersion
+		ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:12:9-41
+	android:required
+		ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:13:9-32
+uses-feature#android.software.vr.mode
+ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:20:5-22:36
+	android:required
+		ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:22:9-33
+	android:name
+		ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:21:9-48
+uses-feature#android.hardware.vr.high_performance
+ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:24:5-26:36
+	android:required
+		ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:26:9-33
+	android:name
+		ADDED from [com.google.vr:sdk-base:1.190.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/c45fa1d0b26e61d832de06ef3ab6d689/AndroidManifest.xml:25:9-60
+meta-data#com.google.ar.core.min_apk_version
+ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:33:9-35:41
+	android:value
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:35:13-38
+	android:name
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:34:13-62
+activity#com.google.ar.core.InstallActivity
+ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:37:9-43:80
+	android:excludeFromRecents
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:40:13-46
+	android:launchMode
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:42:13-43
+	android:exported
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:41:13-37
+	android:configChanges
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:39:13-74
+	android:theme
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:43:13-77
+	android:name
+		ADDED from [com.google.ar:core:1.13.0] /Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/AndroidManifest.xml:38:13-62

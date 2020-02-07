@@ -1,0 +1,26 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-fil/values-fil.xml",
+            "map": [
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/res/values-fil/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "191,242,295,433,571",
+                        "endColumns": "50,52,137,137,92",
+                        "endOffsets": "241,294,432,570,663"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "55,110,167,309,451",
+                        "endColumns": "54,56,141,141,96",
+                        "endOffsets": "105,162,304,446,543"
+                    }
+                }
+            ]
+        }
+    ]
+}

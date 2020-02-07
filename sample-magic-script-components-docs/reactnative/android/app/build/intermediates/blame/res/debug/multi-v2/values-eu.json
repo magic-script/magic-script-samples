@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-eu/values-eu.xml",
+            "map": [
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/res/values-eu/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "190,235,290,436,585",
+                        "endColumns": "44,54,145,148,102",
+                        "endOffsets": "234,289,435,584,687"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "105,154,213,363,516",
+                        "endColumns": "48,58,149,152,106",
+                        "endOffsets": "149,208,358,511,618"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/res/values-eu/values-eu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "3456",
+                        "endColumns": "100",
+                        "endOffsets": "3552"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/332b84871ea3c39705a14dadae3be4a3/res/values-eu/values-eu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,214,312,422,508,614,738,825,909,1001,1095,1192,1286,1388,1482,1578,1675,1767,1860,1942,2051,2161,2260,2369,2475,2586,2757,2856",
+                        "endColumns": "108,97,109,85,105,123,86,83,91,93,96,93,101,93,95,96,91,92,81,108,109,98,108,105,110,170,98,81",
+                        "endOffsets": "209,307,417,503,609,733,820,904,996,1090,1187,1281,1383,1477,1573,1670,1762,1855,1937,2046,2156,2255,2364,2470,2581,2752,2851,2933"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "623,732,830,940,1026,1132,1256,1343,1427,1519,1613,1710,1804,1906,2000,2096,2193,2285,2378,2460,2569,2679,2778,2887,2993,3104,3275,3374",
+                        "endColumns": "108,97,109,85,105,123,86,83,91,93,96,93,101,93,95,96,91,92,81,108,109,98,108,105,110,170,98,81",
+                        "endOffsets": "727,825,935,1021,1127,1251,1338,1422,1514,1608,1705,1799,1901,1995,2091,2188,2280,2373,2455,2564,2674,2773,2882,2988,3099,3270,3369,3451"
+                    }
+                }
+            ]
+        }
+    ]
+}

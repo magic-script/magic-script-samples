@@ -1,0 +1,60 @@
+{
+    "logs": [
+        {
+            "outputFile": "/Users/grzegorzdec/visualstudioprojects/magic-script-samples/sample-magic-script-components-docs/reactnative/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-az/values-az.xml",
+            "map": [
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/49393e3233c2208f6dc5f1155807c781/res/values-az/values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8",
+                        "startColumns": "0,0,0,0,0",
+                        "startOffsets": "190,240,293,405,523",
+                        "endColumns": "49,52,111,117,85",
+                        "endOffsets": "239,292,404,522,608"
+                    },
+                    "to": {
+                        "startLines": "2,3,4,5,6",
+                        "startColumns": "4,4,4,4,4",
+                        "startOffsets": "105,159,216,332,454",
+                        "endColumns": "53,56,115,121,89",
+                        "endOffsets": "154,211,327,449,539"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/2a7444608cbe86af0d52bb63c24cc376/res/values-az/values-az.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "35",
+                        "startColumns": "4",
+                        "startOffsets": "3342",
+                        "endColumns": "100",
+                        "endOffsets": "3438"
+                    }
+                },
+                {
+                    "source": "/Users/grzegorzdec/.gradle/caches/transforms-2/files-2.1/332b84871ea3c39705a14dadae3be4a3/res/values-az/values-az.xml",
+                    "from": {
+                        "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "105,213,312,424,512,619,733,814,893,984,1077,1172,1271,1372,1465,1560,1655,1746,1838,1923,2030,2137,2237,2346,2450,2560,2718,2820",
+                        "endColumns": "107,98,111,87,106,113,80,78,90,92,94,98,100,92,94,94,90,91,84,106,106,99,108,103,109,157,101,82",
+                        "endOffsets": "208,307,419,507,614,728,809,888,979,1072,1167,1266,1367,1460,1555,1650,1741,1833,1918,2025,2132,2232,2341,2445,2555,2713,2815,2898"
+                    },
+                    "to": {
+                        "startLines": "7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "544,652,751,863,951,1058,1172,1253,1332,1423,1516,1611,1710,1811,1904,1999,2094,2185,2277,2362,2469,2576,2676,2785,2889,2999,3157,3259",
+                        "endColumns": "107,98,111,87,106,113,80,78,90,92,94,98,100,92,94,94,90,91,84,106,106,99,108,103,109,157,101,82",
+                        "endOffsets": "647,746,858,946,1053,1167,1248,1327,1418,1511,1606,1705,1806,1899,1994,2089,2180,2272,2357,2464,2571,2671,2780,2884,2994,3152,3254,3337"
+                    }
+                }
+            ]
+        }
+    ]
+}
