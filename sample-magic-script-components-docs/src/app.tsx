@@ -98,8 +98,8 @@ export default class MyApp extends React.Component {
   }
 
   onSceneSelected = event => {
-    if (event.SelectedItems.length > 0) {
-      const item = event.SelectedItems[0];
+    if (event.selectedItemsIndexes.length > 0) {
+      const item = event.selectedItemsIndexes[0];
       this.setState({ sceneIndex: item.id });
     }
   }
@@ -115,9 +115,9 @@ export default class MyApp extends React.Component {
       <View name='main-view' alignment={'center-center'} localScale={[0.5, 0.5, 0.5]} localPosition={[0, -0.3, -1]}>
         <View alignment={'center-center'} localPosition={[0, 1.3, 0]}>
           <Button localPosition={[-0.5, 0, 0]} width={0.25} height={0.1} roundness={1} textSize={0.05} onClick={this.onPreviousScene}>Prev</Button>
-          <DropdownList alignment={'top-center'} height={0.15} listMaxHeight={1} localPosition={[0, 0, 0]} onSelectionChanged={this.onSceneSelected} text={scene.name} textSize={0.05}>
-            {this.renderDropdownItems()}
-          </DropdownList>
+          {/* <DropdownList alignment={'top-center'} height={0.15} listMaxHeight={1} localPosition={[0, 0, 0]} onSelectionChanged={this.onSceneSelected} text={scene.name} textSize={0.05}> */}
+            {/* {this.renderDropdownItems()} */}
+          {/* </DropdownList> */}
           <Button localPosition={[0.5, 0, 0]} width={0.25} height={0.1} roundness={1} textSize={0.05} onClick={this.onNextScene}>Next</Button>
         </View>
         
