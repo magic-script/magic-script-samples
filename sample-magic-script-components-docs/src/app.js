@@ -77,12 +77,12 @@ export default class MyApp extends React.Component {
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = 0
-    this.state = { sceneIndex: initialIndex, showGrid: false, controls: true };
+    const initialIndex = 15;
+    this.state = { sceneIndex: initialIndex, controls: true };
   }
 
   componentDidMount() {
-    this.handler = setInterval(this.onNextScene, 10000);
+    // this.handler = setInterval(this.onNextScene, 10000);
   }
 
   onNextScene = () => {
@@ -94,21 +94,21 @@ export default class MyApp extends React.Component {
   onPreviousScene = () => {
     const { sceneIndex } = this.state;
     const prevIndex = (sceneIndex > 0) ? sceneIndex - 1 : this.scenes.length - 1;
-    this.setState({ sceneIndex: prevIndex, controls: false });
+    this.setState({ sceneIndex: prevIndex });
   }
 
   onSceneSelected = event => {
-    if (event.selectedItemsIndexes.length > 0) {
-      const item = event.selectedItemsIndexes[0];
+    if (event.SelectedItems.length > 0) {
+      const item = event.SelectedItems[0];
       this.setState({ sceneIndex: item.id });
     }
   }
 
   renderDropdownItems() {
-    return this.scenes.map((scene, index) => <DropdownListItem key={index} id={`${index}`} label={scene.name.replace(/\n/g, ' ')} />)
+    return this.scenes.map((scene, index) => <DropdownListItem key={index} id={index} label={scene.name.replace(/\n/g, ' ')} />);
   }
 
-  renderButtons() {
+  renderButtons(scene) {
     return (
       <View alignment={'center-center'} localPosition={[0, 1.3, 0]}>
         <Button localPosition={[-0.5, 0, 0]} width={0.25} height={0.1} roundness={1} textSize={0.05} onClick={this.onPreviousScene}>Prev</Button>
@@ -123,18 +123,18 @@ export default class MyApp extends React.Component {
     const { sceneIndex, controls } = this.state;
     const scene = this.scenes[sceneIndex];
     return (
-      <View name='main-view' alignment={'center-center'} localScale={[0.5, 0.5, 0.5]} localPosition={[0, 0, 0]}> 
-        {controls & this.renderButtons}
+      <View name='main-view' alignment={'center-center'} localScale={[0.5, 0.5, 0.5]}> 
+        {controls && this.renderButtons(scene)}
 
         {/* <View localPosition={[0, 0.6, -0.3]} width={5.4} height={5} alignment={'center-center'}> */}
         <Image color={[1, 0, 0, 1]} localPosition={[-1.4, 0, -0.3]} width={1.2} height={4} />
         <Image color={[1, 0, 0, 1]} localPosition={[0, 2, -0.3]} width={4} height={2.8} />
         <Image color={[1, 0, 0, 1]} localPosition={[0, -2, -0.3]} width={4} height={2.8} />
         <Image color={[1, 0, 0, 1]} localPosition={[2, 0, -0.3]} width={2.4} height={4} />
-          <Image color={[0, 0, 0, 1]} localPosition={[0, 0, -0.28]} width={1.6} height={1.2} />
+        <Image color={[0, 0, 0, 1]} localPosition={[0, 0, -0.28]} width={1.6} height={1.2} />
         {/* </View> */}
 
-        <View localPosition={[0, 0, 0]} width={1.4} height={1} defaultItemAlignment={'top-left'}>
+        <View alignment={'center-center'}>
           {scene.component}
         </View>
       </View>

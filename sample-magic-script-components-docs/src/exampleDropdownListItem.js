@@ -26,7 +26,7 @@ export class ExampleDropdownListItem extends React.Component {
           onSelectionChanged={this.onSelection}
         >
           {moons.map((moon, index) => (
-            <DropdownListItem id={`${index}`} label={moon} />
+            <DropdownListItem id={index} label={moon} />
           ))}
         </DropdownList>
       </View>

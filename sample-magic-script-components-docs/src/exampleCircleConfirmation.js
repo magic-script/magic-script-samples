@@ -9,11 +9,11 @@ export class ExampleCircleConfirmation extends React.Component {
     onConfirmationCanceled = event => {
         console.log("onConfirmationCanceled");
     };
-    onConfirmationUpdate = event => {
-        console.log("onConfirmationUpdate");
+    onConfirmationUpdated = event => {
+        console.log("onConfirmationUpdated");
     };
-    onConfirmationComplete = event => {
-        console.log("onConfirmationComplete");
+    onConfirmationCompleted = event => {
+        console.log("onConfirmationCompleted");
     };
 
 
@@ -22,8 +22,8 @@ export class ExampleCircleConfirmation extends React.Component {
             <View>
                 <CircleConfirmation
                     onConfirmationCanceled={this.onConfirmationCanceled}
-                    onConfirmationComplete={this.onConfirmationComplete}
-                    onConfirmationUpdate={this.onConfirmationUpdate}
+                    onConfirmationCompleted={this.onConfirmationCompleted}
+                    onConfirmationUpdated={this.onConfirmationUpdated}
                     radius={0.2}
                 ></CircleConfirmation>
             </View>

@@ -54,7 +54,7 @@ export class ExampleScrollView extends React.Component {
           localPosition={[-0.15, 0.4, 0]}
         />
         <ScrollView scrollBarVisibility="always" scrollBounds={aabb}>
-          <ScrollBar width={0.6} thumbSize={0.03} orientation="vertical" />
+          <ScrollBar length={0.6} thumbSize={0.03} orientation="vertical" />
           <LinearLayout
             defaultItemAlignment="center-left"
             defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
