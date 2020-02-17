@@ -5,14 +5,13 @@
   },
   "private": true,
   "devDependencies": {
-    "@babel/core": "^7.5.5",
+    "@babel/core": "^7.4.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
-    "@babel/preset-typescript": "^7.8.3",
-    "@types/react": "^16.9.11",
+    "@babel/runtime": "^7.4.5",
     "eslint-config-semistandard": "^13.0.0",
     "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-import": "^2.16.0",
     "eslint-plugin-node": "^8.0.1",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
@@ -22,14 +21,9 @@
     "rollup-plugin-commonjs": "^9.3.4",
     "rollup-plugin-includepaths": "0.2.3",
     "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-typescript": "^1.0.1",
-    "semistandard": "^13.0.1",
-    "tslib": "^1.10.0",
-    "typescript": "^3.6.4"
+    "semistandard": "^13.0.1"
   },
   "dependencies": {
-    "eslint-plugin-react": "^7.15.1",
-    "magic-script-components": "^2.0.2",
     "magic-script-components-lumin": "^1.0.11",
     "magic-script-polyfills": "^2.7.1"
   }

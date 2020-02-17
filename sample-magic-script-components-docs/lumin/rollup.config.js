@@ -2,7 +2,6 @@ import babel from 'rollup-plugin-babel';
 import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import includePaths from 'rollup-plugin-includepaths';
-import typescript from 'rollup-plugin-typescript';
 
 let includePathOptions = {
   include: {},
@@ -14,16 +13,14 @@ const common = {
   plugins: [
     includePaths(includePathOptions),
     babel({
-      exclude: 'node_modules/**',
-      extensions: ['.js', '.jsx', '.ts', '.tsx']
+      exclude: 'node_modules/**'
     }),
     resolve({
       customResolveOptions: {
         moduleDirectory: '../node_modules'
       }
     }),
-    commonjs(),
-    typescript()
+    commonjs()
   ]
 };
 
@@ -32,7 +29,7 @@ export default [
   {
     ...common,
     external: ['uv', 'lumin', 'ssl', 'jpeg', 'png', 'gl'],
-    input: 'src/main.tsx',
+    input: 'src/main.js',
     preserveModules: true,
     output: {
       dir: 'bin',
@@ -42,7 +39,7 @@ export default [
   // Build for MagicScript on Magicverse (iOS, Android)
   {
     ...common,
-    input: '../src/app.tsx',
+    input: '../src/app.js',
     external: ['react'],
     output: {
       globals: {

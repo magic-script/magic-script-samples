@@ -3,37 +3,20 @@
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "devDependencies": {
-    "@babel/core": "^7.5.0",
-    "@babel/runtime": "^7.5.0",
-    "@react-native-community/eslint-config": "^0.0.3",
+    "@babel/core": "^7.4.5",
+    "@babel/runtime": "^7.4.5",
     "@babel/plugin-transform-react-jsx": "^7.3.0",
     "@babel/plugin-proposal-class-properties": "^7.4.4",
-    "@types/jest": "^24.0.18",
-    "@types/react": "^16.9.2",
-    "@types/react-native": "^0.60.14",
-    "@types/react-test-renderer": "^16.9.0",
     "babel-jest": "^24.8.0",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.1",
-    "react-test-renderer": "16.8.6",
-    "typescript": "^3.6.3",
+    "react-test-renderer": "16.8.3",
     "magic-script-typings": "1.4.0"
   },
   "dependencies": {
     "magic-script-polyfills": "2.4.2",
     "react": "16.8.3",
     "react-native": "0.60.5",
-    "magic-script-components-react-native": "1.0.1"
-  },
-  "jest": {
-    "preset": "react-native",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "jsx",
-      "json",
-      "node"
-    ]
+    "magic-script-components-react-native": "git+https://github.com/magic-script/magic-script-components-react-native"
   }
 }
