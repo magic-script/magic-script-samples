@@ -47,7 +47,7 @@ export default class MyApp extends React.Component {
       { name: 'ColorPicker', component: <ExampleColorPicker localPosition={[0, 0, 0]} /> },
       // { name: 'Content', component: <ExampleContent localPosition={[0, 0, 0]} /> },
       { name: 'DatePicker', component: <ExampleDatePicker localPosition={[0, 0, 0]} /> },
-      // { name: 'Dialog', component: <ExampleDialog localPosition={[0, 0, 0]} /> },
+      { name: 'Dialog', component: <ExampleDialog localPosition={[0, 0, 0]} /> },
       { name: 'DropdownList', component: <ExampleDropdownList localPosition={[0, 0, 0]} /> },
       { name: 'DropdownListItem', component: <ExampleDropdownListItem localPosition={[0, 0, 0]} /> },
       { name: 'GridLayout', component: <ExampleGridLayout localPosition={[0, 0, 0]} /> },
@@ -65,7 +65,7 @@ export default class MyApp extends React.Component {
       { name: 'RectLayout', component: <ExampleRectLayout localPosition={[0, 0, 0]} /> },
       { name: 'ScrollBar', component: <ExampleScrollBar localPosition={[0, 0, 0]} /> },
       { name: 'ScrollView', component: <ExampleScrollView localPosition={[0, 0, 0]} /> },
-      // { name: 'Slider', component: <ExampleSlider localPosition={[0, 0, 0]} /> },
+      { name: 'Slider', component: <ExampleSlider localPosition={[0, 0, 0]} /> },
       { name: 'Spinner', component: <ExampleSpinner localPosition={[0, 0, 0]} /> },
       { name: 'Tab', component: <ExampleTab localPosition={[0, 0, 0]} /> },
       { name: 'Text', component: <ExampleText localPosition={[0, 0, 0]} /> },
@@ -73,11 +73,11 @@ export default class MyApp extends React.Component {
       { name: 'TimePicker', component: <ExampleTimePicker localPosition={[0, 0, 0]} /> },
       { name: 'Toggle', component: <ExampleToggle localPosition={[0, 0, 0]} /> },
       { name: 'ToggleGroup', component: <ExampleToggleGroup localPosition={[0, 0, 0]} /> },
-      // { name: 'Video', component: <ExampleVideo localPosition={[0, 0, 0]} /> },
+      { name: 'Video', component: <ExampleVideo localPosition={[0, 0, 0]} /> },
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = 15;
+    const initialIndex = 4;
     this.state = { sceneIndex: initialIndex, controls: true };
   }
 

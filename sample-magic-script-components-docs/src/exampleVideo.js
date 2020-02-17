@@ -23,7 +23,7 @@ export class ExampleVideo extends React.Component {
   }
 
   onEventHandler = (eventData) => {
-    console.log(`onEventHandler:`, eventData);
+    console.log('onEventHandler: ', eventData);
 
     const videoEventType = eventData.VideoEventType;
 
@@ -82,7 +82,7 @@ export class ExampleVideo extends React.Component {
           orientation='horizontal'
         >
           <Button key='play'  type='icon' iconType="play"  height={0.1}
-            enabled={this.state.playEnabled}  onClick={this.onPlayHandler} />
+            /*enabled={this.state.playEnabled}*/  onClick={this.onPlayHandler} />
           <Button key='pause' type='icon' iconType="pause" height={0.1}
             enabled={this.state.pauseEnabled} onClick={this.onPauseHandler}/>
           <Button key='stop'  type='icon' iconType="stop"  height={0.1}
