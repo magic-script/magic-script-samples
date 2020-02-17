@@ -7,14 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* MagicScriptDocsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* MagicScriptDocsTests.m */; };
+		00E356F31AD99517003FC87E /* DocsSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* DocsSampleTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB11A68108700A75B9A /* LaunchScreen.xib */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		B9BF25DBAB038022CFCB97BC /* libPods-MagicScriptDocs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D381F12033080C7EE5940C1 /* libPods-MagicScriptDocs.a */; };
+		B9BF25DBAB038022CFCB97BC /* libPods-DocsSample.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6D381F12033080C7EE5940C1 /* libPods-DocsSample.a */; };
 		C41FCE0B230C192800F4A04F /* Empty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41FCE0A230C192800F4A04F /* Empty.swift */; };
-		D4043A6303880EB743F03BA7 /* libPods-MagicScriptDocsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FA5CC6F9634AEB3CE576E9 /* libPods-MagicScriptDocsTests.a */; };
+		D4043A6303880EB743F03BA7 /* libPods-DocsSampleTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 50FA5CC6F9634AEB3CE576E9 /* libPods-DocsSampleTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,32 +23,32 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = MagicScriptDocs;
+			remoteInfo = DocsSample;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		008F07F21AC5B25A0029DE68 /* main.jsbundle */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = main.jsbundle; sourceTree = "<group>"; };
-		00E356EE1AD99517003FC87E /* MagicScriptDocsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicScriptDocsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* DocsSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DocsSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* MagicScriptDocsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicScriptDocsTests.m; sourceTree = "<group>"; };
-		0A897FF15313113BFBDEDA42 /* Pods-MagicScriptDocs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicScriptDocs.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicScriptDocs/Pods-MagicScriptDocs.release.xcconfig"; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* MagicScriptDocs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicScriptDocs.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = MagicScriptDocs/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = MagicScriptDocs/AppDelegate.m; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* DocsSampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocsSampleTests.m; sourceTree = "<group>"; };
+		0A897FF15313113BFBDEDA42 /* Pods-DocsSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocsSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-DocsSample/Pods-DocsSample.release.xcconfig"; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* DocsSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DocsSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = DocsSample/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = DocsSample/AppDelegate.m; sourceTree = "<group>"; };
 		13B07FB21A68108700A75B9A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = MagicScriptDocs/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = MagicScriptDocs/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = MagicScriptDocs/main.m; sourceTree = "<group>"; };
-		50FA5CC6F9634AEB3CE576E9 /* libPods-MagicScriptDocsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MagicScriptDocsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6D381F12033080C7EE5940C1 /* libPods-MagicScriptDocs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-MagicScriptDocs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		A3BA37D7EBB617DA41351912 /* Pods-MagicScriptDocsTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicScriptDocsTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MagicScriptDocsTests/Pods-MagicScriptDocsTests.release.xcconfig"; sourceTree = "<group>"; };
-		C41FCE09230C192700F4A04F /* MagicScriptDocs-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MagicScriptDocs-Bridging-Header.h"; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = DocsSample/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = DocsSample/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = DocsSample/main.m; sourceTree = "<group>"; };
+		50FA5CC6F9634AEB3CE576E9 /* libPods-DocsSampleTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DocsSampleTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6D381F12033080C7EE5940C1 /* libPods-DocsSample.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DocsSample.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3BA37D7EBB617DA41351912 /* Pods-DocsSampleTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocsSampleTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-DocsSampleTests/Pods-DocsSampleTests.release.xcconfig"; sourceTree = "<group>"; };
+		C41FCE09230C192700F4A04F /* DocsSample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DocsSample-Bridging-Header.h"; sourceTree = "<group>"; };
 		C41FCE0A230C192800F4A04F /* Empty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Empty.swift; sourceTree = "<group>"; };
-		CDDCDAADAC48402C42045CE1 /* Pods-MagicScriptDocsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicScriptDocsTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicScriptDocsTests/Pods-MagicScriptDocsTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDDCDAADAC48402C42045CE1 /* Pods-DocsSampleTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocsSampleTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DocsSampleTests/Pods-DocsSampleTests.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
-		F7B8ECE6C1E223FE455C0DEF /* Pods-MagicScriptDocs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MagicScriptDocs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MagicScriptDocs/Pods-MagicScriptDocs.debug.xcconfig"; sourceTree = "<group>"; };
+		F7B8ECE6C1E223FE455C0DEF /* Pods-DocsSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DocsSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DocsSample/Pods-DocsSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4043A6303880EB743F03BA7 /* libPods-MagicScriptDocsTests.a in Frameworks */,
+				D4043A6303880EB743F03BA7 /* libPods-DocsSampleTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -64,20 +64,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B9BF25DBAB038022CFCB97BC /* libPods-MagicScriptDocs.a in Frameworks */,
+				B9BF25DBAB038022CFCB97BC /* libPods-DocsSample.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* MagicScriptDocsTests */ = {
+		00E356EF1AD99517003FC87E /* DocsSampleTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* MagicScriptDocsTests.m */,
+				00E356F21AD99517003FC87E /* DocsSampleTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = MagicScriptDocsTests;
+			path = DocsSampleTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -88,7 +88,7 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* MagicScriptDocs */ = {
+		13B07FAE1A68108700A75B9A /* DocsSample */ = {
 			isa = PBXGroup;
 			children = (
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
@@ -99,9 +99,9 @@
 				13B07FB11A68108700A75B9A /* LaunchScreen.xib */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				C41FCE0A230C192800F4A04F /* Empty.swift */,
-				C41FCE09230C192700F4A04F /* MagicScriptDocs-Bridging-Header.h */,
+				C41FCE09230C192700F4A04F /* DocsSample-Bridging-Header.h */,
 			);
-			name = MagicScriptDocs;
+			name = DocsSample;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
@@ -109,8 +109,8 @@
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				6D381F12033080C7EE5940C1 /* libPods-MagicScriptDocs.a */,
-				50FA5CC6F9634AEB3CE576E9 /* libPods-MagicScriptDocsTests.a */,
+				6D381F12033080C7EE5940C1 /* libPods-DocsSample.a */,
+				50FA5CC6F9634AEB3CE576E9 /* libPods-DocsSampleTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -125,9 +125,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* MagicScriptDocs */,
+				13B07FAE1A68108700A75B9A /* DocsSample */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* MagicScriptDocsTests */,
+				00E356EF1AD99517003FC87E /* DocsSampleTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				9FAB1F81D30D221B574F7019 /* Pods */,
@@ -140,8 +140,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* MagicScriptDocs.app */,
-				00E356EE1AD99517003FC87E /* MagicScriptDocsTests.xctest */,
+				13B07F961A680F5B00A75B9A /* DocsSample.app */,
+				00E356EE1AD99517003FC87E /* DocsSampleTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -149,10 +149,10 @@
 		9FAB1F81D30D221B574F7019 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F7B8ECE6C1E223FE455C0DEF /* Pods-MagicScriptDocs.debug.xcconfig */,
-				0A897FF15313113BFBDEDA42 /* Pods-MagicScriptDocs.release.xcconfig */,
-				CDDCDAADAC48402C42045CE1 /* Pods-MagicScriptDocsTests.debug.xcconfig */,
-				A3BA37D7EBB617DA41351912 /* Pods-MagicScriptDocsTests.release.xcconfig */,
+				F7B8ECE6C1E223FE455C0DEF /* Pods-DocsSample.debug.xcconfig */,
+				0A897FF15313113BFBDEDA42 /* Pods-DocsSample.release.xcconfig */,
+				CDDCDAADAC48402C42045CE1 /* Pods-DocsSampleTests.debug.xcconfig */,
+				A3BA37D7EBB617DA41351912 /* Pods-DocsSampleTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -160,9 +160,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* MagicScriptDocsTests */ = {
+		00E356ED1AD99517003FC87E /* DocsSampleTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MagicScriptDocsTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DocsSampleTests" */;
 			buildPhases = (
 				2CDA8B57BBA812C27B51EA06 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -174,14 +174,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = MagicScriptDocsTests;
-			productName = MagicScriptDocsTests;
-			productReference = 00E356EE1AD99517003FC87E /* MagicScriptDocsTests.xctest */;
+			name = DocsSampleTests;
+			productName = DocsSampleTests;
+			productReference = 00E356EE1AD99517003FC87E /* DocsSampleTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* MagicScriptDocs */ = {
+		13B07F861A680F5B00A75B9A /* DocsSample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MagicScriptDocs" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DocsSample" */;
 			buildPhases = (
 				B8AFAA4DA51A8754D5667FE0 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -189,14 +189,15 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				53DB20329A91F6457AC0DC1C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = MagicScriptDocs;
-			productName = MagicScriptDocs;
-			productReference = 13B07F961A680F5B00A75B9A /* MagicScriptDocs.app */;
+			name = DocsSample;
+			productName = DocsSample;
+			productReference = 13B07F961A680F5B00A75B9A /* DocsSample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -218,7 +219,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MagicScriptDocs" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DocsSample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -232,8 +233,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* MagicScriptDocs */,
-				00E356ED1AD99517003FC87E /* MagicScriptDocsTests */,
+				13B07F861A680F5B00A75B9A /* DocsSample */,
+				00E356ED1AD99517003FC87E /* DocsSampleTests */,
 			);
 		};
 /* End PBXProject section */
@@ -287,11 +288,43 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MagicScriptDocsTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DocsSampleTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53DB20329A91F6457AC0DC1C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DocsSample/Pods-DocsSample-resources.sh",
+				"${PODS_ROOT}/GLTFSceneKit/Source/Common/GLTFShaderModifierFragment_alphaCutoff.shader",
+				"${PODS_ROOT}/GLTFSceneKit/Source/Common/GLTFShaderModifierSurface.shader",
+				"${PODS_ROOT}/GLTFSceneKit/Source/Common/GLTFShaderModifierSurface_alphaModeBlend.shader",
+				"${PODS_ROOT}/GLTFSceneKit/Source/Common/GLTFShaderModifierSurface_doubleSidedWorkaround.shader",
+				"${PODS_ROOT}/GLTFSceneKit/Source/Common/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness.shader",
+				"${PODS_ROOT}/GLTFSceneKit/Source/Common/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader",
+				"${PODS_ROOT}/GLTFSceneKit/Source/Common/schema/extensions/KHR_materials_pbrSpecularGlossiness/GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader",
+				"${PODS_CONFIGURATION_BUILD_DIR}/RNMagicScript/RNMagicScriptResources.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLTFShaderModifierFragment_alphaCutoff.shader",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLTFShaderModifierSurface.shader",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLTFShaderModifierSurface_alphaModeBlend.shader",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLTFShaderModifierSurface_doubleSidedWorkaround.shader",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLTFShaderModifierSurface_pbrSpecularGlossiness.shader",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLTFShaderModifierSurface_pbrSpecularGlossiness_doubleSidedWorkaround.shader",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GLTFShaderModifierSurface_pbrSpecularGlossiness_texture_doubleSidedWorkaround.shader",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/RNMagicScriptResources.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DocsSample/Pods-DocsSample-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		B8AFAA4DA51A8754D5667FE0 /* [CP] Check Pods Manifest.lock */ = {
@@ -309,7 +342,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-MagicScriptDocs-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-DocsSample-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -342,7 +375,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* MagicScriptDocsTests.m in Sources */,
+				00E356F31AD99517003FC87E /* DocsSampleTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -361,7 +394,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* MagicScriptDocs */;
+			target = 13B07F861A680F5B00A75B9A /* DocsSample */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -373,7 +406,7 @@
 				13B07FB21A68108700A75B9A /* Base */,
 			);
 			name = LaunchScreen.xib;
-			path = MagicScriptDocs;
+			path = DocsSample;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -381,7 +414,7 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CDDCDAADAC48402C42045CE1 /* Pods-MagicScriptDocsTests.debug.xcconfig */;
+			baseConfigurationReference = CDDCDAADAC48402C42045CE1 /* Pods-DocsSampleTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -389,7 +422,7 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = MagicScriptDocsTests/Info.plist;
+				INFOPLIST_FILE = DocsSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -399,18 +432,18 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicScriptDocs.app/MagicScriptDocs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DocsSample.app/DocsSample";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3BA37D7EBB617DA41351912 /* Pods-MagicScriptDocsTests.release.xcconfig */;
+			baseConfigurationReference = A3BA37D7EBB617DA41351912 /* Pods-DocsSampleTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = MagicScriptDocsTests/Info.plist;
+				INFOPLIST_FILE = DocsSampleTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -420,20 +453,20 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicScriptDocs.app/MagicScriptDocs";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DocsSample.app/DocsSample";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7B8ECE6C1E223FE455C0DEF /* Pods-MagicScriptDocs.debug.xcconfig */;
+			baseConfigurationReference = F7B8ECE6C1E223FE455C0DEF /* Pods-DocsSample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEVELOPMENT_TEAM = 664R426J78;
-				INFOPLIST_FILE = MagicScriptDocs/Info.plist;
+				INFOPLIST_FILE = DocsSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -442,8 +475,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicscript.template;
-				PRODUCT_NAME = MagicScriptDocs;
-				SWIFT_OBJC_BRIDGING_HEADER = "MagicScriptDocs-Bridging-Header.h";
+				PRODUCT_NAME = DocsSample;
+				SWIFT_OBJC_BRIDGING_HEADER = "DocsSample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -452,13 +485,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0A897FF15313113BFBDEDA42 /* Pods-MagicScriptDocs.release.xcconfig */;
+			baseConfigurationReference = 0A897FF15313113BFBDEDA42 /* Pods-DocsSample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 664R426J78;
-				INFOPLIST_FILE = MagicScriptDocs/Info.plist;
+				INFOPLIST_FILE = DocsSample/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (
@@ -467,8 +500,8 @@
 					"-lc++",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.magicscript.template;
-				PRODUCT_NAME = MagicScriptDocs;
-				SWIFT_OBJC_BRIDGING_HEADER = "MagicScriptDocs-Bridging-Header.h";
+				PRODUCT_NAME = DocsSample;
+				SWIFT_OBJC_BRIDGING_HEADER = "DocsSample-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -576,7 +609,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "MagicScriptDocsTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "DocsSampleTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -585,7 +618,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "MagicScriptDocs" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "DocsSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -594,7 +627,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "MagicScriptDocs" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "DocsSample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

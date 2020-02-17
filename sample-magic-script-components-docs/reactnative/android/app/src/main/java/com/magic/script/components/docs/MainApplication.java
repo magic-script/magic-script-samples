@@ -1,4 +1,4 @@
-package com.magic.script.docs;
+package com.magic.script.components.docs;
 
 import android.app.Application;
 import android.util.Log;

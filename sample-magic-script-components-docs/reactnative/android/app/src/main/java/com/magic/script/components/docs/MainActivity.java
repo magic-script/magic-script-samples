@@ -1,4 +1,4 @@
-package com.magic.script.docs;
+package com.magic.script.components.docs;
 
 import com.facebook.react.ReactActivity;
 
@@ -10,6 +10,6 @@ public class MainActivity extends ReactActivity {
      */
     @Override
     protected String getMainComponentName() {
-        return "MagicScriptDocs";
+        return "DocsSample";
     }
 }
