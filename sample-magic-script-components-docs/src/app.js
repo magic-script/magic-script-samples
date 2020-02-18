@@ -48,8 +48,8 @@ export default class MyApp extends React.Component {
       // { name: 'Content', component: <ExampleContent localPosition={[0, 0, 0]} /> },
       { name: 'DatePicker', component: <ExampleDatePicker localPosition={[0, 0, 0]} /> },
       { name: 'Dialog', component: <ExampleDialog localPosition={[0, 0, 0]} /> },
-      { name: 'DropdownList', component: <ExampleDropdownList localPosition={[0, 0, 0]} /> },
-      { name: 'DropdownListItem', component: <ExampleDropdownListItem localPosition={[0, 0, 0]} /> },
+      { name: 'DropdownList', component: <ExampleDropdownList localPosition={[0, 0.2, 0]} /> },
+      { name: 'DropdownListItem', component: <ExampleDropdownListItem localPosition={[0, 0.3, 0]} /> },
       { name: 'GridLayout', component: <ExampleGridLayout localPosition={[0, 0, 0]} /> },
       { name: 'Image', component: <ExampleImage localPosition={[0, 0, 0]} /> },
       // { name: 'Light', component: <ExampleLight localPosition={[0, 0, 0]} /> },
@@ -77,7 +77,7 @@ export default class MyApp extends React.Component {
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = 4;
+    const initialIndex = 26;
     this.state = { sceneIndex: initialIndex, controls: true };
   }
 
@@ -110,7 +110,7 @@ export default class MyApp extends React.Component {
 
   renderButtons(scene) {
     return (
-      <View alignment={'center-center'} localPosition={[0, 1.3, 0]}>
+      <View alignment={'center-center'} localPosition={[0, 0.5, 0]} localScale={[0.5, 0.5, 0.5]}>
         <Button localPosition={[-0.5, 0, 0]} width={0.25} height={0.1} roundness={1} textSize={0.05} onClick={this.onPreviousScene}>Prev</Button>
         <DropdownList alignment={'top-center'} height={0.15} listMaxHeight={1} localPosition={[0, 0, 0]} onSelectionChanged={this.onSceneSelected} text={scene.name} textSize={0.05}>
           {this.renderDropdownItems()}
@@ -123,16 +123,16 @@ export default class MyApp extends React.Component {
     const { sceneIndex, controls } = this.state;
     const scene = this.scenes[sceneIndex];
     return (
-      <View name='main-view' alignment={'center-center'} localScale={[0.5, 0.5, 0.5]}> 
+      <View name='main-view' alignment={'center-center'}> 
         {controls && this.renderButtons(scene)}
 
-        {/* <View localPosition={[0, 0.6, -0.3]} width={5.4} height={5} alignment={'center-center'}> */}
-        <Image color={[1, 0, 0, 1]} localPosition={[-1.4, 0, -0.3]} width={1.2} height={4} />
-        <Image color={[1, 0, 0, 1]} localPosition={[0, 2, -0.3]} width={4} height={2.8} />
-        <Image color={[1, 0, 0, 1]} localPosition={[0, -2, -0.3]} width={4} height={2.8} />
-        <Image color={[1, 0, 0, 1]} localPosition={[2, 0, -0.3]} width={2.4} height={4} />
-        <Image color={[0, 0, 0, 1]} localPosition={[0, 0, -0.28]} width={1.6} height={1.2} />
-        {/* </View> */}
+        <View localPosition={[0, 0, -0.3]}>
+          <Image color={[1, 0, 0, 1]} localPosition={[-1, 0, 0]} width={0.5} height={2} />
+          <Image color={[1, 0, 0, 1]} localPosition={[0, 1, 0]} width={2} height={0.5} />
+          <Image color={[1, 0, 0, 1]} localPosition={[0, -1, 0]} width={2} height={0.5} />
+          <Image color={[1, 0, 0, 1]} localPosition={[1, 0, 0]} width={0.5} height={4} />
+          <Image color={[0, 0, 0, 1]} localPosition={[0, 0, -0.02]} width={2} height={2} />
+        </View>
 
         <View alignment={'center-center'}>
           {scene.component}

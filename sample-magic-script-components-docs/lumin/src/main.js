@@ -9,4 +9,4 @@ import mxs from "magic-script-components-lumin";
 // Load main app logic from the app class.
 import MyApp from './app';
 
-mxs.bootstrap(<MyApp type='landscape' volumeSize={[1.0, 1.5, 0.5]} />);
+mxs.bootstrap(<MyApp type='landscape' volumeSize={[2.0, 2.0, 1.0]} />);

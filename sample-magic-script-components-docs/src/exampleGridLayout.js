@@ -5,7 +5,7 @@ export class ExampleGridLayout extends React.Component {
   render() {
     return (
       <View name="main-view">
-        <GridLayout localPosition={[0, 0.5, 0]} width={0.5} height={0.8} rows={2} columns={2}
+        <GridLayout localPosition={[-0.25, 0.5, 0]} width={0.5} height={0.8} rows={2} columns={2}
           itemAlignment={[
             {row: 0, column: 0, alignment: 'top-right'},
             {row: 0, column: 1, alignment: 'bottom-left'},

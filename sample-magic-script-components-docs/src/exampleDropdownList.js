@@ -3,6 +3,7 @@ import { View, DropdownList, DropdownListItem } from "magic-script-components";
 
 export  class ExampleDropdownList extends React.Component {
   state = { selectedId: undefined };
+
   onSelection = eventData => {
     console.log("Selected items:", eventData.SelectedItems);
   };
@@ -16,8 +17,9 @@ export  class ExampleDropdownList extends React.Component {
       "Valetudo",
       "Amalthea"
     ];
+    
     return (
-      <View name="main-view">
+      <View name="main-view" localPosition={this.props.localPosition}>
         <DropdownList
           text="Select Moon"
           iconColor={[0.5, 1.0, 0.5, 0.8]}

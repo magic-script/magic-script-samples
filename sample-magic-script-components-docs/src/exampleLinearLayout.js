@@ -20,7 +20,7 @@ export class ExampleLinearLayout extends React.Component {
         <LinearLayout
           defaultItemAlignment="center-left"
           defaultItemPadding={[0.01, 0.01, 0.01, 0.01]}
-          localPosition={[-0.25, 0.25, 0]}
+          localPosition={[-0.1, 0.25, 0]}
         >
           {moons.map((moon, index) => (
             <Text textSize={0.05} key={index} text={moon} />

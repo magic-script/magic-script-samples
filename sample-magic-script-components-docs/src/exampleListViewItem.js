@@ -24,7 +24,7 @@ export  class ExampleListViewItem extends React.Component {
     const evenColor = [0.75, 0.5, 0.25, 1];
 
     return (
-      <ListView localPosition={[-0.15, -0.15, 0]} width={0.5} height={0.6}>
+      <ListView localPosition={[-0.25, 0.25, 0]} width={0.5} height={0.6}>
         <ScrollBar length={0.5} thumbSize={0.03} />
         {moons.map((moon, index) => (
           <ListViewItem backgroundColor={index % 2 ? evenColor : oddColor}>

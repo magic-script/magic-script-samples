@@ -49,9 +49,11 @@ export class ExampleScrollView extends React.Component {
     return (
       <View name="main-view">
         <Text
+          alignment="center-center"
           text="Phonetic Alphabet"
+          textAlignment="center"
           textSize={0.07}
-          localPosition={[-0.15, 0.4, 0]}
+          localPosition={[0, 0.4, 0]}
         />
         <ScrollView scrollBarVisibility="always" scrollBounds={aabb}>
           <ScrollBar length={0.6} thumbSize={0.03} orientation="vertical" />

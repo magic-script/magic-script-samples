@@ -11,6 +11,7 @@ export class ExampleTab extends React.Component {
   render() {
     return (
       <LinearLayout
+        alignment='center-center'
         name='top-layout'
         orientation='vertical'
         defaultItemAlignment="center-left"

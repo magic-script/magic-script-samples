@@ -12,11 +12,11 @@ export class ExampleToggle extends React.Component {
     return (
       <View name="main-view">
         <Toggle
-          localPosition={[0, -0.25, 0]}
+          localPosition={[0.1, -0.25, 0]}
           text="Switch Page"
           onToggleChanged={this.onSwitchHandler}
         />
-        <PageView name="page-view" visiblePage={this.state.pageIndex}>
+        <PageView alignment="center-center" name="page-view" visiblePage={this.state.pageIndex}>
           <Content name="page-0">
             <Text textSize={0.1}>Page One</Text>
           </Content>

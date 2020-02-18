@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
+import { LinearLayout, Video, Button, Text } from 'magic-script-components';
 
-import { LinearLayout, Video, Button, Text } from "magic-script-components";
 export class ExampleVideo extends React.Component {
   state = {
     playEnabled: false,
@@ -54,7 +54,7 @@ export class ExampleVideo extends React.Component {
 
   render() {
     const videoProps = {
-      videoPath: require("../resources/video_1.mp4"),
+      videoPath: require('../resources/video_1.mp4'),
       width: 1920,
       height: 1080,
       onEvent: this.onEventHandler,
@@ -67,25 +67,25 @@ export class ExampleVideo extends React.Component {
 
     return (
       <LinearLayout
+        alignment='center-center'
         key='top-layout'
         name='main-view'
-        defaultItemAlignment="center-left"
+        defaultItemAlignment='center-center'
         defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
-        localPosition={[-0.45, 0.45, 0]}
         orientation='vertical'
       >
         <Video key='video' {...videoProps}/>
         <LinearLayout
           key='buttons-layout'
-          defaultItemAlignment="center-center"
+          defaultItemAlignment='center-center'
           defaultItemPadding={[0.02, 0.02, 0.02, 0.02]}
           orientation='horizontal'
         >
-          <Button key='play'  type='icon' iconType="play"  height={0.1}
-            /*enabled={this.state.playEnabled}*/  onClick={this.onPlayHandler} />
-          <Button key='pause' type='icon' iconType="pause" height={0.1}
+          <Button key='play'  type='icon' iconType='play'  height={0.1}
+            enabled={this.state.playEnabled}  onClick={this.onPlayHandler} />
+          <Button key='pause' type='icon' iconType='pause' height={0.1}
             enabled={this.state.pauseEnabled} onClick={this.onPauseHandler}/>
-          <Button key='stop'  type='icon' iconType="stop"  height={0.1}
+          <Button key='stop'  type='icon' iconType='stop'  height={0.1}
             enabled={this.state.stopEnabled}  onClick={this.onStopHandler} />
         </LinearLayout>
         <Text key='status' textSize={0.05} text={`Status: ${this.state.status}`}/>

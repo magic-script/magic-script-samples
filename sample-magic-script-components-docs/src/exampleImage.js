@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Image, Button } from "magic-script-components";
+import React from 'react';
+import { View, Image, Button } from 'magic-script-components';
 
 export class ExampleImage extends React.Component {
   constructor(props) {
@@ -26,16 +26,16 @@ export class ExampleImage extends React.Component {
           filePath={path}
           height={0.25}
           width={0.5}
-          localPosition={[0.1, 0.1, 0.3]}
         />
         <Button
-          localPosition={[0.12, -0.15, 0]}
+          localPosition={[0.12, -0.17, 0]}
           width={0.25}
           height={0.1}
           roundness={0.5}
-          type="icon"
-          iconType="arrow-right"
-          text="Next image"
+          labelSide='left'
+          type='icon'
+          iconType='arrow-right'
+          text='Next'
           onClick={this.onNextClick}
         />
       </View>
