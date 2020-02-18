@@ -45,7 +45,7 @@ export default class MyApp extends React.Component {
       { name: 'Button', component: <ExampleButton localPosition={[0, 0, 0]} /> },
       { name: 'CircleConfirmation', component: <ExampleCircleConfirmation localPosition={[0, 0, 0]} /> },
       { name: 'ColorPicker', component: <ExampleColorPicker localPosition={[0, 0, 0]} /> },
-      // { name: 'Content', component: <ExampleContent localPosition={[0, 0, 0]} /> },
+      { name: 'Content', component: <ExampleContent localPosition={[0, 0, 0]} /> },
       { name: 'DatePicker', component: <ExampleDatePicker localPosition={[0, 0, 0]} /> },
       { name: 'Dialog', component: <ExampleDialog localPosition={[0, 0, 0]} /> },
       { name: 'DropdownList', component: <ExampleDropdownList localPosition={[0, 0.2, 0]} /> },
@@ -60,7 +60,7 @@ export default class MyApp extends React.Component {
       { name: 'Model', component: <ExampleModel localPosition={[0, 0, 0]} /> },
       { name: 'PageView', component: <ExamplePageView localPosition={[0, 0, 0]} /> },
       { name: 'Panel', component: <ExamplePanel localPosition={[0, 0, 0]} /> },
-      // { name: 'PortalIcon', component: <ExamplePortalIcon localPosition={[0, 0, 0]} /> },
+      { name: 'PortalIcon', component: <ExamplePortalIcon localPosition={[0, 0, 0]} /> },
       { name: 'ProgressBar', component: <ExampleProgressBar localPosition={[0, 0, 0]} /> },
       { name: 'RectLayout', component: <ExampleRectLayout localPosition={[0, 0, 0]} /> },
       { name: 'ScrollBar', component: <ExampleScrollBar localPosition={[0, 0, 0]} /> },
@@ -77,7 +77,7 @@ export default class MyApp extends React.Component {
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = 26;
+    const initialIndex = 3;
     this.state = { sceneIndex: initialIndex, controls: true };
   }
 
