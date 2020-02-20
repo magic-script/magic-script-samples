@@ -19,7 +19,7 @@ export class ExampleColorPicker extends React.Component {
 
   render() {
     return (
-      <View name='main-view'>
+      <View name='main-view' localScale={[2,2,2]}>
         <ColorPicker
           color={[1, 0.5, 1, 0.8]}
           onColorChanged={this.onColorChanged}

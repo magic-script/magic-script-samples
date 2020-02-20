@@ -25,7 +25,7 @@ export class ExampleListView extends React.Component {
         <ScrollBar length={0.5} thumbSize={0.03} />
         {moons.map((moon, index) => (
           <ListViewItem>
-            <Text key={index} textSize={0.1}>
+            <Text key={moon} textSize={0.1}>
               {moon}
             </Text>
           </ListViewItem>

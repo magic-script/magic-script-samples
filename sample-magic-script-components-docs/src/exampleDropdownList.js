@@ -19,7 +19,7 @@ export  class ExampleDropdownList extends React.Component {
     ];
     
     return (
-      <View name="main-view" localPosition={this.props.localPosition}>
+      <View name="main-view" localPosition={this.props.localPosition} >
         <DropdownList
           text="Select Moon"
           iconColor={[0.5, 1.0, 0.5, 0.8]}
