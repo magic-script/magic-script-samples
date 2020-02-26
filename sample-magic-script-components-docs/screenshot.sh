@@ -159,15 +159,22 @@ ios_cut() {
 lumin(){
     mkdir -p ~/ScreenShotsComponents
 
-    for component in "${components[@]}"; do
-        echo "component: $component"
-        lumin_screenshot $component
-        sleep 10;
-    done
+    if $SINGLE 
+        then
+            lumin_screenshot $SINGLE_FILENAME
+            sleep 5
+            lumin_cut $SINGLE_FILENAME
+        else 
+            for component in "${components[@]}"; do
+                echo "component: $component"
+                lumin_screenshot $component
+                sleep 10;
+            done
 
-    for component in "${components[@]}"; do
-        lumin_cut $component
-    done
+            for component in "${components[@]}"; do
+                lumin_cut $component
+            done
+        fi
 
     echo "done"
 }
