@@ -45,14 +45,14 @@ export default class MyApp extends React.Component {
       { name: 'Button', component: <ExampleButton localPosition={[0, 0, 0]} /> },
       { name: 'CircleConfirmation', component: <ExampleCircleConfirmation localPosition={[0, 0, 0]} /> },
       { name: 'ColorPicker', component: <ExampleColorPicker localPosition={[0, 0, 0]}/> },
-      // { name: 'Content', component: <ExampleContent localPosition={[0, 0, 0]} /> },
+      { name: 'Content', component: <ExampleContent localPosition={[0, 0, 0]} /> },
       { name: 'DatePicker', component: <ExampleDatePicker localPosition={[0, 0, 0]} /> },
-      // { name: 'Dialog', component: <ExampleDialog localPosition={[0, 0, 0]} /> },
+      { name: 'Dialog', component: <ExampleDialog localPosition={[0, 0, 0]} /> },
       { name: 'DropdownList', component: <ExampleDropdownList localPosition={[0, 0.2, 0]}/> },
       { name: 'DropdownListItem', component: <ExampleDropdownListItem localPosition={[0, 0.3, 0]}/> },
       { name: 'GridLayout', component: <ExampleGridLayout localPosition={[0, 0, 0]} /> },
       { name: 'Image', component: <ExampleImage localPosition={[0, 0, 0]} /> },
-      // { name: 'Light', component: <ExampleLight localPosition={[0, 0, 0]} /> },
+      { name: 'Light', component: <ExampleLight localPosition={[0, 0, 0]} /> },
       { name: 'Line', component: <ExampleLine localPosition={[0, 0, 0]} /> },
       { name: 'LinearLayout', component: <ExampleLinearLayout localPosition={[0, 0, 0]} /> },
       { name: 'ListView', component: <ExampleListView localPosition={[0, 0, 0]} /> },
@@ -73,16 +73,16 @@ export default class MyApp extends React.Component {
       { name: 'TimePicker', component: <ExampleTimePicker localPosition={[0, 0, 0]}/> },
       { name: 'Toggle', component: <ExampleToggle localPosition={[0, 0, 0]} /> },
       { name: 'ToggleGroup', component: <ExampleToggleGroup localPosition={[0, 0, 0]} /> },
-      // { name: 'Video', component: <ExampleVideo localPosition={[0, 0, 0]} /> },
+      { name: 'Video', component: <ExampleVideo localPosition={[0, 0, 0]} /> },
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = 3;
+    const initialIndex = this.scenes.findIndex((item) => item.name == 'Tab');
     this.state = { sceneIndex: initialIndex, controls: true };
   }
 
   componentDidMount() {
-    this.handler = setInterval(this.onNextScene, 10000);
+    // this.handler = setInterval(this.onNextScene, 10000);
   }
 
   onNextScene = () => {

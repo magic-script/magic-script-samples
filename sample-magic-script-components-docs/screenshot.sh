@@ -53,6 +53,9 @@ Usage: screenshot [-s|--single|--no-cut] [PLATFORM]
 
  default directory with screenshot ~/ScreenShotsComponents/
  
+ !!Notice!! 
+ To run this script you need installed imagemagick, please visit https://imagemagick.org/ for more details
+ 
  OPT
 EOF
 
