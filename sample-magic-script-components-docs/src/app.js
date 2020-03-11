@@ -44,12 +44,12 @@ export default class MyApp extends React.Component {
     this.scenes = [
       { name: 'Button', component: <ExampleButton localPosition={[0, 0, 0]} /> },
       { name: 'CircleConfirmation', component: <ExampleCircleConfirmation localPosition={[0, 0, 0]} /> },
-      { name: 'ColorPicker', component: <ExampleColorPicker localPosition={[0, 0, 0]}/> },
+      { name: 'ColorPicker', component: <ExampleColorPicker localPosition={[0, 0, 0]} /> },
       { name: 'Content', component: <ExampleContent localPosition={[0, 0, 0]} /> },
       { name: 'DatePicker', component: <ExampleDatePicker localPosition={[0, 0, 0]} /> },
       { name: 'Dialog', component: <ExampleDialog localPosition={[0, 0, 0]} /> },
-      { name: 'DropdownList', component: <ExampleDropdownList localPosition={[0, 0.2, 0]}/> },
-      { name: 'DropdownListItem', component: <ExampleDropdownListItem localPosition={[0, 0.3, 0]}/> },
+      { name: 'DropdownList', component: <ExampleDropdownList localPosition={[0, 0.2, 0]} /> },
+      { name: 'DropdownListItem', component: <ExampleDropdownListItem localPosition={[0, 0.3, 0]} /> },
       { name: 'GridLayout', component: <ExampleGridLayout localPosition={[0, 0, 0]} /> },
       { name: 'Image', component: <ExampleImage localPosition={[0, 0, 0]} /> },
       { name: 'Light', component: <ExampleLight localPosition={[0, 0, 0]} /> },
@@ -69,16 +69,16 @@ export default class MyApp extends React.Component {
       { name: 'Spinner', component: <ExampleSpinner localPosition={[0, 0, 0]} /> },
       { name: 'Tab', component: <ExampleTab localPosition={[0, 0, 0]} /> },
       { name: 'Text', component: <ExampleText localPosition={[0, 0, 0]} /> },
-      { name: 'TextEdit', component: <ExampleTextEdit localPosition={[0, 0, 0]}/> },
-      { name: 'TimePicker', component: <ExampleTimePicker localPosition={[0, 0, 0]}/> },
+      { name: 'TextEdit', component: <ExampleTextEdit localPosition={[0, 0, 0]} /> },
+      { name: 'TimePicker', component: <ExampleTimePicker localPosition={[0, 0, 0]} /> },
       { name: 'Toggle', component: <ExampleToggle localPosition={[0, 0, 0]} /> },
       { name: 'ToggleGroup', component: <ExampleToggleGroup localPosition={[0, 0, 0]} /> },
       { name: 'Video', component: <ExampleVideo localPosition={[0, 0, 0]} /> },
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = this.scenes.findIndex((item) => item.name == 'Tab');
-    this.state = { sceneIndex: initialIndex, controls: true };
+    const initialIndex = this.scenes.findIndex((item) => item.name == 'Text');
+    this.state = { sceneIndex: initialIndex, controls: false };
   }
 
   componentDidMount() {
@@ -110,7 +110,7 @@ export default class MyApp extends React.Component {
 
   renderButtons(scene) {
     return (
-      <View alignment={'center-center'} localPosition={[0, 0.5, 0]}>
+      <View alignment={'center-center'} localPosition={[0, 0.5, 0]} localScale={[0.5, 0.5, 0.5]}>
         <Button localPosition={[-0.5, 0, 0]} width={0.25} height={0.1} roundness={1} textSize={0.05} onClick={this.onPreviousScene}>Prev</Button>
         <DropdownList alignment={'top-center'} height={0.15} listMaxHeight={1} localPosition={[0, 0, 0]} onSelectionChanged={this.onSceneSelected} text={scene.name} textSize={0.05}>
           {this.renderDropdownItems()}
@@ -123,17 +123,11 @@ export default class MyApp extends React.Component {
     const { sceneIndex, controls } = this.state;
     const scene = this.scenes[sceneIndex];
     return (
-      <View name='main-view' alignment={'center-center'} localPosition={[0,0,0]} localScale={[0.5, 0.5, 0.5]}> 
+      <View name='main-view' alignment={'center-center'} localPosition={[0, 0, 0]}>
         {controls && this.renderButtons(scene)}
-
-        <View localPosition={[0, 0, -0.3]}>
-          <Image color={[1, 0, 0, 1]} localPosition={[-1, 0, 0]} width={0.5} height={3} />
-          <Image color={[1, 0, 0, 1]} localPosition={[0, 1.5, 0]} width={3} height={1.5} />
-          <Image color={[1, 0, 0, 1]} localPosition={[0, -1.5, 0]} width={3} height={1.5} />
-          <Image color={[1, 0, 0, 1]} localPosition={[1, 0, 0]} width={0.5} height={4} />
-          <Image color={[0, 0, 0, 1]} localPosition={[0, 0, -0.02]} width={1.55} height={1.55} />
-        </View>
-
+        {/* <Image color="#373737" localPosition={[0, 0, -0.3]} width={5} height={5} /> */}
+        <Image color="#2222227D" localPosition={[-0.3, -0.4, -0.25]} width={6} height={4} />
+        <Image filePath={require('../resources/bg6.jpg')} localPosition={[-0.3, -0.4, -0.3]} width={6} height={4} />
         <View alignment={'center-center'}>
           {scene.component}
         </View>
