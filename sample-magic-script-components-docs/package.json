@@ -1,5 +1,5 @@
 {
     "dependencies": {
-        "magic-script-components": "2.0.2"
+        "magic-script-components": "git+https://github.com/magic-script/magic-script-components"
     }
 }
