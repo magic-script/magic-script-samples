@@ -4,34 +4,40 @@ import {
   ListViewItem,
   Text,
   Image,
-  View
+  View,
+  RectLayout,
+  ScrollBar
 } from "magic-script-components";
 
 export class ExampleListView extends React.Component {
   render() {
     const contacts = [
-      { name: 'Lorem Ipsum', email: 'lorem.ipsum@magicleap.com', image: require('../resources/contact1.png') },
-      { name: 'Little Kitten', email: 'kitten@magicleap.com', image: require('../resources/contact2.png') },
-      { name: 'Lorem Ipsum', email: 'lorem.ipsum@magicleap.com', image: require('../resources/contact1.png') },
-      { name: 'Lorem Ipsum', email: 'lorem.ipsum@magicleap.com', image: require('../resources/contact1.png') },
+      { name: 'Lorem Ipsum    ', email: 'lorem@magicleap.com ', image: require('../resources/contact1.png'), phone: '(555)-123-1234' },
+      { name: 'Little Kitten  ', email: 'kitten@magicleap.com', image: require('../resources/contact2.png'), phone: '(555)-123-1234' },
+      { name: 'Lorem Ipsum 2  ', email: 'lorem@magicleap.com ', image: require('../resources/contact1.png'), phone: '(555)-123-1234' },
+      { name: 'Little Kitten 2', email: 'kitten@magicleap.com', image: require('../resources/contact2.png'), phone: '(555)-123-1234' }
     ];
 
     return (
       <View>
-        <Image localPosition={[0, 0, 0]}  height={0.5} color={'#00000055'}/>
-        <ListView localPosition={[0, 0, 0]} width={0.7} height={0.5} defaultItemAlignment={'top-left'} defaultItemPadding={[0, 0, 0.02, 0]}>
+        <ListView localPosition={[0, 0, 0]} width={0.7} height={0.5} defaultItemAlignment={'top-left'} defaultItemPadding={[0, 0, 0.01, 0]}>
+          <ScrollBar length={0.5} thumbSize={0.03} />
           {contacts.map((contact, index) => (
             <ListViewItem key={index}>
-              <View localPosition={[0, 0, 0]} localScale={[0.8, 0.8, 0.8]}>
-                <Image localPosition={[0, 0, 0]} height={0.17} width={0.17} filePath={contact.image} />
-                <Text localPosition={[0.13, 0.05, 0]} textSize={0.07} weight={"bold"} textColor={"#85D834"} >
-                  {contact.name}
-                </Text>
-                <Image height={0.07} icon={"send"} localPosition={[0.13, -0.03, 0]} />
-                <Text textSize={0.04} textColor={"#e0e0e0"} localPosition={[0.21, -0.03, 0]}>
-                  {contact.email}
-                </Text>
-              </View>
+              <RectLayout width={0.35} contentAlignment={'top-left'}>
+                <View>
+                  <Image localPosition={[0, 0, 0]} height={0.17} width={0.17} filePath={contact.image} />
+                  <Text localPosition={[0.2, 0.05, 0]} alignment={'center-left'} textSize={0.07} weight={"bold"} textColor={"#85D834"} >
+                    {contact.name}
+                  </Text>
+                  <Text localPosition={[0.2, 0, 0]} alignment={'center-left'} textSize={0.05} textColor={"#e0e0e0"} >
+                    {contact.email}
+                  </Text>
+                  <Text localPosition={[0.2, -0.05, 0]} alignment={'center-left'} textSize={0.05} textColor={"#B5B5B5"}>
+                    {contact.phone}
+                  </Text>
+                </View>
+              </RectLayout>
             </ListViewItem>
           ))}
         </ListView>

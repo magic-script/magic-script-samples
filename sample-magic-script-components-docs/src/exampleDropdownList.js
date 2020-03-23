@@ -35,9 +35,9 @@ export class ExampleDropdownList extends React.Component {
           defaultItemPadding={[0.03, 0.03, 0.03, 0.03]}
           orientation={'horizontal'}
         >
-          <Text textSize={0.1}>State:</Text>
+          <Text textSize={0.03}>State:</Text>
           <DropdownList
-            textSize={0.1}
+            textSize={0.03}
             text={selectedState}
             onSelectionChanged={this.onSelectedStateChanged}
           >

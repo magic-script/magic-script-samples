@@ -1,31 +1,48 @@
 import React from "react";
-import { View, RectLayout, Content, Text } from "magic-script-components";
+import { View, RectLayout, Image, Line } from "magic-script-components";
 
 export class ExampleRectLayout extends React.Component {
   render() {
     return (
       <View name="main-view">
+        <Line color={'white'} points={[[-0.2, 0.2, 0], [0, 0.2, 0], [0, 0, 0], [-0.2, 0, 0], [-0.2, 0.2, 0]]} />
         <RectLayout
-          localPosition={[-0.4, 0.4, 0]}
-          width={0.8}
-          height={0.4}
-          padding={[0.1, 0.1, 0.1, 0.1]}
-          contentAlignment="bottom-left"
+          localPosition={[-0.2, 0.2, 0]}
+          width={0.2}
+          height={0.2}
+          contentAlignment="top-left"
         >
-          <Content>
-            <Text textSize={0.05} text="Top Message" />
-          </Content>
+          <Image width={0.1} height={0.1} color={'red'} />
         </RectLayout>
+
+        <Line color={'white'} points={[[0, 0.2, 0], [0.2, 0.2, 0], [0.2, 0, 0], [0, 0, 0], [0, 0.2, 0]]} />
         <RectLayout
-          localPosition={[-0.4, 0, 0]}
-          width={0.8}
-          height={0.4}
-          padding={[0.1, 0.1, 0.1, 0.1]}
+          localPosition={[0, 0.2, 0]}
+          width={0.2}
+          height={0.2}
           contentAlignment="top-right"
         >
-          <Content>
-            <Text textSize={0.05} text="Bottom Message" />
-          </Content>
+          <Image width={0.1} height={0.1} color={'blue'} />
+        </RectLayout>
+
+        <Line color={'white'} points={[[-0.2, 0, 0], [0, 0, 0], [0, -0.2, 0], [-0.2, -0.2, 0], [-0.2, 0, 0]]} />
+        <RectLayout
+          localPosition={[-0.2, 0, 0]}
+          width={0.2}
+          height={0.2}
+          contentAlignment="bottom-left"
+        >
+          <Image width={0.1} height={0.1} color={'yellow'} />
+        </RectLayout>
+        
+        <Line color={'white'} points={[[0, 0, 0], [0.2, 0, 0], [0.2, -0.2, 0], [0, -0.2, 0], [0, 0, 0]]} />
+        <RectLayout
+          localPosition={[0, 0, 0]}
+          width={0.2}
+          height={0.2}
+          contentAlignment="bottom-right"
+        >
+          <Image width={0.1} height={0.1} color={'green'} />
         </RectLayout>
       </View>
     );
