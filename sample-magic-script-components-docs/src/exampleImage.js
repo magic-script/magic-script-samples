@@ -13,7 +13,7 @@ export class ExampleImage extends React.Component {
   render() {
     return (
       <View localPosition={[-0.16, 0, 0]}>
-        <Image localPosition={[-0.13, 0, 0]} height={0.17} width={0.17} filePath={require('../resources/contact1.png')}/>
+        <Image localPosition={[-0.13, 0, 0]} height={0.17} width={0.17} filePath={require('../resources/contact1.jpg')}/>
           <Text alignment={'center-left'} textSize={0.07} weight={"bold"} textColor={"#85D834"} localPosition={[0, 0.05, 0]}>
           Lorem Ipsum
           </Text>

@@ -12,10 +12,10 @@ import {
 export class ExampleListView extends React.Component {
   render() {
     const contacts = [
-      { name: 'Lorem Ipsum    ', email: 'lorem@magicleap.com ', image: require('../resources/contact1.png'), phone: '(555)-123-1234' },
-      { name: 'Little Kitten  ', email: 'kitten@magicleap.com', image: require('../resources/contact2.png'), phone: '(555)-123-1234' },
-      { name: 'Lorem Ipsum 2  ', email: 'lorem@magicleap.com ', image: require('../resources/contact1.png'), phone: '(555)-123-1234' },
-      { name: 'Little Kitten 2', email: 'kitten@magicleap.com', image: require('../resources/contact2.png'), phone: '(555)-123-1234' }
+      { name: 'Lorem Ipsum    ', email: 'lorem@magicleap.com ', image: require('../resources/contact1.jpg'), phone: '(555)-123-1234' },
+      { name: 'Little Kitten  ', email: 'kitten@magicleap.com', image: require('../resources/contact2.jpg'), phone: '(555)-123-1234' },
+      { name: 'Lorem Ipsum 2  ', email: 'lorem@magicleap.com ', image: require('../resources/contact1.jpg'), phone: '(555)-123-1234' },
+      { name: 'Little Kitten 2', email: 'kitten@magicleap.com', image: require('../resources/contact2.jpg'), phone: '(555)-123-1234' }
     ];
 
     return (
