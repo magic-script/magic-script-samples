@@ -39,13 +39,10 @@ export class ExampleScrollView extends React.Component {
     ];
 
     const aabb = {
-      min: [-0.25, -0.45, -0.1],
-      max: [0.25, 0.35, 0.1]
+      min: [-0.1, -0.1, -0.1],
+      max: [0.1, 0.1, 0.1]
     };
-
-    const calculateValue = (number, multiplier) =>
-      ((number + 1 * multiplier) % 10) * 0.1;
-
+    
     return (
       <View name="main-view">
         <Text
@@ -67,12 +64,7 @@ export class ExampleScrollView extends React.Component {
                 textSize={0.05}
                 key={index}
                 text={`${word[0]} - ${word}`}
-                textColor={[
-                  calculateValue(index, 1),
-                  calculateValue(index, 2),
-                  calculateValue(index, 3),
-                  0.8
-                ]}
+                textColor={"white"}
               />
             ))}
           </LinearLayout>

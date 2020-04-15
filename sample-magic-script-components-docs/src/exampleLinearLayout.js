@@ -1,5 +1,5 @@
 import React from "react";
-import { View, LinearLayout, Text, TextEdit } from "magic-script-components";
+import { LinearLayout, Text, TextEdit } from "magic-script-components";
 
 export class ExampleLinearLayout extends React.Component {
   render() {

@@ -106,7 +106,7 @@ android_cut() {
     then
         echo "trimming $1"
         convert $FILENAME \
-        -colors 255 \
+        -chop 0x80 \
         $FILENAME
     fi
 }
@@ -149,7 +149,7 @@ ios_cut() {
     then
         FILENAME=~/ScreenShotsComponents/$1/ios.png
         convert $FILENAME \
-        -chop 0x100 -gravity South -chop 0x100 \
+        -chop 0x70 -gravity South -chop 0x35 \
         $FILENAME;
     fi
 }

@@ -1,5 +1,5 @@
 import React from "react";
-import { View, WebView, Text } from "magic-script-components";
+import { View, WebView } from "magic-script-components";
 
 export class ExampleWebView extends React.Component {
 
@@ -7,7 +7,7 @@ export class ExampleWebView extends React.Component {
 
     return (
       <View name='main-view' >
-        <WebView localPosition={[0, -0.2, 0]} width={1} height={0.8} url={'http://google.com'}/>
+        <WebView  width={1} height={0.8} url={'https://www.magicleap.com'}/>
       </View>
     );
   }

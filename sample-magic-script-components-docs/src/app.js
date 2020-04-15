@@ -76,7 +76,7 @@ export default class MyApp extends React.Component {
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = this.scenes.findIndex((item) => item.name == 'Image');
+    const initialIndex = this.scenes.findIndex((item) => item.name == 'Video');
     this.state = { sceneIndex: initialIndex, controls: false };
   }
 
@@ -104,6 +104,7 @@ export default class MyApp extends React.Component {
   }
 
   renderDropdownItems() {
+
     return this.scenes.map((scene, index) => <DropdownListItem key={index} id={index} label={scene.name.replace(/\n/g, ' ')} />);
   }
 
@@ -123,13 +124,13 @@ export default class MyApp extends React.Component {
     const scene = this.scenes[sceneIndex];
     return (
       <Scene>
-        <Prism size={[6.0, 4.0, 4.0]}>
-          <View name='main-view' alignment={'center-center'} localPosition={[0, 0, -1]}>
+        <Prism size={[6.0, 4.0, 5.0]} >
+          <View name='main-view' alignment={'center-center'} localPosition={[0, 0, 0]} >
             {controls && this.renderButtons(scene)}
             {/* <Image color="#373737" localPosition={[0, 0, -0.3]} width={5} height={5} /> */}
             {/* <Image color="#2222227D" localPosition={[-0.3, -0.4, -0.25]} width={6} height={4} /> */}
-            <Image filePath={require('../resources/bg6.jpg')} localPosition={[-0.3, -0.4, -0.3]} width={6} height={4} />
-            <View alignment={'center-center'}>
+            {/* <Image filePath={require('../resources/bg6.jpg')} localPosition={[-0.3, -0.4, -0.3]} width={6} height={4} /> */}
+            <View alignment={'center-center'} >
               {scene.component}
             </View>
           </View>
