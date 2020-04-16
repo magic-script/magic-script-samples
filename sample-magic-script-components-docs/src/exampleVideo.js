@@ -62,21 +62,22 @@ class ExampleVideo extends React.Component {
 
   render() {
     const resolution = [1920, 1080];
-    const widthInMeters = 0.7 ;
+    const widthInMeters = 1.4;
     const size = [
-      0.7,
-      0.5
+      widthInMeters,
+      (resolution[1] * widthInMeters) / resolution[0]
     ];
     return (
       <View localPosition={this.props.localPosition}>
         <Video
-          localPosition={[0, 0, 0]}
+          localPosition={[0, 0.75, 0]}
           looping={this.state.isLooping}
           width={resolution[0]}
           height={resolution[1]}
           size={size}
+          anchorPosition={[0.5 * size[0], 0.5 * size[1], 0]}
           videoPath={this.state.videoPath}
-          ViewMode={"full-area"}
+          viewMode={"full-area"}
           volume={this.state.volume}
           action={this.state.action}
         />
