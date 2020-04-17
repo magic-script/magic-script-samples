@@ -62,7 +62,7 @@ class ExampleVideo extends React.Component {
 
   render() {
     const resolution = [1920, 1080];
-    const widthInMeters = 1.4;
+    const widthInMeters = 1;
     const size = [
       widthInMeters,
       (resolution[1] * widthInMeters) / resolution[0]

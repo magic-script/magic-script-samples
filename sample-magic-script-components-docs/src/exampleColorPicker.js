@@ -24,8 +24,8 @@ export class ExampleColorPicker extends React.Component {
           height={0.15}
           color={[1, 0.5, 1, 0.8]}
           onColorChanged={this.onColorChanged}
-        // onColorConfirmed={this.onColorConfirmed}
-        // onColorCanceled={this.onColorCanceled} />
+          onColorConfirmed={this.onColorConfirmed}
+          onColorCanceled={this.onColorCanceled} />
         />
       </View>
     );
