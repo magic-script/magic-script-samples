@@ -1,4 +1,5 @@
 import React from 'react';
+import { View, Button, LinearLayout, DropdownList, DropdownListItem, Line, Image, RectLayout, Panel,Scene, Prism } from 'magic-script-components';
 import {
   ExampleButton,
   ExampleCircleConfirmation,
@@ -33,7 +34,7 @@ import {
   ExampleToggleGroup,
   ExampleVideo,
   ExampleWebView,
-} from './prism_examples'
+} from '.'
 
 export default class MyApp extends React.Component {
   constructor(props) {
@@ -75,15 +76,66 @@ export default class MyApp extends React.Component {
       { name: 'WebView', component: <ExampleWebView localPosition={[0, 0, 0]} /> },
     ];
 
-    const initialIndex = this.scenes.findIndex((item) => item.name == 'WebView');
-    this.state = { sceneIndex: initialIndex };
+    const initialIndex = this.scenes.findIndex((item) => item.name == 'CircleConfirmation');
+    this.state = { sceneIndex: initialIndex, controls: false };
+  }
+
+  componentDidMount() {
+    // this.handler = setInterval(this.onNextScene, 10000);
+  }
+
+  onNextScene = () => {
+    const { sceneIndex } = this.state;
+    const nextIndex = (sceneIndex + 1) % this.scenes.length;
+    this.setState({ sceneIndex: nextIndex });
+  }
+
+  onPreviousScene = () => {
+    const { sceneIndex } = this.state;
+    const prevIndex = (sceneIndex > 0) ? sceneIndex - 1 : this.scenes.length - 1;
+    this.setState({ sceneIndex: prevIndex });
+  }
+
+  onSceneSelected = event => {
+    if (event.SelectedItems.length > 0) {
+      const item = event.SelectedItems[0];
+      this.setState({ sceneIndex: item.id });
+    }
+  }
+
+  renderDropdownItems() {
+
+    return this.scenes.map((scene, index) => <DropdownListItem key={index} id={index} label={scene.name.replace(/\n/g, ' ')} />);
+  }
+
+  renderButtons(scene) {
+    return (
+      <View alignment={'center-center'} localPosition={[0, 0.5, 0]} localScale={[0.5, 0.5, 0.5]}>
+        <Button localPosition={[-0.5, 0, 0]} width={0.25} height={0.1} roundness={1} textSize={0.05} onClick={this.onPreviousScene}>Prev</Button>
+        <DropdownList alignment={'top-center'} height={0.15} listMaxHeight={1} localPosition={[0, 0, 0]} onSelectionChanged={this.onSceneSelected} text={scene.name} textSize={0.05}>
+          {this.renderDropdownItems()}
+        </DropdownList>
+        <Button localPosition={[0.5, 0, 0]} width={0.25} height={0.1} roundness={1} textSize={0.05} onClick={this.onNextScene}>Next</Button>
+      </View>)
   }
 
   render() {
-    const { sceneIndex } = this.state;
-    const component = this.scenes[sceneIndex].component;
+    const { sceneIndex, controls } = this.state;
+    const scene = this.scenes[sceneIndex];
     return (
-      component
+      <Scene>
+        <Prism size={[6.0, 4.0, 5.0]} >
+          <View name='main-view' alignment={'center-center'} localPosition={[0, 0, -1.5]} >
+            {controls && this.renderButtons(scene)}
+            {/* <Image color="#373737" localPosition={[0, 0, -0.3]} width={5} height={5} /> */}
+            {/* <Image color="#2222227D" localPosition={[-0.3, -0.4, -0.25]} width={6} height={4} /> */}
+            <Image filePath={require('../resources/bg6.jpg')} localPosition={[-0.3, -0.4, -0.3]} width={6} height={4} />
+            <View alignment={'center-center'}  >
+              {scene.component}
+            </View>
+          </View>
+        </Prism>
+      </Scene>
     );
   }
 }

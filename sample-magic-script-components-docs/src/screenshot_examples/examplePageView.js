@@ -6,10 +6,10 @@ export class ExamplePageView extends React.Component {
     super(props);
     this.state = { pageIndex: 0, photoIndex: 0 };
     this.photos = [
-      { image: require('../resources/contact1.jpg') },
-      { image: require('../resources/contact2.jpg') },
-      { image: require('../resources/contact1.jpg') },
-      { image: require('../resources/contact2.jpg') }
+      { image: require('../../resources/contact1.jpg') },
+      { image: require('../../resources/contact2.jpg') },
+      { image: require('../../resources/contact1.jpg') },
+      { image: require('../../resources/contact2.jpg') }
     ];
   }
 
