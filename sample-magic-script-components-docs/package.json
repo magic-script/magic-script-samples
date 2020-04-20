@@ -1,0 +1,5 @@
+{
+    "dependencies": {
+        "magic-script-components": "git+https://github.com/magic-script/magic-script-components"
+    }
+}
